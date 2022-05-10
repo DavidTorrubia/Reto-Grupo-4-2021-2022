@@ -1,12 +1,13 @@
 body {
     margin: 0 0 0 0;
 }
-.Header-Logo{
+
+.Header-Logo {
     width: 9rem;
     margin: auto;
 }
 
-.Header{
+.Header {
     display: flex;
     justify-content: space-between;
     background-color: #2a0c00;
@@ -16,38 +17,63 @@ body {
     top: 0;
     width: 100%;
 }
-.Header-Imagen{
+
+.Header-Imagen {
     height: 2rem;
     width: auto;
 }
-.Header-Item-Left-Container{
+
+.Header-Item-Left-Container {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     width: 9rem;
     margin-left: 3rem;
+    position: relative;
 }
-.Header-Image-Usericon{
+
+.Header-Image-Usericon {
     border-radius: 30px;
 }
-.Header-Item-Right-Container{
+
+.Header-Item-Right-Container {
     margin-right: 3rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 9rem;
 }
-.Header-Imagen-Bandera{
+
+.Header-Imagen-Bandera {
     border: #2a0c00 solid 4px;
     border-radius: 30px;
 }
 
+.Header-Item-Left-Container-Dropbutton {
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    background-color: transparent;
+}
 
+.Header-Item-Left-Container-Dropbutton-Content {
+    display: none;
+    position: absolute;
+    top: 4rem;
+    left: 0rem;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.Header-Item-Left-Container-Dropbutton-Content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
 @media only screen and (max-width: 600px) {
-    .Header-Item-Right-Container{
+    .Header-Item-Right-Container {
         width: 6rem;
-    }
-    .Header-Item-Left-Container{
-        width: 6rem;
-        justify-content: left;
     }
 }
