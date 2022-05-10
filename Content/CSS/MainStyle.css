@@ -1,3 +1,53 @@
 body {
     margin: 0 0 0 0;
 }
+.Header-Logo{
+    width: 9rem;
+    margin: auto;
+}
+
+.Header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #2a0c00;
+    align-items: center;
+    height: 4rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.Header-Imagen{
+    height: 2rem;
+    width: auto;
+}
+.Header-Item-Left-Container{
+    display: flex;
+    justify-content: center;
+    width: 9rem;
+    margin-left: 3rem;
+}
+.Header-Image-Usericon{
+    border-radius: 30px;
+}
+.Header-Item-Right-Container{
+    margin-right: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 9rem;
+}
+.Header-Imagen-Bandera{
+    border: #2a0c00 solid 4px;
+    border-radius: 30px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .Header-Item-Right-Container{
+        width: 6rem;
+    }
+    .Header-Item-Left-Container{
+        width: 6rem;
+        justify-content: left;
+    }
+}
