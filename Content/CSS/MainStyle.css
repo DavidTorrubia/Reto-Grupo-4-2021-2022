@@ -10,7 +10,7 @@ body {
 .Header {
     display: flex;
     justify-content: space-between;
-    background-color: #2a0c00;
+    background-color: #3a1101;
     align-items: center;
     height: 4rem;
     position: fixed;
@@ -27,6 +27,7 @@ body {
     display: flex;
     justify-content: left;
     width: 9rem;
+    height: 100%;
     margin-left: 3rem;
     position: relative;
 }
@@ -44,22 +45,23 @@ body {
 }
 
 .Header-Imagen-Bandera {
-    border: #2a0c00 solid 4px;
     border-radius: 30px;
 }
 
 .Header-Item-Left-Container-Dropbutton {
-    padding: 16px;
     font-size: 16px;
     border: none;
     background-color: transparent;
+    height: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .Header-Item-Left-Container-Dropbutton-Content {
     display: none;
     position: absolute;
-    top: 4rem;
     left: 0rem;
+    top: 100%;
     background-color: #f1f1f1;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
