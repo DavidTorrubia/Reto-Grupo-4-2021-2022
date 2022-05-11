@@ -78,8 +78,40 @@ body {
     text-decoration: none;
     display: block;
 }
+
+.Footer a{
+    color: white;
+    text-decoration: auto;
+    font-family: 'Tommy personal use';
+    font-size: 14px;
+}
+
+.Footer{
+    background-color: #3a1101;
+    color: white;
+}
+
+.Footer-SelectionBar{
+    display: flex;
+    justify-content: space-around;
+    padding: 19px 0 0 0;
+}
+
+.Footer p{
+    font-size: 12px;
+    text-align-last: center;
+    text-align: justify;
+    padding: 13px 0 25px 0px;
+    font-family: SANS-SERIF;
+}
+
 @media only screen and (max-width: 600px) {
     .Header-Item-Right-Container {
         width: 6rem;
     }
 }
+
+@font-face{
+    src: url(../Fonts/MADE\ Tommy\ Soft\ Medium\ PERSONAL\ USE.otf);
+    font-family: 'Tommy personal use';
+ }
