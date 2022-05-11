@@ -1,6 +1,7 @@
 .Content{
     height: 1000px;
     width: 100%;
+    margin-top: 5rem;
 }
 
 .Content-Container{
@@ -8,12 +9,9 @@
     background-image: url(https://img.freepik.com/foto-gratis/coctel-naranja-cafe-sobre-superficie-blanca_1150-44206.jpg?t=st=1652283644~exp=1652284244~hmac=7a0e4942de29d1d766434141f91262ddfdbf7c1f815f13399de60c13f472cafc&w=1380);
     background-position-x: center;
     height: 858px;
-    margin-top: 180px;
-
 }
 
 .Content-Container-Carrousel{
-    display: flex;
     align-items: center;
     height: 858px;
 }
@@ -21,7 +19,6 @@
 .Content-Container-Carrousel-Container-Adv{
     background-color: bisque;
     width: 100%;
-    margin-top: 156px;
 
 }
 
@@ -43,6 +40,8 @@
 .Content-Container-Carrousel-Container-Adv-1-Title{
     color:white;
     font-family: Helvetica;
+    padding-top: 10%;
+    padding-left: 10%;
     
 
 }
@@ -50,20 +49,16 @@
 .Content-Container-Carrousel-Container-Adv-1-Subtitle{
     color:white;
     font-family: Helvetica;
+    padding-left: 10%;
 }
 
 .Content-Container-Carrousel-Container-Adv-1-Text{
     color:white;
     font-family: sans-serif;
+    padding-left: 10%;
+    
+    
 }
-
-/*
-.content-container-carrousel-container-carrousel{
-    display: flex;
-    align-items: center;
-    height: 858px;
-}
-*/
 
 .Content-Container-Carrousel-Left-Img{
     width: 60px;
