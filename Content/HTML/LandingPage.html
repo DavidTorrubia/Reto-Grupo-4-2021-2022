@@ -14,8 +14,11 @@
 <body>
     <div class="Header">
         <div class="Header-Item Header-Item-Left-Container">
-            <button type="button" class="Header-Item-Left-Container-Dropbutton" id="Header-Item-Left-Container-Dropbutton" onclick="MenuDeploy()"><img class="Header-Imagen" src="../Icons/MenuIcon.png" alt="imagen_menu"></button>
-            <div class="Header-Item-Left-Container-Dropbutton-Content" id="Header-Item-Left-Container-Dropbutton-Content">
+            <button type="button" class="Header-Item-Left-Container-Dropbutton"
+                id="Header-Item-Left-Container-Dropbutton" onclick="MenuDeploy()"><img class="Header-Imagen"
+                    src="../Icons/MenuIcon.png" alt="imagen_menu"></button>
+            <div class="Header-Item-Left-Container-Dropbutton-Content"
+                id="Header-Item-Left-Container-Dropbutton-Content">
                 <a href="#"></a>
                 <a href="#"></a>
                 <a href="#"></a>
@@ -23,7 +26,20 @@
         </div>
         <a href="../HTML/LandingPage.html"><img class="Header-Logo" src="../Images/Logo/LogoWhite.png" alt="logo"></a>
         <div class="Header-Item Header-Item-Right-Container">
-            <img class="Header-Imagen Header-Image-Usericon" src="../Images/defaultUserImage.jpg" />
+
+            <div class="Header-Item-Right-Container-UserDropButtonContainer">
+                <button type="button" class="Header-Item-Right-Container-UserDropButton" id="Header-Item-Right-Container-UserDropButton" onclick="UserMenuDeploy()"><img
+                        class="Header-Imagen Header-Image-Usericon" src="../Images/defaultUserImage.jpg" /></button>
+                <div class="Header-Item-Right-Container-UserDropButton-Content"
+                    id="Header-Item-Right-Container-UserDropButton-Content">
+                    <button type="button" class="Header-Item-Right-Container-UserDropButton-Content-Button"
+                        id="Header-Item-Right-Container-UserDropButton-Content-LogIn"> Login</button>
+                    <button type="button" class="Header-Item-Right-Container-UserDropButton-Content-Button"
+                        id="Header-Item-Right-Container-UserDropButton-Content-SignUp"> Sign Up</button>
+                    <button type="button" class="Header-Item-Right-Container-UserDropButton-Content-Button"
+                        id="Header-Item-Right-Container-UserDropButton-Content-Log off"> Log off</button>
+                </div>
+            </div>
             <img class="Header-Imagen" src="../Icons/ShopppingListWhite.png" />
             <img class="Header-Imagen Header-Imagen-Bandera" src="../Images/flags/ukflag.png" />
         </div>
