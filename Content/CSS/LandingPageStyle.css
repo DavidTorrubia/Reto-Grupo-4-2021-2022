@@ -24,10 +24,10 @@
 
 .Content-Container-Carrousel-Container-Adv-1{
     background-image: url(https://img.freepik.com/foto-gratis/coctel-naranja-cafe-sobre-superficie-blanca_1150-44206.jpg?t=st=1652283644~exp=1652284244~hmac=7a0e4942de29d1d766434141f91262ddfdbf7c1f815f13399de60c13f472cafc&w=1380);
+    background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
-    width: 1920px;
     height: 858px;
-    padding-left: 0%;
 
 }
 
