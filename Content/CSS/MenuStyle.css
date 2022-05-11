@@ -8,6 +8,7 @@
 .Content-Menu-Types-Container-Item{
     position: relative;
     width: 30%;
+    transition: width 0.5s;
     height: min-content;
     background-color: black;
     border-radius: 10px;
@@ -22,10 +23,13 @@
 }
 
 .Content-Menu-Types-Container-Item1:hover .Content-Menu-Types-Container-Item1-Image{opacity: 60%;}
+.Content-Menu-Types-Container-Item1:hover {width: 35%;}
 .Content-Menu-Types-Container-Item1:hover .Content-Menu-Types-Container-Item1-text{opacity: 100%;}
 .Content-Menu-Types-Container-Item2:hover .Content-Menu-Types-Container-Item2-Image{opacity: 60%;}
+.Content-Menu-Types-Container-Item2:hover {width: 35%;}
 .Content-Menu-Types-Container-Item2:hover .Content-Menu-Types-Container-Item2-text{opacity: 100%;}
 .Content-Menu-Types-Container-Item3:hover .Content-Menu-Types-Container-Item3-Image{opacity: 60%;}
+.Content-Menu-Types-Container-Item3:hover {width: 35%;}
 .Content-Menu-Types-Container-Item3:hover .Content-Menu-Types-Container-Item3-text{opacity: 100%;}
 
 .Content-Menu-Types-Container-Images-Text{
