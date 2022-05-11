@@ -142,6 +142,7 @@ body {
     text-align: justify;
     padding: 4px 41px 25px 0px;
     font-family: SANS-SERIF;
+    margin-bottom: 0;
 }
 
 @media only screen and (max-width: 600px) {
