@@ -28,7 +28,7 @@ body {
 .Header-Item-Left-Container {
     display: flex;
     justify-content: left;
-    width: 11rem;
+    width: 6%;
     height: 100%;
     margin-right: 3rem;
     position: relative;
@@ -166,9 +166,6 @@ body {
     }
     .Header-Logo{
         width: 8rem;
-    }
-    .Header-Item-Left-Container{
-        width: 6%;
     }
 }
 
