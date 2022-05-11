@@ -81,10 +81,11 @@ body {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    font-family: 'Tommy personal use';
 }
 
-.Header-Item-Left-Container-Dropbutton-Content a :hover {background-color: rgba(0, 0, 0, 0.345);}
-
+.Header-Item-Left-Container-Dropbutton-Content a:hover {background-color: rgba(0, 0, 0, 0.123);}
+.Header-Item-Right-Container-UserDropButton-Content-Button:hover { background-color: rgba(0, 0, 0, 0.123);}
 
 .Header-Item-Right-Container-UserDropButton{
     background-color: transparent;
@@ -99,7 +100,12 @@ body {
     color: black;
     padding: 12px 16px;
     display: block;
+    text-decoration: none;
+    font-size: 16px;
     border: transparent;
+    font-family: 'Tommy personal use';
+    width: 100%;
+    justify-content: left;
 }
 .Header-Item-Right-Container-UserDropButton-Content{
     position: absolute;
@@ -108,6 +114,7 @@ body {
     top: -10rem;
     transition: top 2s;
     z-index: -999;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 .Header-Item-Right-Container-UserDropButton-Content.deployed{
     width: 160px;
@@ -126,7 +133,7 @@ body {
 }
 
 .Footer{
-    background-color: #3a1101;
+    background-image: linear-gradient( #913611 , #3a1101);
     color: white;
 }
 
