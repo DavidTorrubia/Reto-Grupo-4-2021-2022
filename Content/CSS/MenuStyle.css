@@ -55,3 +55,14 @@
     src: url(../Fonts/MADE\ Tommy\ Soft\ Medium\ PERSONAL\ USE.otf);
     font-family: 'Tommy personal use';
  }
+
+ @media only screen and (max-width: 600px) {
+   .Content-Menu-Types-Container{
+    flex-direction: column;
+   }
+
+   .Content-Menu-Types-Container-Item{
+    width: 70%;
+    margin-bottom: 17px;
+}
+ }

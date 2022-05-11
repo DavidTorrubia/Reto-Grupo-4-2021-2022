@@ -157,6 +157,12 @@ body {
     .Header-Item-Right-Container {
         width: 6rem;
     }
+    .Header-Logo{
+        width: 8rem;
+    }
+    .Header-Item-Left-Container{
+        width: 6%;
+    }
 }
 
 @font-face{
