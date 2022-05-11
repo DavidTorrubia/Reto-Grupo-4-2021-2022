@@ -1,0 +1,19 @@
+.Content-InteractiveImageDescription-Container{
+    background-color: black;
+    position: relative;
+}
+.Content-InteractiveImageDescription-Container-Background{
+    opacity: 100%;
+    transition: 1s;
+}
+.Content-InteractiveImageDescription-Container:hover  .Content-InteractiveImageDescription-Container-Background{opacity: 50%;}
+
+.Content-InteractiveImageDescription-Container-Logo{
+    position: absolute;
+}   
+.Content-InteractiveImageDescription-Container-Header{
+    position: absolute;
+}
+.Content-InteractiveImageDescription-Container-Text{
+    position: absolute;
+}
