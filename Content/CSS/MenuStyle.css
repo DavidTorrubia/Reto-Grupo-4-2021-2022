@@ -1,0 +1,57 @@
+.Content{
+    height: 2000px;
+    width: 100%;
+    background-color: #e5be9e3a;
+    margin-top: 5rem;
+    padding-top: 2rem;
+}
+.Content-Menu-Types-Container-Item{
+    position: relative;
+    width: 30%;
+    height: min-content;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+.Content-Menu-Types-Container-Images{
+    width: 100%;
+    border-radius: 10px;
+    opacity: 100%;
+    transition: opacity 0.5s;
+    
+}
+
+.Content-Menu-Types-Container-Item1:hover .Content-Menu-Types-Container-Item1-Image{opacity: 60%;}
+.Content-Menu-Types-Container-Item1:hover .Content-Menu-Types-Container-Item1-text{opacity: 100%;}
+.Content-Menu-Types-Container-Item2:hover .Content-Menu-Types-Container-Item2-Image{opacity: 60%;}
+.Content-Menu-Types-Container-Item2:hover .Content-Menu-Types-Container-Item2-text{opacity: 100%;}
+.Content-Menu-Types-Container-Item3:hover .Content-Menu-Types-Container-Item3-Image{opacity: 60%;}
+.Content-Menu-Types-Container-Item3:hover .Content-Menu-Types-Container-Item3-text{opacity: 100%;}
+
+.Content-Menu-Types-Container-Images-Text{
+    opacity: 0%;
+    font-family: 'Tommy personal use';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0 0 0 0;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    transition: opacity 0.5s;
+}
+.Content-Menu-Types-Container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.Content-Header{
+    font-family: 'Tommy personal use';
+    text-align: center;
+}
+@font-face{
+    src: url(../Fonts/MADE\ Tommy\ Soft\ Medium\ PERSONAL\ USE.otf);
+    font-family: 'Tommy personal use';
+ }
