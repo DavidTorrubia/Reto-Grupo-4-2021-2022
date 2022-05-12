@@ -35,9 +35,38 @@
                 <div class="Header-Item-Right-Container-UserDropButton-Content"
                     id="Header-Item-Right-Container-UserDropButton-Content">
                     <button type="button" class="Header-Item-Right-Container-UserDropButton-Content-Button"
-                        id="Header-Item-Right-Container-UserDropButton-Content-LogIn"> Login</button>
+                        id="Header-Item-Right-Container-UserDropButton-Content-LogIn" onclick="LoginDeploy()">
+                        Login</button>
+                    <div class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu"
+                        id="Header-Item-Right-Container-UserDropButton-Content-LogInMenu">
+                        <form class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-form">
+                            <h3 class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Header">Email</h3>
+                            <input type="text"
+                                class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Input">
+                            <h3 class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Header">Password
+                            </h3>
+                            <input type="password"
+                                class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Input">
+                            <input type="submit" value="Log in"
+                                class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Submit">
+                        </form>
+                    </div>
                     <button type="button" class="Header-Item-Right-Container-UserDropButton-Content-Button"
-                        id="Header-Item-Right-Container-UserDropButton-Content-SignUp"> Sign Up</button>
+                        id="Header-Item-Right-Container-UserDropButton-Content-SignUp" onclick="SignUpDeploy()"> Sign Up</button>
+                    <div class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu"
+                        id="Header-Item-Right-Container-UserDropButton-Content-SignUpMenu">
+                        <form class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-form">
+                            <h3 class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Header">Email</h3>
+                            <input type="text"
+                                class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Input">
+                            <h3 class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Header">Password
+                            </h3>
+                            <input type="password"
+                                class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Input">
+                            <input type="submit" value="Sign Up"
+                                class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Submit">
+                        </form>
+                    </div>
                     <button type="button" class="Header-Item-Right-Container-UserDropButton-Content-Button"
                         id="Header-Item-Right-Container-UserDropButton-Content-Log off"> Log off</button>
                 </div>
@@ -94,9 +123,8 @@
                         class="Carrousel-Previous">
                         Go to previous slide
                         </a>
-                        <a href="#Carrousel-Slide-3"
-                        class="Carrousel-Next">
-                        Go to next slide
+                        <a href="#Carrousel-Slide-3" class="Carrousel-Next">
+                            Go to next slide
                         </a>
                 </li>
                 <li id="Carrousel-Slide-3" 
@@ -118,9 +146,8 @@
                         class="Carrousel-Previous">
                         Go to previous slide
                         </a>
-                        <a href="#Carrousel-Slide-1"
-                        class="Carrousel-Next">
-                        Go to first slide
+                        <a href="#Carrousel-Slide-1" class="Carrousel-Next">
+                            Go to first slide
                         </a>
                 </li>
             </ol>
