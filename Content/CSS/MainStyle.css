@@ -5,6 +5,7 @@ body {
 .Header-Logo {
     width: 15rem;
     margin: auto;
+    transition: 1s;
 }
 
 .Header {
@@ -30,7 +31,7 @@ body {
     justify-content: left;
     width: 6%;
     height: 100%;
-    margin-right: 3rem;
+    margin-right: 9%;
     position: relative;
 }
 
@@ -43,7 +44,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 11rem;
+    width: 10%;
     height: 100%;
 }
 
@@ -59,6 +60,7 @@ body {
     height: 100%;
     padding-left: 1rem;
     padding-right: 1rem;
+    transition: 0.3s;
 }
 
 .Header-Item-Left-Container-Dropbutton-Content {
@@ -83,6 +85,7 @@ body {
     text-decoration: none;
     display: block;
     font-family: 'Tommy personal use';
+    transition: 0.3s;
 }
 
 .Header-Item-Left-Container-Dropbutton-Content a:hover {background-color: rgba(0, 0, 0, 0.123);}
@@ -94,6 +97,7 @@ body {
     height: 100%;
     padding-left: 1rem;
     padding-right: 1rem;
+    transition: 0.3s;
 }
 
 .Header-Item-Right-Container-UserDropButton-Content-Button{
@@ -107,6 +111,7 @@ body {
     font-family: 'Tommy personal use';
     width: 100%;
     justify-content: left;
+    transition: 0.3s;
 }
 .Header-Item-Right-Container-UserDropButton-Content{
     position: absolute;
@@ -158,6 +163,7 @@ body {
     background-color: #e5be9e3a;
     margin-top: 5rem;
 }
+.Header-Logo:hover {width: 17rem;}
 
 @media only screen and (max-width: 600px) {
     .Header-Item-Right-Container {
