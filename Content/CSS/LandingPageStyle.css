@@ -59,10 +59,10 @@ ol,li {
 
 .Content-Carrousel{
     position: relative;
-    padding-top: 75%;
     filter: drop-shadow(0 0 10px #0003);
     perspective: 100px;
-    height: 858px;
+    height: fit-content;
+
 }
 
 .Content-Carrousel-View{
@@ -76,6 +76,7 @@ ol,li {
     counter-reset: item;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
+    height: fit-content;
 }
 
 .Carrousel-Slide{
@@ -84,7 +85,13 @@ ol,li {
     width: 100%;
     background-color: #f99;
     counter-increment: item;
-    height: 858px;
+    height: 848px;
+}
+
+@media screen and (max-width:600px){
+    .Carrousel-Slide{
+        height: 400px;
+    }
 }
 
 .Carrousel-Slide ::before{
@@ -94,6 +101,7 @@ ol,li {
     transform: translate3d(-50%,-40%,70px);
     color: #fff;
     font-size: 2em;
+    
 }
 
 .Carorusel-Snapper {
@@ -164,7 +172,6 @@ ol,li {
   width: 4rem;
   height: 4rem;
   transform: translateY(-50%);
-  border-radius: 50%;
   font-size: 0;
   outline: 0;
 }
@@ -207,7 +214,7 @@ ol,li {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 858px;
+    
 }
 
 .Carrousel-Slide-1-Container-Title{
