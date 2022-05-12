@@ -4,25 +4,250 @@
     margin-top: 5rem;
 }
 
-.Content-Container{
-    max-width: 1920px;
-    background-image: url(https://img.freepik.com/foto-gratis/coctel-naranja-cafe-sobre-superficie-blanca_1150-44206.jpg?t=st=1652283644~exp=1652284244~hmac=7a0e4942de29d1d766434141f91262ddfdbf7c1f815f13399de60c13f472cafc&w=1380);
-    background-position-x: center;
+/*CARROUSEL*/
+
+@keyframes tonext{
+    75%{
+        left:0;
+    }
+    95% {
+        left: 100%;
+      }
+      98% {
+        left: 100%;
+      }
+      99% {
+        left: 0;
+      }
+}
+
+@keyframes tostart {
+    75% {
+      left: 0;
+    }
+    95% {
+      left: -300%;
+    }
+    98% {
+      left: -300%;
+    }
+    99% {
+      left: 0;
+    }
+  }
+
+  @keyframes snap {
+    96% {
+      scroll-snap-align: center;
+    }
+    97% {
+      scroll-snap-align: none;
+    }
+    99% {
+      scroll-snap-align: none;
+    }
+    100% {
+      scroll-snap-align: center;
+    }
+  }
+
+ol,li {
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+
+.Content-Carrousel{
+    position: relative;
+    padding-top: 75%;
+    filter: drop-shadow(0 0 10px #0003);
+    perspective: 100px;
     height: 858px;
 }
 
-.Content-Container-Carrousel{
+.Content-Carrousel-View{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    overflow-x: scroll;
+    counter-reset: item;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+
+.Carrousel-Slide{
+    position: relative;
+    flex: 0 0 100%;
+    width: 100%;
+    background-color: #f99;
+    counter-increment: item;
+    height: 858px;
+}
+
+.Carrousel-Slide ::before{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%,-40%,70px);
+    color: #fff;
+    font-size: 2em;
+}
+
+.Carorusel-Snapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: center;
+  }
+  
+  @media (hover: hover) {
+    .Carrousel-Snapper {
+      animation-name: tonext, snap;
+      animation-timing-function: ease;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+    }
+  
+    .Carrousel-Slide:last-child .Content-Carrousel-Snapper {
+      animation-name: tostart, snap;
+    }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .Carrousel-Snapper {
+      animation-name: none;
+    }
+  }
+
+.Content-Carrousel:hover .Carrousel-Snapper,
+.Content-Carrousel:focus-within .Carorusel-Snapper {
+  animation-name: none;
+}
+
+.Carrousel-Navigation {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+
+.Carrousel-Navigation-List,
+.Carrousel-Navigation-Item {
+  display: inline-block;
+}
+
+.Carrousel-Navigation-Button {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: rgb(190, 190, 190);
+  background-clip: content-box;
+  border: 0.25rem solid transparent;
+  border-radius: 50%;
+  font-size: 0;
+  transition: transform 0.1s;
+}
+
+.Content-Carrousel::before,
+.Content-Carrousel::after,
+.Carrousel-Previous,
+.Carrousel-Next {
+  position: absolute;
+  top: 0;
+  margin-top: 37.5%;
+  width: 4rem;
+  height: 4rem;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  font-size: 0;
+  outline: 0;
+}
+
+.Content-Carrousel::before,
+.Carrousel-Previous {
+  left: -1rem;
+}
+
+.Content-Carrousel::after,
+.Carrousel-Next {
+  right: -1rem;
+}
+
+.Content-Carrousel::before,
+.Content-Carrousel::after {
+  content: '';
+  z-index: 1;
+  background-size: 1.5rem 1.5rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: rgb(190, 190, 190);
+  font-size: 2.5rem;
+  line-height: 4rem;
+  text-align: center;
+  pointer-events: none;
+}
+
+.Content-Carrousel::before {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,50 80,100 80,0' fill='%23fff'/%3E%3C/svg%3E");
+}
+
+.Content-Carrousel::after {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E");
+}
+
+
+#Carrousel-Slide-1{
+    background-image: url(https://img.freepik.com/foto-gratis/coctel-naranja-cafe-sobre-superficie-blanca_1150-44206.jpg?t=st=1652283644~exp=1652284244~hmac=7a0e4942de29d1d766434141f91262ddfdbf7c1f815f13399de60c13f472cafc&w=1380);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 858px;
+}
+
+.Carrousel-Slide-1-Container-Title{
+    color:white;
+    font-family: Helvetica;
+    padding-top: 20%;
+    padding-left: 10%;
+}
+
+.Carrousel-Slide-1-Container-Subtitle{
+    color:white;
+    font-family: Helvetica;
+    padding-left: 10%;
+}
+
+
+.Carrousel-Slide-1-Container-Text{
+    color:white;
+    font-family: sans-serif;
+    padding-left: 10%;
+}
+
+
+
+
+
+
+/*
+.Content-Carrousel{
     align-items: center;
     height: 858px;
 }
 
-.Content-Container-Carrousel-Container-Adv{
+.Content-Carrousel-Container-Adv{
     background-color: bisque;
     width: 100%;
 
 }
 
-.Content-Container-Carrousel-Container-Adv-1{
+.Content-Carrousel-Container-Adv-1{
     background-image: url(https://img.freepik.com/foto-gratis/coctel-naranja-cafe-sobre-superficie-blanca_1150-44206.jpg?t=st=1652283644~exp=1652284244~hmac=7a0e4942de29d1d766434141f91262ddfdbf7c1f815f13399de60c13f472cafc&w=1380);
     background-size: cover;
     background-repeat: no-repeat;
@@ -31,13 +256,13 @@
 
 }
 
-.Content-Container-Carrousel-Container-Adv-1{
+.Content-Carrousel-Container-Adv-1{
     padding-left: 0%;
 
 }
 
 
-.Content-Container-Carrousel-Container-Adv-1-Title{
+.Content-Carrousel-Container-Adv-1-Title{
     color:white;
     font-family: Helvetica;
     padding-top: 20%;
@@ -46,13 +271,13 @@
 
 }
 
-.Content-Container-Carrousel-Container-Adv-1-Subtitle{
+.Content-Carrousel-Container-Adv-1-Subtitle{
     color:white;
     font-family: Helvetica;
     padding-left: 10%;
 }
 
-.Content-Container-Carrousel-Container-Adv-1-Text{
+.Content-Carrousel-Container-Adv-1-Text{
     color:white;
     font-family: sans-serif;
     padding-left: 10%;
@@ -60,7 +285,7 @@
     
 }
 
-.Content-Container-Carrousel-Interaction{
+.Content-Carrousel-Interaction{
     display: flex;
     position: absolute;
     top: 429px;
@@ -68,14 +293,14 @@
     justify-content: center;
 }
 
-.Content-Container-Carrousel-Left-Img{
+.Content-Carrousel-Left-Img{
     width: 60px;
     -webkit-transform: rotate(180deg);
     padding-left: 10%;
 }
 
 
-.Content-Container-Carrousel-Left-Right-Img{
+.Content-Carrousel-Left-Right-Img{
     width: 60px;
     color:rgb(190, 190, 190);
     padding-left: 80%;
