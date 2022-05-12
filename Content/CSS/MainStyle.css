@@ -33,11 +33,27 @@ body {
 }
 
 .Header-Item-Right-Container-UserDropButton-Content-LogInMenu{
-    flex-direction: column;
+    display: none;
     background-color: rgba(0, 0, 0, 0.067);
     align-items: center;
     padding-top: 1rem;
     padding-bottom: 1rem;
+}
+.Header-Item-Right-Container-UserDropButton-Content-SignUpMenu{
+    display: none;
+    background-color: rgba(0, 0, 0, 0.067);
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.Header-Item-Right-Container-UserDropButton-Content-SignUpMenu-Header{
+    text-align: left;
+    font-family: 'Tommy personal use';
+    font-weight: lighter;
+    margin: 0.2rem 0.2rem 0.2rem 0.2rem;
+    text-align: left;
+    font-size: 1rem;
+    width: 80%;
 }
 .Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Header{
     text-align: left;
