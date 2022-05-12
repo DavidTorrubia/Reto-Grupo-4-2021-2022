@@ -172,6 +172,7 @@ body {
     .Header-Logo{
         width: 8rem;
     }
+    .Header-Logo:hover {width: 10rem;}
 }
 
 @font-face{
