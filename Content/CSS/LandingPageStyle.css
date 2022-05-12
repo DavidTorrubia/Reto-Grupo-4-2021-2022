@@ -137,38 +137,13 @@ ol,li {
   animation-name: none;
 }
 
-.Carrousel-Navigation {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  text-align: center;
-}
-
-.Carrousel-Navigation-List,
-.Carrousel-Navigation-Item {
-  display: inline-block;
-}
-
-.Carrousel-Navigation-Button {
-  display: inline-block;
-  width: 1.5rem;
-  height: 1.5rem;
-  background-color: rgb(190, 190, 190);
-  background-clip: content-box;
-  border: 0.25rem solid transparent;
-  border-radius: 50%;
-  font-size: 0;
-  transition: transform 0.1s;
-}
-
 .Content-Carrousel::before,
 .Content-Carrousel::after,
 .Carrousel-Previous,
 .Carrousel-Next {
   position: absolute;
   top: 0;
-  margin-top: 37.5%;
+  margin-top: 22%;
   width: 4rem;
   height: 4rem;
   transform: translateY(-50%);
@@ -195,17 +170,19 @@ ol,li {
   background-position: center center;
   color: rgb(190, 190, 190);
   font-size: 2.5rem;
-  line-height: 4rem;
+  line-height: 2rem;
   text-align: center;
   pointer-events: none;
 }
 
 .Content-Carrousel::before {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,50 80,100 80,0' fill='%23fff'/%3E%3C/svg%3E");
+  padding-left: 5%;
 }
 
 .Content-Carrousel::after {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E");
+  padding-right: 5%;
 }
 
 
@@ -221,21 +198,36 @@ ol,li {
     color:white;
     font-family: Helvetica;
     padding-top: 20%;
-    padding-left: 10%;
+    padding-left: 20%;
+    padding-right: 20%;
+    font-weight: 800;
 }
 
 .Carrousel-Slide-1-Container-Subtitle{
     color:white;
     font-family: Helvetica;
-    padding-left: 10%;
+    padding-left: 20%;
+    padding-right: 20%;
+    font-weight: 500;
 }
 
 
 .Carrousel-Slide-1-Container-Text{
     color:white;
     font-family: sans-serif;
-    padding-left: 10%;
+    padding-left: 20%;
+    padding-right: 20%;
 }
+
+
+#Carrousel-Slide-2{
+    background-image: url(https://images.pexels.com/photos/10273536/pexels-photo-10273536.jpeg?cs=srgb&dl=pexels-enzo-mu%C3%B1oz-10273536.jpg&fm=jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
 
 
 
