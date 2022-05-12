@@ -40,7 +40,7 @@
 .Content-Container-Carrousel-Container-Adv-1-Title{
     color:white;
     font-family: Helvetica;
-    padding-top: 10%;
+    padding-top: 20%;
     padding-left: 10%;
     
 
@@ -60,15 +60,23 @@
     
 }
 
+.Content-Container-Carrousel-Interaction{
+    display: flex;
+    position: absolute;
+    top: 429px;
+    width: 100%;
+    justify-content: center;
+}
+
 .Content-Container-Carrousel-Left-Img{
     width: 60px;
     -webkit-transform: rotate(180deg);
-    padding-left: 5%;
+    padding-left: 10%;
 }
 
 
 .Content-Container-Carrousel-Left-Right-Img{
     width: 60px;
     color:rgb(190, 190, 190);
-    padding-right: 5%;
+    padding-left: 80%;
 }
