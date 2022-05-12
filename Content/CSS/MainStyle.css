@@ -20,7 +20,13 @@ body {
     background-image: linear-gradient( #913611 , #3a1101);
     z-index: 100;
 }
-
+.Header-Background{
+    background-image: linear-gradient( #913611 , #3a1101);
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    z-index: -1;
+}
 .Header-Imagen {
     height: 2rem;
     width: auto;

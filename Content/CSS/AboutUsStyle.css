@@ -36,6 +36,7 @@
     width: 80%;
     border-radius: 30px;
     margin-top: 2rem;
+    margin-bottom: 2rem;
     height: 0.6rem;
     background-image: linear-gradient( #913611 , #3a1101);
 }
@@ -43,13 +44,27 @@
 .Content-BusinessValues-Container{
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .Content-BusinessValues-Container-Item{
     display: flex;
     flex-direction: column;
+    width: 30%;
+    align-items: center;
+    justify-content: center;
 }
-
+.Content-BusinessValues-Container-Item-Icon{
+    width: 80%;
+}
+.Content-BusinessValues-Container-Item-Text{
+    text-align: center;
+    color: #3a1101;
+    font-family: 'Tommy personal use';
+}
 .Content-InteractiveImageDescription-Container:hover  .Content-InteractiveImageDescription-Container-Background{opacity: 50%;}
 .Content-InteractiveImageDescription-Container:hover .Content-InteractiveImageDescription-Container-Header-front{opacity: 0%;}
 .Content-InteractiveImageDescription-Container:hover .Content-InteractiveImageDescription-Container-Text{opacity: 100%;}
