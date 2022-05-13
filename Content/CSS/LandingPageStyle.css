@@ -1,413 +1,182 @@
-.Content{
-    height: 1000px;
-    width: 100%;
-    margin-top: 5rem;
+.Content {
+  height: 1000px;
+  width: 100%;
+  margin-top: 5rem;
+  padding-top: 0rem !important;
 }
 
-/*CARROUSEL*/
-@keyframes tonext{
-    75%{
-        left:0;
-    }
-    95% {
-        left: 100%;
-      }
-      98% {
-        left: 100%;
-      }
-      99% {
-        left: 0;
-      }
+.carousel {
+  position: relative;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+  margin-top: 26px;
 }
 
-@keyframes tostart {
-    75% {
-      left: 0;
-    }
-    95% {
-      left: -300%;
-    }
-    98% {
-      left: -300%;
-    }
-    99% {
-      left: 0;
-    }
-  }
-
-  @keyframes snap {
-    96% {
-      scroll-snap-align: center;
-    }
-    97% {
-      scroll-snap-align: none;
-    }
-    99% {
-      scroll-snap-align: none;
-    }
-    100% {
-      scroll-snap-align: center;
-    }
-  }
-
-ol,li {
-    list-style: none;
-    margin:0;
-    padding:0;
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
 }
 
-.Content-Carrousel{
-    position: relative;
-    filter: drop-shadow(0 0 10px #0003);
-    perspective: 100px;
-    height: fit-content;
+.carousel-item-image {
+  height: 500px;
 }
 
-.Content-Carrousel-View{
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    overflow-x: scroll;
-    counter-reset: item;
-    scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
-    height: fit-content;
-    overflow-y: hidden;
-    overflow-x: hidden;
+.carousel-open:checked+.carousel-item {
+  position: static;
+  opacity: 100;
 }
 
-.Carrousel-Slide{
-    position: relative;
-    flex: 0 0 100%;
-    width: 100%;
-    background-color: #f99;
-    counter-increment: item;
-    height: 800px;
-}
-
-@media screen and (max-width:600px){
-    .Carrousel-Slide{
-        height: 400px;
-    }
-}
-
-.Carrousel-Slide ::before{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate3d(-50%,-40%,70px);
-    color: #fff;
-    font-size: 2em;
-    
-}
-
-.Carorusel-Snapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 150%;
-    height: 100%;
-    scroll-snap-align: center;
-  }
-  
-  @media (hover: hover) {
-    .Carrousel-Snapper {
-      animation-name: tonext, snap;
-      animation-timing-function: ease;
-      animation-duration: 4s;
-      animation-iteration-count: infinite;
-    }
-  
-    .Carrousel-Slide:last-child .Content-Carrousel-Snapper {
-      animation-name: tostart, snap;
-    }
-  }
-  
-  @media (prefers-reduced-motion: reduce) {
-    .Carrousel-Snapper {
-      animation-name: none;
-    }
-  }
-
-.Content-Carrousel:hover .Carrousel-Snapper,
-.Content-Carrousel:focus-within .Carorusel-Snapper {
-  animation-name: none;
-}
-
-.Content-Carrousel::before,
-.Content-Carrousel::after,
-.Carrousel-Previous,
-.Carrousel-Next {
+.carousel-item-image-Container {
   position: absolute;
-  top: 0;
-  margin-top: 22%;
-  width: 8rem;
-  height: 4rem;
-  transform: translateY(-50%);
-  font-size: 0;
-  outline: 0;
+  display: flex;
+  flex-direction: column;
+  top: 10%;
+  left: 10%;
+  align-items: center;
+  justify-content: center;
 }
 
-.Content-Carrousel::before,
-.Carrousel-Previous {
-  left: -1rem;
+.carousel-item-image-Header {
+  font-family: 'Tommy personal use';
+  font-size: 3rem;
+  color: white;
+  text-align: left;
+  margin-bottom: 1rem;
+  text-align: left;
+  width: 100%;
 }
 
-.Content-Carrousel::after,
-.Carrousel-Next {
-  right: -1rem;
+.carousel-item-image-Text {
+  font-family: Helvetica, sans-serif;
+  text-align: left;
+  color: #fff;
+  font-size: 2rem;
+  margin-top: 0rem;
+  text-align: left;
+  width: 100%;
+  margin-bottom: 0.3rem;
+}
+.carousel-item {
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: opacity 0.6s ease-out;
+  transition: opacity 0.6s ease-out;
 }
 
-.Content-Carrousel::before,
-.Content-Carrousel::after {
-  content: '';
-  z-index: 1;
-  background-size: 1.5rem 1.5rem;
-  background-repeat: no-repeat;
-  background-position: center center;
-  color: rgb(190, 190, 190);
-  font-size: 2.5rem;
-  line-height: 2rem;
+.carousel-item img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.carousel-control {
+  background: rgba(0, 0, 0, 0.28);
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  font-size: 40px;
+  height: 40px;
+  line-height: 35px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  cursor: pointer;
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
   text-align: center;
-  pointer-events: none;
+  width: 40px;
+  z-index: 10;
 }
 
-.Content-Carrousel::before {
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,50 80,100 80,0' fill='%23fff'/%3E%3C/svg%3E");
-  padding-left: -5%;
+.carousel-control.prev {
+  left: 2%;
 }
 
-.Content-Carrousel::after {
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E");
-  padding-right: -5%;
+.carousel-control.next {
+  right: 2%;
 }
 
-
-#Carrousel-Slide-1{
-    background-image: url(https://img.freepik.com/foto-gratis/coctel-naranja-cafe-sobre-superficie-blanca_1150-44206.jpg?t=st=1652283644~exp=1652284244~hmac=7a0e4942de29d1d766434141f91262ddfdbf7c1f815f13399de60c13f472cafc&w=1380);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    
+.carousel-control:hover {
+  background: rgba(0, 0, 0, 0.8);
+  color: #aaaaaa;
 }
 
-
-
-#Carrousel-Slide-1-Container-Title{
-    color:white;
-    padding-top: 20%;
-    padding-left: 20%;
-    padding-right: 20%;
+#carousel-1:checked~.control-1,
+#carousel-2:checked~.control-2,
+#carousel-3:checked~.control-3 {
+  display: block;
 }
 
-#Carrousel-Slide-1-Container-Subtitle{
-    color:white;
-    padding-left: 20%;
-    padding-right: 20%;
+.carousel-indicators {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 2%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 10;
 }
 
-
-#Carrousel-Slide-1-Container-Text{
-    color:white;
-    padding-left: 20%;
-    padding-right: 20%;
+.carousel-indicators li {
+  display: inline-block;
+  margin: 0 5px;
 }
 
-
-#Carrousel-Slide-2{
-    background-image: url(https://images.pexels.com/photos/10273536/pexels-photo-10273536.jpeg?cs=srgb&dl=pexels-enzo-mu%C3%B1oz-10273536.jpg&fm=jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+.carousel-bullet {
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 35px;
 }
 
-#Carrousel-Slide-2-Container-Title{
-  color:white;
-  padding-top: 20%;
-  padding-left: 20%;
-  padding-right: 20%;
+.carousel-bullet:hover {
+  color: #aaaaaa;
 }
 
-#Carrousel-Slide-2-Container-Subtitle{
-  color:white;
-  padding-left: 20%;
-  padding-right: 20%;
+#carousel-1:checked~.control-1~.carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2:checked~.control-2~.carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3:checked~.control-3~.carousel-indicators li:nth-child(3) .carousel-bullet {
+  color: #428bca;
 }
 
-#Carrousel-Slide-2-Container-Text{
-  color:white;
-  padding-left: 20%;
-  padding-right: 20%;
+#title {
+  width: 100%;
+  position: absolute;
+  padding: 0px;
+  margin: 0px auto;
+  text-align: center;
+  font-size: 27px;
+  color: rgba(255, 255, 255, 1);
+  font-family: 'Open Sans', sans-serif;
+  z-index: 9999;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
 }
-
-#Carrousel-Slide-3-Container-Title{
-  color:white;
-  padding-top: 20%;
-  padding-left: 20%;
-  padding-right: 20%;
-}
-
-#Carrousel-Slide-3-Container-Subtitle{
-  color:white;
-  padding-left: 20%;
-  padding-right: 20%;
-}
-
-#Carrousel-Slide-3-Container-Text{
-  color:white;
-  padding-left: 20%;
-  padding-right: 20%;
-}
-
-/*END CARROUSSEL*/
 
 /*FIXED ADVERTISE*/
-/*Esta parte es problable que no sirva*/
-.RestContent{
-  position:relative;
+.RestContent {
+  position: relative;
   margin-top: 800px;
   padding-top: 20px;
 }
 
 
-@media screen and (max-width:600px){
-  .RestContent{
-      margin-top: 400px;
+@media screen and (max-width:600px) {
+  .RestContent {
+    margin-top: 400px;
   }
 }
 /*hasta aquí*/
 
 
-.FixedAdv{
-    display: flex;
-    justify-content: space-around;
-    flex-grow: 3;
-    align-content: center;
+.FixedAdv {
+  display: flex;
+  justify-content: space-between;
 }
 
-.FixedAdv-Container{
-  padding-left: 10%;
-  padding-right: 10%;
-}
-
-#FixedAdv-Left{
-  background-image: url(https://images.unsplash.com/photo-1539037116277-4db20889f2d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-#FixedAdv-Right{
-  background-image: url();
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.Advertise-Title{
-  font-family: Helvetica;
-  font-weight: 800;
-}
-
-.Advertise-Subtitle{
-  font-family: Helvetica;
-  font-weight: 500;
-}
-
-.Advertise-Text{
-  font-family: sans-serif;
-}
-
-#FixedAdv-Left-Title{
-  color:#E1B07E;
-}
-
-#FixedAdv-Left-Subtitle{
-  color:#441C17;
-}
-
-
-
-
-
-/*END FIXED ADVERTISE*/
-
-
-
-
-
-
-
-/*
-.Content-Carrousel{
-    align-items: center;
-    height: 858px;
-}
-
-.Content-Carrousel-Container-Adv{
-    background-color: bisque;
-    width: 100%;
-
-}
-
-.Content-Carrousel-Container-Adv-1{
-    background-image: url(https://img.freepik.com/foto-gratis/coctel-naranja-cafe-sobre-superficie-blanca_1150-44206.jpg?t=st=1652283644~exp=1652284244~hmac=7a0e4942de29d1d766434141f91262ddfdbf7c1f815f13399de60c13f472cafc&w=1380);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 858px;
-
-}
-
-.Content-Carrousel-Container-Adv-1{
-    padding-left: 0%;
-
-}
-
-
-.Content-Carrousel-Container-Adv-1-Title{
-    color:white;
-    font-family: Helvetica;
-    padding-top: 20%;
-    padding-left: 10%;
-    
-
-}
-
-.Content-Carrousel-Container-Adv-1-Subtitle{
-    color:white;
-    font-family: Helvetica;
-    padding-left: 10%;
-}
-
-.Content-Carrousel-Container-Adv-1-Text{
-    color:white;
-    font-family: sans-serif;
-    padding-left: 10%;
-    
-    
-}
-
-.Content-Carrousel-Interaction{
-    display: flex;
-    position: absolute;
-    top: 429px;
-    width: 100%;
-    justify-content: center;
-}
-
-.Content-Carrousel-Left-Img{
-    width: 60px;
-    -webkit-transform: rotate(180deg);
-    padding-left: 10%;
-}
-
-
-.Content-Carrousel-Left-Right-Img{
-    width: 60px;
-    color:rgb(190, 190, 190);
-    padding-left: 80%;
+@font-face {
+  src: url(../Fonts/MADE\ Tommy\ Soft\ Medium\ PERSONAL\ USE.otf);
+  font-family: 'Tommy personal use';
 }

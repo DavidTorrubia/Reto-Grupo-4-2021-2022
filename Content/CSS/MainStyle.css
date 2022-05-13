@@ -129,8 +129,6 @@ body {
     border: none;
     background-color: transparent;
     height: 100%;
-    padding-left: 1rem;
-    padding-right: 1rem;
     transition: 0.3s;
 }
 
@@ -186,8 +184,11 @@ body {
     border: transparent;
     font-family: 'Tommy personal use';
     width: 100%;
-    justify-content: left;
+    justify-content: center;
+    text-align: center;
     transition: 0.3s;
+    height: min-content;
+    box-sizing: border-box;
 }
 
 .Header-Item-Right-Container-UserDropButton-Content {
