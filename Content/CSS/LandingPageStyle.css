@@ -194,19 +194,7 @@ ol,li {
     
 }
 
-.Advertise-Title{
-  font-family: Helvetica;
-  font-weight: 800;
-}
 
-.Advertise-Subtitle{
-  font-family: Helvetica;
-  font-weight: 500;
-}
-
-.Advertise-Text{
-  font-family: sans-serif;
-}
 
 #Carrousel-Slide-1-Container-Title{
     color:white;
@@ -277,6 +265,7 @@ ol,li {
 /*END CARROUSSEL*/
 
 /*FIXED ADVERTISE*/
+/*Esta parte es problable que no sirva*/
 .RestContent{
   position:relative;
   margin-top: 800px;
@@ -289,10 +278,55 @@ ol,li {
       margin-top: 400px;
   }
 }
+/*hasta aquí*/
+
 
 .FixedAdv{
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 3;
+    align-content: center;
+}
+
+.FixedAdv-Container{
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+#FixedAdv-Left{
+  background-image: url(https://images.unsplash.com/photo-1539037116277-4db20889f2d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#FixedAdv-Right{
+  background-image: url();
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.Advertise-Title{
+  font-family: Helvetica;
+  font-weight: 800;
+}
+
+.Advertise-Subtitle{
+  font-family: Helvetica;
+  font-weight: 500;
+}
+
+.Advertise-Text{
+  font-family: sans-serif;
+}
+
+#FixedAdv-Left-Title{
+  color:#E1B07E;
+}
+
+#FixedAdv-Left-Subtitle{
+  color:#441C17;
 }
 
 
