@@ -1,10 +1,3 @@
-.Content {
-    height: 2000px;
-    width: 100%;
-    background-color: #e5be9e3a;
-    margin-top: 5rem;
-    padding-top: 1rem;
-}
 
 .Content-Menu-Types-Container-Item {
     position: relative;
@@ -23,7 +16,22 @@
     transition: opacity 0.5s;
 
 }
+.Content-Menu-SlideUp{
+    position: fixed;
+    right: 1rem;
+    border-radius: 30px;
+    border: transparent;
+    background-color: #682307;
+    height: 3rem;
+    z-index: 999;
+    top: 80%;
+    transition: 1s;
+}
+.Content-Menu-SlideUp:hover {height: 3.5rem;}
 
+.Content-Menu-SlideUp-Image{
+ height: 80%;
+}
 .Content-Menu-Types-Container-Item1:hover .Content-Menu-Types-Container-Item1-Image {
     opacity: 60%;
 }
