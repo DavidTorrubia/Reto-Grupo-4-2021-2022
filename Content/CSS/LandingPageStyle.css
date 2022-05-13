@@ -277,11 +277,24 @@ ol,li {
 /*END CARROUSSEL*/
 
 /*FIXED ADVERTISE*/
-@media Content-Carrousel-View and (max-width:600px){
-  .FixedAdvertise{
+.RestContent{
+  position:relative;
+  margin-top: 800px;
+  padding-top: 20px;
+}
+
+
+@media screen and (max-width:600px){
+  .RestContent{
       margin-top: 400px;
   }
 }
+
+.FixedAdv{
+  display: flex;
+  justify-content: space-between;
+}
+
 
 
 
