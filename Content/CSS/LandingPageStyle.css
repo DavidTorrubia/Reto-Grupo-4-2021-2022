@@ -5,7 +5,6 @@
 }
 
 /*CARROUSEL*/
-
 @keyframes tonext{
     75%{
         left:0;
@@ -62,7 +61,6 @@ ol,li {
     filter: drop-shadow(0 0 10px #0003);
     perspective: 100px;
     height: fit-content;
-
 }
 
 .Content-Carrousel-View{
@@ -77,6 +75,8 @@ ol,li {
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
     height: fit-content;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 .Carrousel-Slide{
@@ -85,7 +85,7 @@ ol,li {
     width: 100%;
     background-color: #f99;
     counter-increment: item;
-    height: 848px;
+    height: 800px;
 }
 
 @media screen and (max-width:600px){
@@ -108,7 +108,7 @@ ol,li {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 150%;
     height: 100%;
     scroll-snap-align: center;
   }
@@ -144,7 +144,7 @@ ol,li {
   position: absolute;
   top: 0;
   margin-top: 22%;
-  width: 4rem;
+  width: 8rem;
   height: 4rem;
   transform: translateY(-50%);
   font-size: 0;
@@ -177,12 +177,12 @@ ol,li {
 
 .Content-Carrousel::before {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,50 80,100 80,0' fill='%23fff'/%3E%3C/svg%3E");
-  padding-left: 5%;
+  padding-left: -5%;
 }
 
 .Content-Carrousel::after {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E");
-  padding-right: 5%;
+  padding-right: -5%;
 }
 
 
@@ -194,27 +194,36 @@ ol,li {
     
 }
 
-.Carrousel-Slide-1-Container-Title{
+.Advertise-Title{
+  font-family: Helvetica;
+  font-weight: 800;
+}
+
+.Advertise-Subtitle{
+  font-family: Helvetica;
+  font-weight: 500;
+}
+
+.Advertise-Text{
+  font-family: sans-serif;
+}
+
+#Carrousel-Slide-1-Container-Title{
     color:white;
-    font-family: Helvetica;
     padding-top: 20%;
     padding-left: 20%;
     padding-right: 20%;
-    font-weight: 800;
 }
 
-.Carrousel-Slide-1-Container-Subtitle{
+#Carrousel-Slide-1-Container-Subtitle{
     color:white;
-    font-family: Helvetica;
     padding-left: 20%;
     padding-right: 20%;
-    font-weight: 500;
 }
 
 
-.Carrousel-Slide-1-Container-Text{
+#Carrousel-Slide-1-Container-Text{
     color:white;
-    font-family: sans-serif;
     padding-left: 20%;
     padding-right: 20%;
 }
@@ -225,8 +234,72 @@ ol,li {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    
 }
+
+#Carrousel-Slide-2-Container-Title{
+  color:white;
+  padding-top: 20%;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+#Carrousel-Slide-2-Container-Subtitle{
+  color:white;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+#Carrousel-Slide-2-Container-Text{
+  color:white;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+#Carrousel-Slide-3-Container-Title{
+  color:white;
+  padding-top: 20%;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+#Carrousel-Slide-3-Container-Subtitle{
+  color:white;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+#Carrousel-Slide-3-Container-Text{
+  color:white;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+/*END CARROUSSEL*/
+
+/*FIXED ADVERTISE*/
+.RestContent{
+  position:relative;
+  margin-top: 800px;
+  padding-top: 20px;
+}
+
+
+@media screen and (max-width:600px){
+  .RestContent{
+      margin-top: 400px;
+  }
+}
+
+.FixedAdv{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+
+
+/*END FIXED ADVERTISE*/
 
 
 

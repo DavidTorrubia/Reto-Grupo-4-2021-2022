@@ -73,6 +73,11 @@
                                 class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Submit">
                         </form>
                     </div>
+                    <div>
+                        <a type="button" class="Header-Item-Right-Container-UserDropButton-Content-Button UserConfig"
+                            id="Header-Item-Right-Container-UserDropButton-Content-UserConfig "
+                            href="../HTML/UserPage.html">User Config</a>
+                    </div>
                     <button type="button" class="Header-Item-Right-Container-UserDropButton-Content-Button"
                         id="Header-Item-Right-Container-UserDropButton-Content-Log off"> Log off</button>
                 </div>
@@ -82,36 +87,39 @@
         </div>
     </div>
     <div class="Content">
-        <button class="Content-Menu-SlideUp" type="button" id="Content-Menu-SlideUp" onclick="ScrollUp()"><img src="../Icons/Menu/UpArrow.png" class="Content-Menu-SlideUp-Image"></button>
+        <button class="Content-Menu-SlideUp" type="button" id="Content-Menu-SlideUp" onclick="ScrollUp()"><img
+                src="../Icons/Menu/UpArrow.png" class="Content-Menu-SlideUp-Image"></button>
         <h1 class="Content-Header"> Types </h1>
         <div class="Content-Menu-Types-Container">
-            <div class="Content-Menu-Types-Container-Item1 Content-Menu-Types-Container-Item">
+            <div class="Content-Menu-Types-Container-Item1 Content-Menu-Types-Container-Item" onclick="ScrollToDyC()">
                 <img src="../Images/menu/TakeAwayImage.png"
                     class="Content-Menu-Types-Container-Images Content-Menu-Types-Container-Item1-Image">
                 <h1 class="Content-Menu-Types-Container-Images-Text Content-Menu-Types-Container-Item1-text">Drinks <br>
-                    & <br> Coffe</h1>
+                    & <br> Coffee</h1>
             </div>
-            <div class="Content-Menu-Types-Container-Item2 Content-Menu-Types-Container-Item">
+            <div class="Content-Menu-Types-Container-Item2 Content-Menu-Types-Container-Item"
+                onclick="ScrollToPastries()">
                 <img src="../Images/menu/cheesecake.png"
                     class="Content-Menu-Types-Container-Images Content-Menu-Types-Container-Item2-Image">
                 <h1 class="Content-Menu-Types-Container-Images-Text Content-Menu-Types-Container-Item2-text">Pastries
                 </h1>
             </div>
-            <div class="Content-Menu-Types-Container-Item3 Content-Menu-Types-Container-Item">
+            <div class="Content-Menu-Types-Container-Item3 Content-Menu-Types-Container-Item"
+                onclick="ScrollToSnacks()">
                 <img src="../Images/menu/Snacks.png"
                     class="Content-Menu-Types-Container-Images Content-Menu-Types-Container-Item3-Image">
                 <h1 class="Content-Menu-Types-Container-Images-Text Content-Menu-Types-Container-Item3-text">Snacks</h1>
             </div>
         </div>
-        <h1 class="Content-Header"> Drinks & Coffe </h1>
+        <h1 class="Content-Header" id="Menu-Drinks-Coffee"> Drinks & Coffe </h1>
         <div class="Content-Products-Container-DrinksCoffe">
 
         </div>
-        <h1 class="Content-Header"> Pastries </h1>
+        <h1 class="Content-Header" id="Menu-Pastries"> Pastries </h1>
         <div class="Content-Products-Container-Pastries">
 
         </div>
-        <h1 class="Content-Header"> Snacks </h1>
+        <h1 class="Content-Header" id="Menu-Snacks"> Snacks </h1>
         <div class="Content-Products-Container-Snacks">
 
         </div>
