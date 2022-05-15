@@ -19,3 +19,22 @@ function CarrouselMovement(direction){
 
     }
 }
+
+/**Script google maps from: https://developers.google.com/maps/documentation/javascript/adding-a-google-map#maps_add_map-html 
+*¡NO SE UTILIZA, HAY QUE PAGAR!
+function initMap() {
+    // The location of Ecoffe (Centro San Valero)
+    const ecoffe = { lat: 41.66981, lng: -0.87883 };
+    // The map, centered at Ecoffe
+    const map = new google.maps.Map(document.getElementById("Map"), {
+      zoom: 4,
+      center: ecoffe,
+    });
+    // The marker, positioned at Ecoffe
+    const marker = new google.maps.Marker({
+      position: ecoffe,
+      Map: map,
+    });
+  }
+  window.initMap = initMap;
+  */
