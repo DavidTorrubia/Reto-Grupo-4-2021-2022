@@ -207,6 +207,7 @@
 }
 
 .Locations {
+  margin-top: 20px;
   display: flex;
   justify-content: space-between;
 }
@@ -222,13 +223,25 @@
 
 .Map-image{
   width: 100%;
-  margin-top: 20px;
   object-fit: cover;
 }
 
 .Locations-Text{
-  height: 400px;
-  width: 50%;
   margin-top: 20px;
+  width: 50%;
+  background-color: white;
+  padding-left: 5%;
+  font-family: 'Tommy personal use';
+  padding-top: 5%;
+}
+
+.Locations_Text-Title{
+  font-size: larger;
+  margin: 0;
+}
+
+.Locations_Text-Subtitle{
+  font-size: medium;
+  margin: 0;
 }
 
