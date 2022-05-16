@@ -39,6 +39,9 @@
   left: 10%;
   align-items: center;
   justify-content: center;
+  background-color: rgba(0, 0, 0, 0.429);
+  border-radius: 30px;
+  padding: 0.7rem 1rem 0.7rem 1rem;
 }
 
 .carousel-item-image-Header {
@@ -47,6 +50,7 @@
   color: white;
   text-align: left;
   margin-bottom: 1rem;
+  margin-top: 1rem;
   text-align: left;
   width: 100%;
 }
@@ -61,6 +65,7 @@
   width: 100%;
   margin-bottom: 0.3rem;
 }
+
 .carousel-item {
   position: absolute;
   opacity: 0;
@@ -166,7 +171,7 @@
   justify-content: space-between;
 }
 
-.FixedAdv-Container{
+.FixedAdv-Container {
   display: block;
   height: auto;
   width: 50%;
@@ -179,8 +184,22 @@
   color: white;
   font-family: 'Tommy personal use';
 }
-
-#FixedAdv-Left{
+.Advertise-Title{
+  font-size: 50px;
+  background: linear-gradient(#ffffff, #bcbcbc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Tommy personal use';
+  margin-bottom: 0;
+}
+.Advertise-Text{
+  font-size: 20px;
+  background: linear-gradient(#ffffff, #bcbcbc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Tommy personal use';
+}
+#FixedAdv-Left {
   background-image: url(https://images.unsplash.com/photo-1591375198043-606387f65389?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
   flex-grow: 3;
   max-width: 100%;
@@ -193,7 +212,7 @@
   margin-top: 20px;
 }
 
-#FixedAdv-Right{
+#FixedAdv-Right {
   background-image: url(https://images.unsplash.com/photo-1551462577-9aaf3ff5d927?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80);
   flex-grow: 3;
   max-width: 100%;
@@ -212,7 +231,7 @@
   justify-content: space-between;
 }
 
-.map{
+.map {
   display: inline;
   flex-direction: column;
   align-items: center;
@@ -221,12 +240,12 @@
   margin-top: 20px;
 }
 
-.Map-image{
+.Map-image {
   width: 100%;
   object-fit: cover;
 }
 
-.Locations-Text{
+.Locations-Text {
   margin-top: 20px;
   width: 50%;
   background-color: white;
@@ -235,13 +254,12 @@
   padding-top: 5%;
 }
 
-.Locations_Text-Title{
+.Locations_Text-Title {
   font-size: larger;
   margin: 0;
 }
 
-.Locations_Text-Subtitle{
+.Locations_Text-Subtitle {
   font-size: medium;
   margin: 0;
 }
-
