@@ -64,7 +64,6 @@
     background-color:white;
     border-color: white;
     font-family: 'Tommy personal use';
-    margin: 0% 5% 5% 10%;
     border-style: solid;
     border-width: 6px;
     border-color: white;
@@ -73,23 +72,26 @@
 .Profile-Settings{
     grid-column: x1 / x2;
     grid-row: y0 / y1;
-    padding-left: 86%;
+    margin-left: 86%;
 }
 
 .Profile-UserInfo-Name{
     font-size: medium;
+    padding-left: 10%;
 }
 
 .Profile-UserInfo-Email{
     font-size: smaller;
+    padding-left: 10%;
 }
 
 .Profile-UserInfo-MainDirection{
     font-size: x-small;
+    padding-left: 10%;
 }
 
 .Profile-Settings-Image{
-width: 30px;
+    width: 30px;
 }
 
 .Profile-Settings-Container{
