@@ -235,30 +235,26 @@
   justify-content: space-between;
   box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
   margin-bottom: 1rem;
+  max-height: 20rem;
 }
 
 .map {
-  display: inline;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  width:50%;
-  
+  height: 20rem;
 }
 
 .Map-image {
-  width: 100%;
   height: 100%;
 }
 
 .Locations-Container {
-  width: 50%;
+  width: 100%;
   background-color: white;
   font-family: 'Tommy personal use';
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
-  max-height: 30rem;
+  box-sizing: border-box;
 }
 .Locations-Container-item{
   display: flex;
@@ -290,20 +286,24 @@
   .Locations{
     flex-direction: column;
     width: 100%;
-  }
-  .map{
-    width: 100%;
-  }
-  .Map-image{
-    height: 100%;
-    box-sizing: border-box;
+    max-height: none;
   }
   .Locations-Container{
     width: 100%;
     box-sizing: border-box;
-    min-height: 5rem;
-    max-height: 10rem;
+    min-height: 15rem;
+    max-height: 15rem;
     }
+  .map{
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+  }
+  .Map-image{
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 600px) {
