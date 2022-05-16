@@ -1,0 +1,65 @@
+
+
+.Content{
+    display:flex;
+    
+}
+
+.Profile.Container{
+    width: 50%;
+}
+
+.Profile-Container-Banner{
+    margin:0px
+  }
+  .Grid-Profile{
+      display: grid;
+      grid-template-columns: [x0] 24% [x1] 60% [x2] 6% [x3];
+      padding: 15px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+  }
+  
+  #Profile-Image{
+      grid-column: x0 / x1;
+      margin-left: auto;
+      margin-right: auto;
+      z-index: 2;
+  }
+  
+  #Profile-Image-Img{
+      width:100%;
+      border-style: solid;
+      border-width: 6px;
+      border-color: white;
+      
+  }
+
+  
+  #Profile-UserName{
+      background-color:white;
+      grid-column: x1 / x2;
+      border-color: white;
+  }
+  
+  h1,h2{
+      font-family: 'Tommy personal use', sans-serif;
+      font-weight: 300;
+  }
+
+  
+  #profileSettings{
+      grid-column: x2 / x3;
+      margin-top: auto;
+      margin-bottom: auto;
+  }
+  
+  #imgSettings{
+    width: 35px;
+  }
+  
+  .Profile-Options{
+    width: 50%;  
+    height: 2rem;
+    background-color: gray;
+  }
