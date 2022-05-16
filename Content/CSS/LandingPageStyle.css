@@ -174,6 +174,7 @@
   justify-content: space-between;
   margin-top: 1.2rem;
   width: 100%;
+  min-height: 20rem;
 }
 
 .FixedAdv-Container {
@@ -189,55 +190,93 @@
   color: white;
   font-family: 'Tommy personal use';
 }
-.Advertise-Title{
+
+.FixedAdv-Container-Text {
+  width: 100%;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(#ffffff00, #000000);
+  justify-content: center;
+}
+
+.Advertise-Title {
   font-size: 50px;
   background: linear-gradient(#ffffff, #bcbcbc);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: 'Tommy personal use';
   margin-bottom: 0;
+  transition: 0.3s;
 }
-.Advertise-Text{
+
+.Advertise-Text {
   font-size: 20px;
   background: linear-gradient(#ffffff, #bcbcbc);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: 'Tommy personal use';
+  transition: 0.3s;
 }
+
+#FixedAdv-Left:hover .Advertise-Title{
+  font-size: 60px;
+}
+#FixedAdv-Left:hover .Advertise-Text{
+  font-size: 30px;
+}
+#FixedAdv-Right:hover .Advertise-Title{
+  font-size: 60px;
+}
+#FixedAdv-Right:hover .Advertise-Text{
+  font-size: 30px;
+}
+
+
 #FixedAdv-Left {
   background-image: url(https://images.unsplash.com/photo-1591375198043-606387f65389?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
   flex-grow: 3;
   max-width: 100%;
-  max-height: 300px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  padding-top: 5%;
-  padding-bottom: 10%;
-  
 }
 
 #FixedAdv-Right {
   background-image: url(https://images.unsplash.com/photo-1551462577-9aaf3ff5d927?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80);
   flex-grow: 3;
   max-width: 100%;
-  max-height: 300px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  padding-top: 5%;
-  padding-bottom: 12%;
+}
+.Content-LocationsButton{
+  width: 100%;
+  margin-top: 1.2rem;
+  background-color: #da843d3a;
+  border: transparent;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 .Locations {
   width: 100%;
-  margin-top: 1.2rem;
   display: flex;
   justify-content: space-between;
   box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
   margin-bottom: 1rem;
   max-height: 20rem;
+  margin-top: 1.2rem;
+  width: 95%;
 }
-
+.Content-LocationButton-Icon{
+  border-radius: 50%;
+  width: 4rem;
+  padding: 0.2rem 0.2rem 0.2rem 0.2rem;
+  margin-right: 42%;
+}
 .map {
   justify-content: center;
   height: 20rem;
@@ -246,26 +285,33 @@
 .Map-image {
   height: 100%;
 }
-
+.Content-Header {
+  font-family: 'Tommy personal use';
+  text-align: center;
+  color: #3a1101;
+}
 .Locations-Container {
   width: 100%;
-  background-color: white;
+  background-color:rgb(248, 227, 187);
   font-family: 'Tommy personal use';
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
   box-sizing: border-box;
 }
-.Locations-Container-item{
+
+.Locations-Container-item {
   display: flex;
   flex-direction: column;
   padding: 0.5rem 0.5rem 0.5rem 0.5rem;
   transition: 0.3s;
 }
-.Locations-Container-item:hover{
+
+.Locations-Container-item:hover {
   background-color: rgba(0, 0, 0, 0.093);
 }
-.Locations-Container-Header{
+
+.Locations-Container-Header {
   font-size: larger;
   margin: 0;
 }
@@ -276,30 +322,44 @@
 }
 
 @media only screen and (max-width: 600px) {
+  .carousel-item-image-Header {font-size: 1.4rem;}
+
+  .carousel-item-image-Text {font-size:1rem;}
+
   .FixedAdv {
     width: 100%;
     flex-direction: column;
   }
-  #FixedAdv-Right{
-    margin-top: 0.5rem
+
+  #FixedAdv-Right {
+    margin-top: 0.5rem;
   }
-  .Locations{
+  .carousel-item-image-Container{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+  }
+  .Locations {
     flex-direction: column;
     width: 100%;
     max-height: none;
   }
-  .Locations-Container{
+
+  .Locations-Container {
     width: 100%;
     box-sizing: border-box;
     min-height: 15rem;
     max-height: 15rem;
-    }
-  .map{
+  }
+
+  .map {
     width: 100%;
     height: auto;
     box-sizing: border-box;
   }
-  .Map-image{
+
+  .Map-image {
     box-sizing: border-box;
     height: auto;
     width: 100%;
