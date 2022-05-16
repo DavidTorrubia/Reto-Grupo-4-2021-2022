@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../CSS/LandingPageStyle.css">
     <link rel="stylesheet" href="../CSS/MainStyle.css">
     <script src="../JS/HeaderScripts.js"></script>
+    <script src="../JS/LandingPageScripts.js"></script>
     <title>Ecoffe - Landing Page</title>
 </head>
 
@@ -27,7 +28,6 @@
         </div>
         <a href="../HTML/LandingPage.html"><img class="Header-Logo" src="../Images/Logo/LogoWhite.png" alt="logo"></a>
         <div class="Header-Item Header-Item-Right-Container">
-
             <div class="Header-Item-Right-Container-UserDropButtonContainer">
                 <button type="button" class="Header-Item-Right-Container-UserDropButton"
                     id="Header-Item-Right-Container-UserDropButton" onclick="UserMenuDeploy()"><img
@@ -73,8 +73,13 @@
                                 class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Submit">
                         </form>
                     </div>
+                    <div>
+                        <a type="button" class="Header-Item-Right-Container-UserDropButton-Content-Button UserConfig"
+                            id="Header-Item-Right-Container-UserDropButton-Content-UserConfig "
+                            href="../HTML/UserPage.html">User Config</a>
+                    </div>
                     <button type="button" class="Header-Item-Right-Container-UserDropButton-Content-Button"
-                        id="Header-Item-Right-Container-UserDropButton-Content-Log off"> Log out</button>
+                        id="Header-Item-Right-Container-UserDropButton-Content-Log off"> Log off</button>
                 </div>
             </div>
             <a href="../HTML/ShoppingCart.html"><img class="Header-Imagen" src="../Icons/ShopppingListWhite.png" /></a>
@@ -144,11 +149,11 @@
             </div>
         </div>
 
-        <button type="button" class="Content-LocationsButton"> 
-            <img src="../Icons/LandingPage/deploy.gif" class="Content-LocationButton-Icon">
-            <h1 class="Content-Header">Find Us!</h1>
+        <button type="button" class="Content-LocationsButton" onclick="LocationMenuDeploy()"> 
+            <img src="../Icons/LandingPage/flecha.png" class="Content-LocationButton-Icon" id="Content-LocationButton-Icon">
+            <h1 class="Content-Header Content-LocationButton-Header">Find Us!</h1>
         </button>
-        <div class="Locations">
+        <div class="Locations" id="Locations">
             <div class="map" id="Map">
                 <img src="../Images/LandingPage/Locations.PNG" class="Map-image">
             </div>
