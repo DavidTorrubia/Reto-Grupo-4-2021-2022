@@ -21,9 +21,9 @@
 
 .Grid-Profile{
     display: grid;
-    grid-template-columns: [x0] 25% [x1] 75% [x2];
+    grid-template-columns: [x0] auto [x1] auto [x2];
     grid-template-rows: [y0] 15% [y1] 85% [y2];
-    justify-content: space-evenly;
+    justify-content: start;
 }
 
 @media only screen and (max-width: 600px) {
@@ -54,17 +54,26 @@
     border-style: solid;
     border-width: 6px;
     border-color: white;
+    min-width: 8rem;
 }
-  
-
   
 .Profile-UserInfo{
     grid-column: x1 / x2;
     grid-row: y1 / y2;
+    width: 100%;
     background-color:white;
     border-color: white;
     font-family: 'Tommy personal use';
-    padding: 0% 5% 5% 10%;
+    margin: 0% 5% 5% 10%;
+    border-style: solid;
+    border-width: 6px;
+    border-color: white;
+}
+
+.Profile-Settings{
+    grid-column: x1 / x2;
+    grid-row: y0 / y1;
+    padding-left: 86%;
 }
 
 .Profile-UserInfo-Name{
@@ -77,13 +86,6 @@
 
 .Profile-UserInfo-MainDirection{
     font-size: x-small;
-}
-  
-.Profile-Settings{
-    grid-column: x1 / x2;
-    grid-row: y0 / y1;
-    padding-left: 86%;
-
 }
 
 .Profile-Settings-Image{
