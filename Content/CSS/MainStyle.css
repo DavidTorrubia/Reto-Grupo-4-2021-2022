@@ -130,6 +130,7 @@ body {
     background-color: transparent;
     height: 100%;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 .Header-Item-Left-Container-Dropbutton-Content {
@@ -172,6 +173,7 @@ body {
     height: 100%;
     transition: 0.3s;
     padding: 0 0 0 0;
+    cursor: pointer;
 }
 
 .Header-Item-Right-Container-UserDropButton-Content-Button {

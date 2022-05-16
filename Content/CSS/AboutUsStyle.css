@@ -76,13 +76,58 @@
     align-items: center;
     justify-content: center;
 }
+
 .Content-BusinessValues-Container-Item-Icon{
     width: 38%;
 }
+
 .Content-BusinessValues-Container-Item-Text{
     text-align: center;
     color: #3a1101;
     font-family: 'Tommy personal use';
+}
+
+.Content-WorkType h1{
+    color: #3a1101; 
+    font-family: 'Tommy personal use'
+}
+
+.Content-WorkType h1{
+    text-align: center;
+}
+.Content-WorkType-Jobs{
+display: flex;
+flex-direction: row;
+text-align: center;
+justify-content: space-evenly;
+}
+
+.Content-WorkType-Jobs div{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    justify-content: space-evenly;
+}
+
+.Content-WorkType-Jobs p{
+    font-family: sans-serif;
+}
+
+.Content-WorkWithUs h1{
+font-family: 'Tommy personal use';
+color: #3a1101;
+text-align: center;
+padding-bottom: 1rem;
+}
+
+.Content-WorkWithUs p{
+    border: .5rem dashed #852a06;
+    border-radius: 25px;
+    padding: 3rem;
+}
+
+.Content-WorkWithUs{
+    padding-bottom: 2rem;
 }
 .Content-InteractiveImageDescription-Container:hover  .Content-InteractiveImageDescription-Container-Background{opacity: 50%;}
 .Content-InteractiveImageDescription-Container:hover .Content-InteractiveImageDescription-Container-Header-front{opacity: 0%;}
@@ -101,6 +146,7 @@
     font-size: 1rem;
     margin: 0 0 0 0;
 }
+
 @media only screen and (max-width: 600px) {
     .Content-InteractiveImageDescription-Container-Text{
         font-size: 0.7rem;
