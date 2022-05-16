@@ -263,19 +263,25 @@
 }
 .Locations {
   width: 100%;
-  display: flex;
+  display: none;
   justify-content: space-between;
   box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
   margin-bottom: 1rem;
   max-height: 20rem;
   margin-top: 1.2rem;
   width: 95%;
+  transition: 1s;
 }
 .Content-LocationButton-Icon{
   border-radius: 50%;
-  width: 4rem;
+  width: 3rem;
   padding: 0.2rem 0.2rem 0.2rem 0.2rem;
-  margin-right: 42%;
+  transform: rotate(0deg);
+  transition: 1s;
+}
+.Content-LocationButton-Header{
+  margin-right: 47%;
+  margin-left: auto;
 }
 .map {
   justify-content: center;
@@ -342,7 +348,7 @@
   }
   .Locations {
     flex-direction: column;
-    width: 100%;
+    width: 98%;
     max-height: none;
   }
 
