@@ -8,12 +8,14 @@
   width: 100%;
   margin-top: 5rem;
   padding-top: 0rem !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .carousel {
   position: relative;
   box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
-  margin-top: 26px;
 }
 
 .carousel-inner {
@@ -167,9 +169,11 @@
 
 /*FIXED ADVERTISE*/
 .FixedAdv {
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+  margin-top: 1.2rem;
+  width: 100%;
 }
 
 .FixedAdv-Container {
@@ -224,25 +228,13 @@
   padding-top: 5%;
   padding-bottom: 12%;
 }
-
-@media only screen and (max-width: 600px) {
-  .FixedAdv {
-    width: 100%;
-    flex-direction: column;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .FixedAdv-Container {
-    width: 100%;
-    margin-top: 0px;
-  }
-}
-
 .Locations {
-  margin-top: 20px;
+  width: 100%;
+  margin-top: 1.2rem;
   display: flex;
   justify-content: space-between;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+  margin-bottom: 1rem;
 }
 
 .map {
@@ -250,30 +242,73 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 50%;
-  margin-top: 20px;
+  width:50%;
+  
 }
 
 .Map-image {
   width: 100%;
-  object-fit: cover;
+  height: 100%;
 }
 
-.Locations-Text {
-  margin-top: 20px;
+.Locations-Container {
   width: 50%;
   background-color: white;
-  padding-left: 5%;
   font-family: 'Tommy personal use';
-  padding-top: 5%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  max-height: 30rem;
 }
-
-.Locations_Text-Title {
+.Locations-Container-item{
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  transition: 0.3s;
+}
+.Locations-Container-item:hover{
+  background-color: rgba(0, 0, 0, 0.093);
+}
+.Locations-Container-Header{
   font-size: larger;
   margin: 0;
 }
 
-.Locations_Text-Subtitle {
+.Locations-Container-Text {
   font-size: medium;
   margin: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .FixedAdv {
+    width: 100%;
+    flex-direction: column;
+  }
+  #FixedAdv-Right{
+    margin-top: 0.5rem
+  }
+  .Locations{
+    flex-direction: column;
+    width: 100%;
+  }
+  .map{
+    width: 100%;
+  }
+  .Map-image{
+    height: 100%;
+    box-sizing: border-box;
+  }
+  .Locations-Container{
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 5rem;
+    max-height: 10rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+  .FixedAdv-Container {
+    width: 100%;
+    margin-top: 0px;
+  }
 }
