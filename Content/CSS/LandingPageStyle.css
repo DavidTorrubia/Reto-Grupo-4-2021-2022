@@ -169,6 +169,7 @@
 .FixedAdv {
   display: flex;
   justify-content: space-between;
+  margin-top: 20px;
 }
 
 .FixedAdv-Container {
@@ -209,7 +210,7 @@
   background-position: center;
   padding-top: 5%;
   padding-bottom: 10%;
-  margin-top: 20px;
+  
 }
 
 #FixedAdv-Right {
@@ -222,7 +223,20 @@
   background-position: center;
   padding-top: 5%;
   padding-bottom: 12%;
-  margin-top: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .FixedAdv {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .FixedAdv-Container {
+    width: 100%;
+    margin-top: 0px;
+  }
 }
 
 .Locations {
