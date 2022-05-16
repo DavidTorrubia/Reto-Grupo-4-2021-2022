@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,7 @@
     <script src="../JS/HeaderScripts.js"></script>
     <title>Ecoffe - About us</title>
 </head>
+
 <body>
     <div class="Header">
         <div class="Header-Background"></div>
@@ -25,23 +27,55 @@
         </div>
         <a href="../HTML/LandingPage.html"><img class="Header-Logo" src="../Images/Logo/LogoWhite.png" alt="logo"></a>
         <div class="Header-Item Header-Item-Right-Container">
-
             <div class="Header-Item-Right-Container-UserDropButtonContainer">
                 <button type="button" class="Header-Item-Right-Container-UserDropButton"
                     id="Header-Item-Right-Container-UserDropButton" onclick="UserMenuDeploy()"><img
                         class="Header-Imagen Header-Image-Usericon" src="../Images/defaultUserImage.jpg" /></button>
                 <div class="Header-Item-Right-Container-UserDropButton-Content"
                     id="Header-Item-Right-Container-UserDropButton-Content">
-                    <div class="Header-Item-Right-Container-UserDropButton-Content-LogIn-Container">
-                        <button type="button" class="Header-Item-Right-Container-UserDropButton-Content-Button"
-                            id="Header-Item-Right-Container-UserDropButton-Content-LogIn"> Login</button>
-                        <div class="Header-Item-Right-Container-UserDropButton-Content-Button-Content">
-
-                        </div>
+                    <button type="button" class="Header-Item-Right-Container-UserDropButton-Content-Button"
+                        id="Header-Item-Right-Container-UserDropButton-Content-LogIn" onclick="LoginDeploy()">
+                        Login</button>
+                    <div class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu"
+                        id="Header-Item-Right-Container-UserDropButton-Content-LogInMenu">
+                        <form class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-form">
+                            <h3 class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Header">Email</h3>
+                            <input type="text"
+                                class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Input">
+                            <h3 class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Header">Password
+                            </h3>
+                            <input type="password"
+                                class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Input">
+                            <input type="submit" value="Log in"
+                                class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Submit">
+                        </form>
                     </div>
-                    <div class="Header-Item-Right-Container-UserDropButton-Content-SignUp-Container">
-                        <button type="button" class="Header-Item-Right-Container-UserDropButton-Content-Button"
-                        id="Header-Item-Right-Container-UserDropButton-Content-SignUp"> Sign Up</button>
+                    <button type="button" class="Header-Item-Right-Container-UserDropButton-Content-Button"
+                        id="Header-Item-Right-Container-UserDropButton-Content-SignUp" onclick="SignUpDeploy()"> Sign
+                        Up</button>
+                    <div class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu"
+                        id="Header-Item-Right-Container-UserDropButton-Content-SignUpMenu">
+                        <form class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-form">
+                            <h3 class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Header">Email</h3>
+                            <input type="text"
+                                class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Input">
+                            <h3 class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Header">Password
+                            </h3>
+                            <input type="password"
+                                class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Input">
+                            <h3 class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Header">Repeat
+                                Password
+                            </h3>
+                            <input type="password"
+                                class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Input">
+                            <input type="submit" value="Sign Up"
+                                class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Submit">
+                        </form>
+                    </div>
+                    <div>
+                        <a type="button" class="Header-Item-Right-Container-UserDropButton-Content-Button UserConfig"
+                            id="Header-Item-Right-Container-UserDropButton-Content-UserConfig "
+                            href="../HTML/UserPage.html">User Config</a>
                     </div>
                     <button type="button" class="Header-Item-Right-Container-UserDropButton-Content-Button"
                         id="Header-Item-Right-Container-UserDropButton-Content-Log off"> Log off</button>
@@ -50,24 +84,33 @@
             <a href="../HTML/ShoppingCart.html"><img class="Header-Imagen" src="../Icons/ShopppingListWhite.png" /></a>
             <img class="Header-Imagen Header-Imagen-Bandera" src="../Images/flags/ukflag.png" />
         </div>
-
-
     </div>
     <div class="Content">
-        <div class="Content-InteractiveImageDescription-Container">    
-            <img src="https://images.pexels.com/photos/9892384/pexels-photo-9892384.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="Content-InteractiveImageDescription-Container-Background">
-            <h1 class="Content-InteractiveImageDescription-Container-Header-front">What do we represent?</h1>
-            <p class="Content-InteractiveImageDescription-Container-Text">We are an ecofriendly café witch works with natural products. We doesnt use pesticides or similars to grow the coffee plants with the objective of improve the planet with the best taste. We support local farmers with the objective of reduce our carbon footprint, we also use biodegradables packages </p>
+        <div class="Content-InteractiveImageDescription-Container">
+
+            <img src="https://images.pexels.com/photos/9892384/pexels-photo-9892384.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                class="Content-InteractiveImageDescription-Container-Background">
+            <div class="Content-InteractiveImageDescription-Container-Aux">
+                <h1 class="Content-InteractiveImageDescription-Container-Header-front">What do we represent?</h1>
+            </div>
+            <p class="Content-InteractiveImageDescription-Container-Text">We are an ecofriendly café witch works
+                with natural products. We doesnt use pesticides or similars to grow the coffee plants with the
+                objective of improve the planet with the best taste. We support local farmers with the objective of
+                reduce our carbon footprint, we also use biodegradables packages </p>
+
+
         </div>
         <div class="Content-Separator"></div>
         <div class="Content-BusinessValues-Container">
             <div class="Content-BusinessValues-Container-Item">
-                <img class="Content-BusinessValues-Container-Item-Icon" src="../Icons/AboutUs/icons8-mundo-verde-96.png">
+                <img class="Content-BusinessValues-Container-Item-Icon"
+                    src="../Icons/AboutUs/icons8-mundo-verde-96.png">
                 <h1 class="Content-BusinessValues-Container-Item-Text">Eco-friendly</h1>
                 <p>We are in contact with the nature and the environment </p>
             </div>
             <div class="Content-BusinessValues-Container-Item">
-                <img class="Content-BusinessValues-Container-Item-Icon" src="../Icons/AboutUs/icons8-tarjeta-de-garantía-96.png">
+                <img class="Content-BusinessValues-Container-Item-Icon"
+                    src="../Icons/AboutUs/icons8-tarjeta-de-garantía-96.png">
                 <h1 class="Content-BusinessValues-Container-Item-Text">Quality</h1>
                 <p>We make our products with the best ingredients</p>
             </div>
@@ -81,14 +124,14 @@
     </div>
     <div class="Content-WorkType">
         <div class="Content-WorkType-Post">
-<img src="">
-            </div>
+            <img src="">
+        </div>
         <div class="Content-WorkType-Post">
-           <img src="">
-             </div>
+            <img src="">
+        </div>
         <div class="Content-WorkType-Post">
-<img src="">
-            </div>
+            <img src="">
+        </div>
     </div>
     <div class="Footer">
         <div class="Footer-SelectionBar">
@@ -101,4 +144,5 @@
         <p>ecoffe @Copyright</p>
     </div>
 </body>
+
 </html>
