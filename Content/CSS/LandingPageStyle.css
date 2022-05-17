@@ -41,7 +41,7 @@
   left: 10%;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.429);
+  background-image: linear-gradient(#ffffff00, #8e8e8e6f);
   border-radius: 30px;
   padding: 0.7rem 1rem 0.7rem 1rem;
 }
