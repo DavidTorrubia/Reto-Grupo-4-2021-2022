@@ -115,6 +115,7 @@
     margin-bottom: 0.5rem;
     border: transparent;
     font-family: 'Tommy personal use';
+<<<<<<< HEAD
     font-size: 1.5rem;
     background-color: #006D77;
     color: white;
@@ -148,6 +149,36 @@
 }
 .Guide{
     font-weight: 1000;
+=======
+    border-style: solid;
+    border-width: 6px;
+    border-color: white;
+}
+
+.Profile-Settings{
+    grid-column: x1 / x2;
+    grid-row: y0 / y1;
+    margin-left: 86%;
+}
+
+.Profile-UserInfo-Name{
+    font-size: medium;
+    padding-left: 10%;
+}
+
+.Profile-UserInfo-Email{
+    font-size: smaller;
+    padding-left: 10%;
+}
+
+.Profile-UserInfo-MainDirection{
+    font-size: x-small;
+    padding-left: 10%;
+}
+
+.Profile-Settings-Image{
+    width: 30px;
+>>>>>>> 012a697a9d37183da122706f9742cc716b63376d
 }
 .Content-UserConfig-Item-Directions-Content-RemoveList-Item-CheckBox{
     width: 12%;
