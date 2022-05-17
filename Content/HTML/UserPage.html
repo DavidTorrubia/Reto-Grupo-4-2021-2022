@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../CSS/MainStyle.css">
     <link rel="stylesheet" href="../CSS/UserPageStyle.css">
     <script src="../JS/HeaderScripts.js"></script>
+    <script src="../JS/UserPageScripts.js"></script>
 </head>
 
 <body>
@@ -82,31 +83,125 @@
         </div>
     </div>
     <div class="Content">
-        <div class="Content-Divided">
-            <div class="Profile-Container">
-                <div class="Grid-Profile">
-                    <div class="Profile-Image" id="Profile-Image">
-                    </div>
-                    <div class="Profile-UserInfo" id="Profile-UserInfo">
-                        <div class="Profile-UserInfo-Name">
-                            <h1>User name</h1>
-                        </div>
-                        <div class="Profile-UserInfo-Email">
-                            <h2>user@email.com</h2>
-                        </div>
-                        <div class="Profile-UserInfo-MainDirection">
-                            <h2>User Direction</h2>
-                        </div>
-                    </div>
-                    <div class="Profile-Settings" id="Profile-Settings">
-                        <img class="Profile-Settings-Image" id="Profile-Settings-Image" src="../Images/User/Settings.png">
-                    </div>
-                </div>
-                <div class="Profile-Settings-Container">
-                    
+        <div class="Content-User">
+            <div class="Content-User-UserProfile">
+                <img src="../Images/User/ProfileImage.png" class="Content-User-UserProfile-Image">
+                <div class="Content-User-UserProfile-Data">
+                    <h1 class="Content-User-UserProfile-Data-Username">User 12340239282</h1>
+                    <h2 class="Content-User-UserProfile-Data-Email">example@exammple.com</h2>
+                    <p class="Content-User-UserProfile-Data-PrincAddress">Malaga, Spain</p>
                 </div>
             </div>
-            <div class="Profile-Options">
+            <div class="Content-UserConfig">
+                <div class="Content-UserConfig-Item half">
+                    <h2 class="Content-UserConfig-Item-Header">First Name</h2>
+                    <input type="text" class="Content-UserConfig-Item-Field" placeholder="Michael">
+                </div>
+                <div class="Content-UserConfig-Item half">
+                    <h2 class="Content-UserConfig-Item-Header">Last Name</h2>
+                    <input type="text" class="Content-UserConfig-Item-Field" placeholder="Jordan">
+                </div>
+                <div class="Content-UserConfig-Item">
+                    <h2 class="Content-UserConfig-Item-Header">Email</h2>
+                    <input type="text" class="Content-UserConfig-Item-Field" placeholder="Example@Example.com">
+                </div>
+                <button class="Content-UserConfig-Item-Button" type="button">Save Changes</button>
+
+                <div class="Content-UserConfig-Item Directions">
+                    <button class="Content-UserConfig-Item-Directions-Button" type="button" onclick="DeployCreateAddres()">Create New Address</button>
+                    <form class="Content-UserConfig-Item-Directions-Content" id="Content-UserConfig-Item-Directions-Content-Create">
+                        <div class="Content-UserConfig-Item">
+                            <h2 class="Content-UserConfig-Item-Header">Country</h2>
+                            <input type="text" class="Content-UserConfig-Item-Field" placeholder="Spain">
+                        </div>
+                        <div class="Content-UserConfig-Item">
+                            <h2 class="Content-UserConfig-Item-Header">Ciudad</h2>
+                            <input type="text" class="Content-UserConfig-Item-Field" placeholder="Madrid">
+                        </div>
+                        <div class="Content-UserConfig-Item">
+                            <h2 class="Content-UserConfig-Item-Header">Postal Code</h2>
+                            <input type="text" class="Content-UserConfig-Item-Field" placeholder="50011">
+                        </div>
+                        <div class="Content-UserConfig-Item">
+                            <h2 class="Content-UserConfig-Item-Header">Street Address</h2>
+                            <input type="text" class="Content-UserConfig-Item-Field" placeholder="Via Hispanidad">
+                        </div>
+                        <button class="Content-UserConfig-Item-Directions-Content-Button" type="button">Create</button>
+                    </form>
+                    <button class="Content-UserConfig-Item-Directions-Button" type="button" onclick="DeployRemoveAddres()">Remove Address</button>
+                    <div class="Content-UserConfig-Item-Directions-Content" id="Content-UserConfig-Item-Directions-Content-Remove">
+                        <form class="Content-UserConfig-Item-Directions-Content-RemoveList">
+                            <div class="Content-UserConfig-Item-Directions-Content-RemoveList-Item Guide">
+                                <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header Guide">Country</h1>
+                                <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header Guide">City</h1>
+                                <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header Guide">Postal Code</h1>
+                                <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header Guide">Address</h1>
+                            </div>
+                            <div class="Content-UserConfig-Item-Directions-Content-RemoveList-Item Example">
+                                <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header">Spain</h1>
+                                <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header">Zaragoza</h1>
+                                <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header">50011</h1>
+                                <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header">Miralbueno11</h1>
+                                <input type="checkbox" class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-CheckBox">
+                            </div>
+                            <div class="Content-UserConfig-Item-Directions-Content-RemoveList-Item Example">
+                                <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header">Spain</h1>
+                                <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header">Zaragoza</h1>
+                                <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header">50011</h1>
+                                <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header">Miralbueno11</h1>
+                                <input type="checkbox" class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-CheckBox">
+                            </div>
+                            <div class="Content-UserConfig-Item-Directions-Content-RemoveList-Item Example">
+                                <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header">Spain</h1>
+                                <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header">Zaragoza</h1>
+                                <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header">50011</h1>
+                                <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header">Miralbueno11</h1>
+                                <input type="checkbox" class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-CheckBox">
+                            </div>
+                            <div class="Content-UserConfig-Item-Directions-Content-RemoveList-Item Example">
+                                <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header">Spain</h1>
+                                <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header">Zaragoza</h1>
+                                <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header">50011</h1>
+                                <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header">Miralbueno11</h1>
+                                <input type="checkbox" class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-CheckBox">
+                            </div>
+                            <div class="Content-UserConfig-Item-Directions-Content-RemoveList-Item Example">
+                                <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header">Spain</h1>
+                                <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header">Zaragoza</h1>
+                                <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header">50011</h1>
+                                <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header">Miralbueno11</h1>
+                                <input type="checkbox" class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-CheckBox">
+                            </div>
+                        </form>
+                        <button class="Content-UserConfig-Item-Directions-Content-Button">Remove Selected</button>
+                    </div>
+                </div>
+            </div>
+
+        </div> 
+        <div class="Content-Receipts">
+            <div class="Content-Receipts-List">
+                <h1 class="Content-Receipts-List-Header"> Receipts </h1>
+                <div class="Content-Receipts-List-Header-Item">
+                    <h2 class="Content-Receipts-List-Header-Item-text">Date</h2>
+                    <h2 class="Content-Receipts-List-Header-Item-text">Price</h2>
+                </div>
+                <div class="Content-Receipts-List-Header-Item">
+                    <h2 class="Content-Receipts-List-Header-Item-text">Date</h2>
+                    <h2 class="Content-Receipts-List-Header-Item-text">Price</h2>
+                </div>
+                <div class="Content-Receipts-List-Header-Item">
+                    <h2 class="Content-Receipts-List-Header-Item-text">Date</h2>
+                    <h2 class="Content-Receipts-List-Header-Item-text">Price</h2>
+                </div>
+                <div class="Content-Receipts-List-Header-Item">
+                    <h2 class="Content-Receipts-List-Header-Item-text">Date</h2>
+                    <h2 class="Content-Receipts-List-Header-Item-text">Price</h2>
+                </div>
+                <div class="Content-Receipts-List-Header-Item">
+                    <h2 class="Content-Receipts-List-Header-Item-text">Date</h2>
+                    <h2 class="Content-Receipts-List-Header-Item-text">Price</h2>
+                </div>
             </div>
         </div>
     </div>
