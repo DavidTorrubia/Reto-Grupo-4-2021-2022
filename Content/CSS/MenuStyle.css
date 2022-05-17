@@ -7,6 +7,7 @@
     background-color: black;
     border-radius: 10px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
 
 .Content-Menu-Types-Container-Images {
@@ -30,6 +31,7 @@
     display: none;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     opacity: 70%;
+    cursor: pointer;
 }
 .Content-Menu-SlideUp:hover {height: 3.5rem; opacity: 100%;}
 

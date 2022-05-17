@@ -1,84 +1,89 @@
 
-.ShoppingCart-Title{
+.Content-ShoppingCart-Title{
     font-family: 'Tommy personal use';
     text-align: center;
-
+    color: #3a1101;
 }
 
-.ShoppingCart{
+.Content-ShoppingCart{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
 
-.ProductsList{
-    width: 60%;
-}
-
-.Receipt{
+.Content-ShoppingCart-Receipt{
     width: 30%;
-}
-
-.ProductsList{
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     background-color: white;
     display: flex;
     flex-direction: column;
 }
 
-.Example{
+.Content-ShoppingCart-ProductsList{
+    background-color: white;
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.Content-ShoppingCart-ProductsList-Item{
     display: flex;
     flex-direction: row;
-    justify-content: start;
+    justify-content: space-evenly;
     align-items: center;
     font-family: 'Tommy personal use';
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    transition: 0.3s;
 }
 
-.Example-Image{
+.Content-ShoppingCart-ProductsList-Item:hover{
+    background-color: rgba(0, 0, 0, 0.086);
+}
+
+.Content-ShoppingCart-ProductsList-Item-Image{
     width: 4rem;
     height: 4rem;
-    margin-right: 2.5%;
-    border-style: solid;
-    border-color: white;
-    border-width: 0.25rem;
+    margin-right: 0.5rem;
 }
 
-.Receipt{
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-}
-
-.Example-Name{
+.Content-ShoppingCart-ProductsList-Item-Name{
     font-size: medium;
     margin-right: auto;
+    overflow: hidden;
 }
 
-.Example-Quantity-Text{
+.Content-ShoppingCart-ProductsList-Item-Quantity-Text{
+    font-size: medium;
+    width: 4rem;
+    margin-right: 1rem;
+}
+
+.Content-ShoppingCart-ProductsList-Item-Quantity-Number{
+    width: 2rem;
+}
+
+.Content-ShoppingCart-ProductsList-Item-Cost{
     font-size: small;
+    width: 2rem;
+    text-align: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
-.Example-Quantity-Number{
-    width: 0.75rem;
-    margin-right: 5%;
-}
-
-.Example-Cost{
-    font-size: small;
-    margin-right: 5%;
-}
-
-.Example-Delete{
+.Content-ShoppingCart-ProductsList-Item-Delete{
     width: 1.25rem;
-    margin-right: 5%;
+    margin-right: 1rem;
 }
 
-.Receipt-Title{
+.Content-ShoppingCart-Receipt-Title{
     font-family: 'Tommy personal use';
     font-size: larger;
     margin-left: 10%;
 }
 
-.Example2{
+.Content-ShoppingCart-Receipt-Item{
     display: flex;
     flex-direction: row;
     justify-content: start;
@@ -86,23 +91,22 @@
     font-family: 'Tommy personal use';
 }
 
-.Example2-Name{
+.Content-ShoppingCart-Receipt-Item-Name{
     font-size: small;
     margin-right: auto;
     margin-left: 5%;
 }
 
-.Example2-Quantity{
+.Content-ShoppingCart-Receipt-Item-Quantity{
+    font-size: smaller;
+}
+
+.Content-ShoppingCart-Receipt-Item-Cost{
     font-size: smaller;
     margin-right: 5%;
 }
 
-.Example2-Cost{
-    font-size: smaller;
-    margin-right: 5%;
-}
-
-.Receipt-Delivery-Costs{
+.Content-ShoppingCart-Receipt-Delivery-Costs{
     display: flex;
     flex-direction: row;
     justify-content: start;
@@ -110,23 +114,23 @@
     font-family: 'Tommy personal use';
 }
 
-.Delivery-Costs-Name{
+.Content-ShoppingCart-Receipt-Delivery-Costs-Name{
     font-size: small;
     margin-right: auto;
     margin-left: 5%;
 }
 
-.Delivery-Costs-Cost{
+.Content-ShoppingCart-Receipt-Delivery-Costs-Cost{
     font-size: smaller;
     margin-right: 5%;
 }
 
-.Receipt-Line{
-    border: 1px solid gray;
-    width: 100%;
+.Content-ShoppingCart-Receipt-Line{
+    background-color: black;
+    width: 90%;
 }
 
-.Receipt-Total{
+.Content-ShoppingCart-Receipt-Total{
     display: flex;
     flex-direction: row;
     justify-content: start;
@@ -134,13 +138,13 @@
     font-family: 'Tommy personal use';
 }
 
-.Receipt-Total-Text{
+.Content-ShoppingCart-Receipt-Total-Text{
     font-size: medium;
     margin-right: auto;
     margin-left: 7.5%;
 }
 
-.Receipt-Total-Cost{
+.Content-ShoppingCart-Receipt-Total-Cost{
     font-size: medium;
     margin-right: 5%;
 }

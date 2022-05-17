@@ -28,6 +28,7 @@
 }
 .Directions{
     margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 .Content-User-UserProfile-Data{
     width: 100%;
@@ -79,6 +80,7 @@
     font-size: 1.5rem;
     background-color: white;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
 .Content-UserConfig-Item-Directions-Content{
     display: flex;
@@ -115,11 +117,11 @@
     margin-bottom: 0.5rem;
     border: transparent;
     font-family: 'Tommy personal use';
-<<<<<<< HEAD
     font-size: 1.5rem;
     background-color: #006D77;
     color: white;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
 .Content-UserConfig-Item-Directions-Content-RemoveList{
     display: flex;
@@ -149,45 +151,17 @@
 }
 .Guide{
     font-weight: 1000;
-=======
-    border-style: solid;
-    border-width: 6px;
-    border-color: white;
-}
-
-.Profile-Settings{
-    grid-column: x1 / x2;
-    grid-row: y0 / y1;
-    margin-left: 86%;
-}
-
-.Profile-UserInfo-Name{
-    font-size: medium;
-    padding-left: 10%;
-}
-
-.Profile-UserInfo-Email{
-    font-size: smaller;
-    padding-left: 10%;
-}
-
-.Profile-UserInfo-MainDirection{
-    font-size: x-small;
-    padding-left: 10%;
-}
-
-.Profile-Settings-Image{
-    width: 30px;
->>>>>>> 012a697a9d37183da122706f9742cc716b63376d
 }
 .Content-UserConfig-Item-Directions-Content-RemoveList-Item-CheckBox{
     width: 12%;
     height: 40%;
+    cursor: pointer;
 }
 .Content-Receipts{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 1rem;
 }
 .Content-Receipts-List{
     display: flex;
