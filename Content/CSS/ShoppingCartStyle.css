@@ -1,4 +1,10 @@
 
+.ShoppingCart-Title{
+    font-family: 'Tommy personal use';
+    text-align: center;
+
+}
+
 .ShoppingCart{
     display: flex;
     flex-direction: row;
@@ -6,11 +12,11 @@
 }
 
 .ProductsList{
-    width: 75%;
+    width: 60%;
 }
 
 .Receipt{
-    width: 25%;
+    width: 30%;
 }
 
 .ProductsList{
@@ -22,24 +28,160 @@
 .Example{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: start;
     align-items: center;
+    font-family: 'Tommy personal use';
 }
 
 .Example-Image{
     width: 4rem;
     height: 4rem;
+    margin-right: 2.5%;
+    border-style: solid;
+    border-color: white;
+    border-width: 0.25rem;
 }
 
 .Receipt{
-    background-color: lightslategray;
+    background-color: white;
     display: flex;
     flex-direction: column;
+}
+
+.Example-Name{
+    font-size: medium;
+    margin-right: auto;
+}
+
+.Example-Quantity-Text{
+    font-size: small;
+}
+
+.Example-Quantity-Number{
+    width: 0.75rem;
+    margin-right: 5%;
+}
+
+.Example-Cost{
+    font-size: small;
+    margin-right: 5%;
+}
+
+.Example-Delete{
+    width: 1.25rem;
+    margin-right: 5%;
+}
+
+.Receipt-Title{
+    font-family: 'Tommy personal use';
+    font-size: larger;
+    margin-left: 10%;
 }
 
 .Example2{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: start;
     align-items: center;
+    font-family: 'Tommy personal use';
 }
+
+.Example2-Name{
+    font-size: small;
+    margin-right: auto;
+    margin-left: 5%;
+}
+
+.Example2-Quantity{
+    font-size: smaller;
+    margin-right: 5%;
+}
+
+.Example2-Cost{
+    font-size: smaller;
+    margin-right: 5%;
+}
+
+.Receipt-Delivery-Costs{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    font-family: 'Tommy personal use';
+}
+
+.Delivery-Costs-Name{
+    font-size: small;
+    margin-right: auto;
+    margin-left: 5%;
+}
+
+.Delivery-Costs-Cost{
+    font-size: smaller;
+    margin-right: 5%;
+}
+
+.Receipt-Line{
+    border: 1px solid gray;
+    width: 100%;
+}
+
+.Receipt-Total{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    font-family: 'Tommy personal use';
+}
+
+.Receipt-Total-Text{
+    font-size: medium;
+    margin-right: auto;
+    margin-left: 7.5%;
+}
+
+.Receipt-Total-Cost{
+    font-size: medium;
+    margin-right: 5%;
+}
+
+@media only screen and (max-width: 600px) {
+    .ShoppingCart{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ProductsList {
+      width: 90%;
+    }
+
+    .Receipt{
+        width: 90%;
+        margin-top: 1rem;
+    }
+  }
+
+.Payment{
+    background-color: #006D77;
+    color: white;
+    border: none;
+    border-radius: 12%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Tommy personal use';
+    font-size: medium;
+    padding: 2%;
+    margin: 2rem;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.Payment:hover {
+    background-color: #00abbb;
+    color: white;
+}
+
+
+
