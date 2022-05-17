@@ -191,6 +191,7 @@ body {
     transition: 0.3s;
     height: min-content;
     box-sizing: border-box;
+    cursor: pointer;
 }
 
 .Header-Item-Right-Container-UserDropButton-Content {
