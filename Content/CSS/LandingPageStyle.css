@@ -302,7 +302,7 @@
 }
 .Locations-Container {
   width: 100%;
-  background-color:rgb(248, 227, 187);
+  background-color:rgb(255, 255, 255);
   font-family: 'Tommy personal use';
   display: flex;
   flex-direction: column;
