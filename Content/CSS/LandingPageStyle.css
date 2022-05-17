@@ -315,6 +315,7 @@
   flex-direction: column;
   padding: 0.5rem 0.5rem 0.5rem 0.5rem;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .Locations-Container-item:hover {
