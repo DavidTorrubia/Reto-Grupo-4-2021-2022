@@ -30,42 +30,51 @@
 .Content-ShoppingCart-ProductsList-Item{
     display: flex;
     flex-direction: row;
-    justify-content: start;
+    justify-content: space-evenly;
     align-items: center;
     font-family: 'Tommy personal use';
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    transition: 0.3s;
+}
+
+.Content-ShoppingCart-ProductsList-Item:hover{
+    background-color: rgba(0, 0, 0, 0.086);
 }
 
 .Content-ShoppingCart-ProductsList-Item-Image{
     width: 4rem;
     height: 4rem;
-    margin-right: 2.5%;
-    border-style: solid;
-    border-color: white;
-    border-width: 0.25rem;
+    margin-right: 0.5rem;
 }
 
 .Content-ShoppingCart-ProductsList-Item-Name{
     font-size: medium;
     margin-right: auto;
+    overflow: hidden;
 }
 
 .Content-ShoppingCart-ProductsList-Item-Quantity-Text{
-    font-size: small;
+    font-size: medium;
+    width: 4rem;
+    margin-right: 1rem;
 }
 
 .Content-ShoppingCart-ProductsList-Item-Quantity-Number{
-    width: 0.75rem;
-    margin-right: 5%;
+    width: 2rem;
 }
 
 .Content-ShoppingCart-ProductsList-Item-Cost{
     font-size: small;
-    margin-right: 5%;
+    width: 2rem;
+    text-align: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .Content-ShoppingCart-ProductsList-Item-Delete{
     width: 1.25rem;
-    margin-right: 5%;
+    margin-right: 1rem;
 }
 
 .Content-ShoppingCart-Receipt-Title{
@@ -90,7 +99,6 @@
 
 .Content-ShoppingCart-Receipt-Item-Quantity{
     font-size: smaller;
-    margin-right: 5%;
 }
 
 .Content-ShoppingCart-Receipt-Item-Cost{
@@ -118,8 +126,8 @@
 }
 
 .Content-ShoppingCart-Receipt-Line{
-    border: 1px solid gray;
-    width: 100%;
+    background-color: black;
+    width: 90%;
 }
 
 .Content-ShoppingCart-Receipt-Total{
