@@ -99,6 +99,7 @@
 
 .Content-ShoppingCart-Receipt-Item-Quantity{
     font-size: smaller;
+    margin-right: 5%;
 }
 
 .Content-ShoppingCart-Receipt-Item-Cost{
@@ -150,23 +151,29 @@
 }
 
 @media only screen and (max-width: 600px) {
-    .ShoppingCart{
+    .Content-ShoppingCart{
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    .ProductsList {
+    .Content-ShoppingCart-ProductsList {
       width: 90%;
     }
 
-    .Receipt{
+    .Content-ShoppingCart-Receipt{
         width: 90%;
         margin-top: 1rem;
     }
   }
 
-.Payment-Button{
+.Content-Payment-Button{
+    display:flex;
+    justify-content: center;
+}
+
+.Content-Payment-Button-Item{
+    
     background-color: #006D77;
     color: white;
     border: none;
@@ -182,10 +189,28 @@
     cursor: pointer;
 }
 
-.Payment-Button:hover {
+.Content-Payment-Button-Item:hover {
     background-color: #00abbb;
     color: white;
 }
+
+.Content-Payment{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.Content-Payment-Text{
+    font-family: 'Tommy personal use';
+    font-size: smaller;
+}
+
+.Content-Payment-Label-Text{
+    font-family: 'Tommy personal use';
+    font-size: smaller;
+}
+
+
 
 
 
