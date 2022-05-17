@@ -162,7 +162,7 @@
     }
   }
 
-.Payment{
+.Payment-Button{
     background-color: #006D77;
     color: white;
     border: none;
@@ -178,7 +178,7 @@
     cursor: pointer;
 }
 
-.Payment:hover {
+.Payment-Button:hover {
     background-color: #00abbb;
     color: white;
 }
