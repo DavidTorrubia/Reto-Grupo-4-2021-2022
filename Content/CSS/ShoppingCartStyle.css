@@ -195,6 +195,7 @@
 
 .Content-Payment{
     flex-direction: column;
+    display: none;
 }
 
 .Content-Payment-Container{
