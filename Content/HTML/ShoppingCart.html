@@ -146,58 +146,66 @@
             </button>
         </div>
         <div class="Content-Payment"> <!--Está oculto hasta que se le da al botón-->
-            <div>
-                <p class="Content-Payment-Text">Choose your method of payment:</p>
-                <form>
-                    <input type="radio" 
-                    id="Content-Payment-PaymentMethod-CreditCard" 
-                    name="Content-Payment-PaymentMethod-CreditCard"
-                    value="CreditCard">
-                    <label class="Content-Payment-Label-Text" 
-                    for="Content-Payment-PaymentMethod-CreditCard">Credit card</label><br>
-                    <input type="radio" 
-                    id="Content-Payment-PaymentMethod-DebtCard" 
-                    name="Content-Payment-PaymentMethod-DebtCard"
-                    value="DebtCard">
-                    <label class="Content-Payment-Label-Text"
-                    for="Content-Payment-PaymentMethod-DebtCard">Debt card</label><br>
-                    <input type="radio" 
-                    id="Content-Payment-PaymentMethod-PayPal" 
-                    name="Content-Payment-PaymentMethod-PayPal"
-                    value="PayPal">
-                    <label class="Content-Payment-Label-Text"
-                    for="Content-Payment-PaymentMethod-DebtCard">PayPal</label>
+            <div class="Content-Payment-Container">
+                <div class="Content-Payment-Container-Method">
+                    <p class="Content-Payment-Container-Method-Text">Choose your method of payment:</p>
+                    <form>
+                        <input type="radio" 
+                        id="Content-Payment-Payment-Container-Method-CreditCard" 
+                        name="Content-Payment-Payment-Container-Method-CreditCard"
+                        value="Content-Payment-Payment-Container-Method-CreditCard">
+                        <label class="Content-Payment-Container-Method-Label-Text" 
+                        for="Content-Payment-Payment-Container-Method-CreditCard">Credit card</label><br>
+                        <input type="radio" 
+                        id="Content-Payment-Payment-Container-Method-DebtCard" 
+                        name="Content-Payment-Payment-Container-Method-DebtCard"
+                        value="Content-Payment-Payment-Container-Method-DebtCard">
+                        <label class="Content-Payment-Container-Method-Label-Text"
+                        for="Content-Payment-Payment-Container-Method-DebtCard">Debt card</label><br>
+                        <input type="radio" 
+                        id="Content-Payment-Payment-Container-Method-PayPal" 
+                        name="Content-Payment-Container-Payment-Method-PayPal"
+                        value="Content-Payment-Payment-Container-Method-PayPal">
+                        <label class="Content-Payment-Container-Method-Label-Text"
+                        for="Content-Payment-Payment-Container-Method-PayPal">PayPal</label>
+                    </form>
+                </div>
+                <form class="Content-Payment-Container-Info">
+                    <label class="Content-Payment-Container-Info-Label-Text" 
+                    for="Content-Payment-Container-Info-CardNumber">Card number</label><br>
+                    <input type="text" class="Content-Payment-Container-Info-Field" 
+                    id="Content-Payment-Container-Info-CardNumber" 
+                    name="Content-Payment-Container-Info-CardNumber"><br>
+    
+                    <label class="Content-Payment-Container-Info-Label-Text" 
+                    for="Content-Payment-Container-Info-CardHolder">Cardholder name</label><br>
+                    <input type="text" class="Content-Payment-Container-Info-Field" 
+                    id="Content-Payment-Container-Info-CardCardHolder" 
+                    name="Content-Payment-Container-Info-CardCardHolder"><br>
+    
+                    <label class="Content-Payment-Container-Info-Label-Text" 
+                    for="Content-Payment-Container-Info-ExpiryDate">Expiry date</label><br>
+                    <input type="text" class="Content-Payment-Container-Info-Field 
+                    id="Content-Payment-Container-Info-ExpiryDate" 
+                    name="Content-Payment-Container-Info-ExpiryDate"
+                    value="MM/YY"><br>
+    
+                    <label class="Content-Payment-Container-Info-Label-Text" 
+                    for="Content-Payment-Container-Info-SecurityNumber">Security number</label><br>
+                    <input type="text" class="Content-Payment-Container-Info-Field" 
+                    id="Content-Payment-Container-Info-SecurityNumber" 
+                    name="Content-Payment-Container-Info-SecurityNumber"
+                    value="CVC"><br>
                 </form>
             </div>
-
-            <form>
-                <label class="Content-Payment-Label-Text" 
-                for="Content-Payment-CardNumber">Card number</label><br>
-                <input type="text" class="Content-Payment-CardNumber" 
-                id="Content-Payment-CardNumber" 
-                name="Payment-CardNumber"><br>
-
-                <label class="Content-Payment-Label-Text" 
-                for="Content-Payment-CardHolder">Cardholder name</label><br>
-                <input type="text" class="Content-Payment-CardCardHolder" 
-                id="Content-Payment-CardCardHolder" 
-                name="Payment-CardHolder"><br>
-
-                <label class="Content-Payment-Label-Text" 
-                for="Content-Payment-ExpiryDate">Expiry date</label><br>
-                <input type="text" class="Content-Payment-ExpiryDate" 
-                id="Content-Payment-ExpiryDate" 
-                name="Payment-ExpiryDate"
-                value="MM/YY"><br>
-
-                <label class="Content-Payment-Label-Text" 
-                for="Content-Payment-SecurityNumber">Security number</label><br>
-                <input type="text" class="Content-Payment-SecurityNumber" 
-                id="Content-Payment-SecurityNumber" 
-                name="Payment-SecurityNumber"
-                value="CVC"><br>
-            </form>
+            <div class="Content-Payment-Pay-Button">
+                <button type="button" class="Content-Payment-Pay-Button-Item" 
+                onclick="PayFeedback()"> 
+                Pay
+                </button>
+            </div>
         </div>
+        
 
     </div>
     <div class="Footer">
