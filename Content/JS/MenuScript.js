@@ -19,10 +19,17 @@ function ScrollToSnacks() {
 
 window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
+    var mysearchbox = document.getElementById("Content-Menu-Searchbar");
     var mybutton = document.getElementById("Content-Menu-SlideUp");
   if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
     mybutton.style.display = "block";
+    
+  }else if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    mysearchbox.style.position = "fixed";
+    mysearchbox.style.top = "8rem";
   } else {
     mybutton.style.display = "none";
-  }
+    mysearchbox.style.position = "relative";
+    mysearchbox.style.top = "2rem";
+  } 
 }
