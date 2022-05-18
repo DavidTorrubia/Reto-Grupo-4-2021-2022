@@ -62,7 +62,7 @@
     border-radius: 30px;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    height: 0.6rem;
+    height: 0.20rem;
     background-image: linear-gradient(#913611, #3a1101);
 }
 
@@ -165,13 +165,15 @@
    margin-bottom: 2rem;
    width: 50%;
    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+   display: flex;
+   flex-direction: column;
 }
 .Content-WorkWithUs-Header{
     font-family: 'Tommy personal use';
     color: #3a1101;
     text-align: center;
 }
-.Content-WorkWithUs-Text{
+.Content-WorkWithUs-CV-Text{
     border: solid .2rem #3a1101;
     border-radius: 30px;
     font-family: 'Tommy personal use';
