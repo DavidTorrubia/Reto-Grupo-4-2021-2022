@@ -16,6 +16,7 @@
 .carousel {
   position: relative;
   box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+  margin-top: 3rem;
 }
 
 .carousel-inner {
@@ -170,6 +171,7 @@
   width: 100%;
   min-height: 20rem;
   cursor: pointer;
+  margin-bottom: 1.2rem;
 }
 
 .FixedAdv-Container {
@@ -326,11 +328,40 @@
   margin: 0;
 }
 
+.Content-LandingText{
+  width: 50%;
+  border-radius: 30px;
+  margin-top: 8rem;
+  padding: 1rem 1rem 1rem 1rem;
+  opacity: 0%;
+  transition: 1s;
+  margin-bottom: 4rem;
+}
+
+.Content-LandingText-Text{
+  font-family: 'Tommy personal use';
+  text-align: justify;
+  color: black;
+}
+.Content-LandingText-Header{
+  font-family: 'Tommy personal use';
+  text-align: center;
+  margin-bottom: 0rem;
+  margin-top: 0.5rem;
+  color: black;
+}
+
+
 @media only screen and (max-width: 600px) {
   .carousel-item-image-Header {font-size: 1.4rem;}
-
+  .Content-LandingText{
+    opacity: 100%;
+    margin-top: 4rem;
+  }
   .carousel-item-image-Text {font-size:1rem;}
-
+  .Content-LandingText{
+    width: 80%;
+  }
   .FixedAdv {
     width: 100%;
     flex-direction: column;
@@ -376,4 +407,8 @@
     width: 100%;
     margin-top: 0px;
   }
+}
+@font-face {
+  src: url(../Fonts/MADE\ Tommy\ Soft\ Medium\ PERSONAL\ USE.otf);
+  font-family: 'Tommy personal use';
 }

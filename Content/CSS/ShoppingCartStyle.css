@@ -55,7 +55,7 @@
 }
 
 .Content-ShoppingCart-ProductsList-Item-Quantity-Text{
-    font-size: medium;
+    font-size: small;
     width: 4rem;
     margin-right: 1rem;
 }
@@ -99,6 +99,7 @@
 
 .Content-ShoppingCart-Receipt-Item-Quantity{
     font-size: smaller;
+    margin-right: 5%;
 }
 
 .Content-ShoppingCart-Receipt-Item-Cost{
@@ -150,42 +151,124 @@
 }
 
 @media only screen and (max-width: 600px) {
-    .ShoppingCart{
+    .Content-ShoppingCart{
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    .ProductsList {
+    .Content-ShoppingCart-ProductsList {
       width: 90%;
     }
 
-    .Receipt{
+    .Content-ShoppingCart-Receipt{
         width: 90%;
         margin-top: 1rem;
     }
   }
 
-.Payment-Button{
+.Content-Payment-Button{
+    display:flex;
+    justify-content: center;
+}
+
+.Content-Payment-Button-Item{
     background-color: #006D77;
     color: white;
     border: none;
-    border-radius: 12%;
+    border-radius: 30px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-family: 'Tommy personal use';
     font-size: medium;
-    padding: 2%;
+    padding: 0.5rem 1rem;
     margin: 2rem;
     transition-duration: 0.4s;
     cursor: pointer;
 }
 
-.Payment-Button:hover {
+.Content-Payment-Button-Item:hover {
     background-color: #00abbb;
     color: white;
 }
 
+.Content-Payment{
+    flex-direction: column;
+    display: none;
+}
 
+.Content-Payment-Container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 
+@media only screen and (max-width: 600px) {
+    .Content-Payment-Container{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.Content-Payment-Container-Method{
+    margin-bottom: 2rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.Content-Payment-Container-Info{
+    margin-bottom: 2rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.Content-Payment-Container-Method-Text{
+    font-family: 'Tommy personal use';
+    font-size: smaller;
+}
+
+.Content-Payment-Container-Method-Label-Text{
+    font-family: 'Tommy personal use';
+    font-size: smaller;
+}
+
+.Content-Payment-Container-Info-Label-Text{
+    font-family: 'Tommy personal use';
+    font-size: smaller;
+    margin-top: 1rem;
+}
+
+.Content-Payment-Container-Info-Field{
+    font-family: 'Tommy personal use';
+    font-size: smaller;
+    border-radius: 30px;
+    padding-left: 0.5rem;
+    padding-right: 80%;
+}
+
+.Content-Payment-Pay-Button{
+    display:flex;
+    justify-content: center;
+}
+
+.Content-Payment-Pay-Button-Item{
+    background-color: #006D77;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Tommy personal use';
+    font-size: medium;
+    padding: 0.5rem 1rem;
+    margin-bottom: 4rem;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.Content-Payment-Pay-Button-Item:hover {
+    background-color: #00abbb;
+    color: white;
+}
