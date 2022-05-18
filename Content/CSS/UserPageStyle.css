@@ -1,0 +1,229 @@
+.Content{
+    display: flex;
+    flex-direction: row;
+}
+.Content-User{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Content-Receipts{
+    width: 50%;
+}
+.Content-User-UserProfile-Settings{
+    height: 30%;
+    margin-top: 3%;
+    margin-right: 5%;
+}
+.Content-User-UserProfile{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    width: 85%;
+}
+.Content-User-UserProfile-Image{
+    width: 14rem;
+    background-color: white;
+}
+.Directions{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.Content-User-UserProfile-Data{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding-left: 0.5rem;
+}
+.Content-User-UserProfile-Data-Username{
+    font-family: 'Tommy personal use';
+    margin-bottom: 0;
+}
+.Content-User-UserProfile-Data-Email{
+    font-family: 'Tommy personal use';
+    margin-bottom: 0;
+    margin-top: 0.1rem;
+}
+.Content-User-UserProfile-Data-PrincAddress{
+    font-family: 'Tommy personal use';
+    margin-bottom: 0;
+    margin-top: 0.1rem;
+}
+.Content-UserConfig{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.half{
+    width: 47% !important;
+}
+.Content-UserConfig-Item{
+    display: flex;
+    flex-direction: column;
+    width: 96%;
+}
+.Content-UserConfig-Item-Header{
+    font-family: 'Tommy personal use'; 
+    margin-bottom: 0.5rem;
+}
+.Content-UserConfig-Item-Field{
+    border-radius: 30px;
+    font-size: 1.5rem;
+    padding-left: 0.5rem;
+}
+.Content-UserConfig-Item-Directions-Button{
+    border: transparent;
+    font-family: 'Tommy personal use';
+    font-size: 1.5rem;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+.Content-UserConfig-Item-Directions-Content{
+    display: flex;
+    flex-direction: column;
+}
+#Content-UserConfig-Item-Directions-Content-Create{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.653);
+    align-items: center;
+    display: none;
+}
+#Content-UserConfig-Item-Directions-Content-Remove{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.653);
+    align-items: center;
+    display: none;
+    margin-bottom: 3rem;
+}
+.Content-UserConfig-Item-Button{
+    width: 96%;
+    border: transparent;
+    font-family: 'Tommy personal use';
+    font-size: 1.5rem;
+    background-image: linear-gradient(#913611, #3a1101);
+    color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    margin-top: 1rem;
+}
+.Content-UserConfig-Item-Directions-Content-Button{
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    border: transparent;
+    font-family: 'Tommy personal use';
+    font-size: 1.5rem;
+    background-color: #006D77;
+    color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+.Content-UserConfig-Item-Directions-Content-RemoveList{
+    display: flex;
+    flex-direction: column;
+    max-height: 10rem;
+    min-height: 10rem;
+    overflow-y: scroll;
+    width: 100%;
+}
+.Content-UserConfig-Item-Directions-Content-RemoveList-Item{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    transition: 0.3s;
+}
+.Content-UserConfig-Item-Directions-Content-RemoveList-Item:hover {
+    background-color: rgba(0, 0, 0, 0.067);
+}
+.Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header{
+    font-family: 'Tommy personal use'; 
+    width: 22%;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 100;
+    overflow: hidden;
+}
+.Guide{
+    font-weight: 1000;
+}
+.Content-UserConfig-Item-Directions-Content-RemoveList-Item-CheckBox{
+    width: 12%;
+    height: 40%;
+    cursor: pointer;
+}
+.Content-Receipts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1rem;
+    width: 50%;
+}
+.Content-Receipts-List{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    min-height: 30rem;
+    max-height: 30rem;
+    overflow-y: scroll;
+}
+.Content-Receipts-List-Header{
+    background-image: linear-gradient(#913611, #3a1101);
+    color: white;
+    width: 100%;
+    margin-top:0;
+    font-family: 'Tommy personal use';
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 0rem;
+}
+.Content-Receipts-List-Header-Item{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    transition: 0.3s;
+}
+.Content-Receipts-List-Header-Item-text{
+    width: 50%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 100;
+    font-family: 'Tommy personal use';
+    text-align: center;
+    overflow: hidden;
+    
+}
+.Content-Receipts-List-Header-Item:hover{
+    background-color: rgba(0, 0, 0, 0.067);
+}
+
+
+@font-face {
+    src: url(../Fonts/MADE\ Tommy\ Soft\ Medium\ PERSONAL\ USE.otf);
+    font-family: 'Tommy personal use';
+}
+@media only screen and (max-width: 850px) {
+    .Content{
+        flex-direction: column;
+    }
+    .Content-Receipts-List{
+        width: 90%;
+        margin-top: 1rem;
+    }
+    .Content-Receipts{
+        width: 100%;
+    }
+    .Content-User{
+        width: 100%;
+    }
+}

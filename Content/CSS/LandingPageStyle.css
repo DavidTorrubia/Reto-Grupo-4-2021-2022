@@ -1,0 +1,414 @@
+@font-face {
+  src: url(../Fonts/MADE\ Tommy\ Soft\ Medium\ PERSONAL\ USE.otf);
+  font-family: 'Tommy personal use';
+}
+
+.Content {
+  height: 1000px;
+  width: 100%;
+  margin-top: 5rem;
+  padding-top: 0rem !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel {
+  position: relative;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+  margin-top: 3rem;
+}
+
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.carousel-open:checked+.carousel-item {
+  position: static;
+  opacity: 100;
+}
+
+.carousel-item-image-Container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 10%;
+  left: 10%;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(#ffffff00, #8e8e8e6f);
+  border-radius: 30px;
+  padding: 0.7rem 1rem 0.7rem 1rem;
+}
+
+.carousel-item-image-Header {
+  font-family: 'Tommy personal use';
+  font-size: 3rem;
+  color: white;
+  text-align: left;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  text-align: left;
+  width: 100%;
+}
+
+.carousel-item-image-Text {
+  font-family: Helvetica, sans-serif;
+  text-align: left;
+  color: #fff;
+  font-size: 2rem;
+  margin-top: 0rem;
+  text-align: left;
+  width: 100%;
+  margin-bottom: 0.3rem;
+}
+
+.carousel-item {
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: opacity 0.6s ease-out;
+  transition: opacity 0.6s ease-out;
+}
+
+.carousel-item img {
+  display: block;
+  max-width: 100%;
+}
+
+.carousel-control {
+  background: rgba(0, 0, 0, 0.28);
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  font-size: 40px;
+  height: 40px;
+  line-height: 35px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  cursor: pointer;
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  text-align: center;
+  width: 40px;
+  z-index: 10;
+}
+
+.carousel-control.prev {
+  left: 2%;
+}
+
+.carousel-control.next {
+  right: 2%;
+}
+
+.carousel-control:hover {
+  background: rgba(0, 0, 0, 0.8);
+  color: #aaaaaa;
+}
+
+#carousel-1:checked~.control-1,
+#carousel-2:checked~.control-2,
+#carousel-3:checked~.control-3 {
+  display: block;
+}
+
+.carousel-indicators {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 2%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 10;
+}
+
+.carousel-indicators li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.carousel-bullet {
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 35px;
+}
+
+.carousel-bullet:hover {
+  color: #aaaaaa;
+}
+
+#carousel-1:checked~.control-1~.carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2:checked~.control-2~.carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3:checked~.control-3~.carousel-indicators li:nth-child(3) .carousel-bullet {
+  color: #428bca;
+}
+
+#title {
+  width: 100%;
+  position: absolute;
+  padding: 0px;
+  margin: 0px auto;
+  text-align: center;
+  font-size: 27px;
+  color: rgba(255, 255, 255, 1);
+  font-family: 'Open Sans', sans-serif;
+  z-index: 9999;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
+}
+
+/*FIXED ADVERTISE*/
+.FixedAdv {
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.2rem;
+  width: 100%;
+  min-height: 20rem;
+  cursor: pointer;
+  margin-bottom: 1.2rem;
+}
+
+.FixedAdv-Container {
+  display: block;
+  height: auto;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  top: 10%;
+  left: 10%;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: 'Tommy personal use';
+}
+
+.FixedAdv-Container-Text {
+  width: 100%;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(#ffffff00, #000000);
+  justify-content: center;
+  text-decoration: auto;
+}
+
+
+.Advertise-Title {
+  font-size: 50px;
+  background: linear-gradient(#ffffff, #bcbcbc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Tommy personal use';
+  margin-bottom: 0;
+  transition: 0.3s;
+}
+
+.Advertise-Text {
+  font-size: 20px;
+  background: linear-gradient(#ffffff, #bcbcbc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Tommy personal use';
+  transition: 0.3s;
+}
+
+#FixedAdv-Left:hover .Advertise-Title{
+  font-size: 60px;
+}
+#FixedAdv-Left:hover .Advertise-Text{
+  font-size: 30px;
+}
+#FixedAdv-Right:hover .Advertise-Title{
+  font-size: 60px;
+}
+#FixedAdv-Right:hover .Advertise-Text{
+  font-size: 30px;
+}
+
+
+#FixedAdv-Left {
+  background-image: url(https://images.unsplash.com/photo-1591375198043-606387f65389?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+  flex-grow: 3;
+  max-width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#FixedAdv-Right {
+  background-image: url(https://images.unsplash.com/photo-1551462577-9aaf3ff5d927?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80);
+  flex-grow: 3;
+  max-width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.Content-LocationsButton{
+  width: 100%;
+  margin-top: 1.2rem;
+  background-color: #da843d3a;
+  border: transparent;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+.Locations {
+  width: 100%;
+  display: none;
+  justify-content: space-between;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+  margin-bottom: 1rem;
+  max-height: 20rem;
+  margin-top: 1.2rem;
+  width: 95%;
+  transition: 1s;
+}
+.Content-LocationButton-Icon{
+  border-radius: 50%;
+  width: 3rem;
+  padding: 0.2rem 0.2rem 0.2rem 0.2rem;
+  transform: rotate(0deg);
+  transition: 1s;
+}
+.Content-LocationButton-Header{
+  margin-right: 47%;
+  margin-left: auto;
+}
+.map {
+  justify-content: center;
+  height: 20rem;
+}
+
+.Map-image {
+  height: 100%;
+}
+.Content-Header {
+  font-family: 'Tommy personal use';
+  text-align: center;
+  color: #3a1101;
+}
+.Locations-Container {
+  width: 100%;
+  background-color:rgb(255, 255, 255);
+  font-family: 'Tommy personal use';
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  box-sizing: border-box;
+}
+
+.Locations-Container-item {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.Locations-Container-item:hover {
+  background-color: rgba(0, 0, 0, 0.093);
+}
+
+.Locations-Container-Header {
+  font-size: larger;
+  margin: 0;
+}
+
+.Locations-Container-Text {
+  font-size: medium;
+  margin: 0;
+}
+
+.Content-LandingText{
+  width: 50%;
+  border-radius: 30px;
+  margin-top: 8rem;
+  padding: 1rem 1rem 1rem 1rem;
+  opacity: 0%;
+  transition: 1s;
+  margin-bottom: 4rem;
+}
+
+.Content-LandingText-Text{
+  font-family: 'Tommy personal use';
+  text-align: justify;
+  color: black;
+}
+.Content-LandingText-Header{
+  font-family: 'Tommy personal use';
+  text-align: center;
+  margin-bottom: 0rem;
+  margin-top: 0.5rem;
+  color: black;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .carousel-item-image-Header {font-size: 1.4rem;}
+  .Content-LandingText{
+    opacity: 100%;
+    margin-top: 4rem;
+  }
+  .carousel-item-image-Text {font-size:1rem;}
+  .Content-LandingText{
+    width: 80%;
+  }
+  .FixedAdv {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  #FixedAdv-Right {
+    margin-top: 0.5rem;
+  }
+  .carousel-item-image-Container{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+  }
+  .Locations {
+    flex-direction: column;
+    width: 98%;
+    max-height: none;
+  }
+
+  .Locations-Container {
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 15rem;
+    max-height: 15rem;
+  }
+
+  .map {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+  }
+
+  .Map-image {
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .FixedAdv-Container {
+    width: 100%;
+    margin-top: 0px;
+  }
+}
+@font-face {
+  src: url(../Fonts/MADE\ Tommy\ Soft\ Medium\ PERSONAL\ USE.otf);
+  font-family: 'Tommy personal use';
+}
