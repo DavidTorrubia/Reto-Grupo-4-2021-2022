@@ -1,254 +1,252 @@
 .Content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .Content-InteractiveImageDescription-Container {
-    background-color: black;
-    position: relative;
-    width: 100%;
-    height: 35rem;
-    margin-top: 2rem;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    margin-bottom: 2rem;
+  background-color: black;
+  position: relative;
+  width: 100%;
+  height: 35rem;
+  margin-top: 2rem;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  margin-bottom: 2rem;
 }
 
 .Content-InteractiveImageDescription-Container-Background {
-    opacity: 100%;
-    transition: 1s;
-    width: 100%;
-    object-fit: cover;
-    height: 100%;
+  opacity: 100%;
+  transition: 1s;
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
 }
 
 .Content-InteractiveImageDescription-Container-Aux {
-    width: 100%;
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-    align-items: center;
-    background-image: linear-gradient(#ffffff00, #000000);
-    justify-content: center;
-    top: 0;
-    left: 0;
-    position: absolute;
+  width: 100%;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(#ffffff00, #000000);
+  justify-content: center;
+  top: 0;
+  left: 0;
+  position: absolute;
 }
 
 .Content-BusinessValues-Container-Item p {
-    font-family: sans-serif;
-    padding: 0 48px;
-    text-align: center;
+  font-family: sans-serif;
+  padding: 0 48px;
+  text-align: center;
 }
 
 .Content-InteractiveImageDescription-Container-Header-front {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    left: 50%;
-    top: 50%;
-    font-family: 'Tommy personal use';
-    color: white;
-    font-size: 5rem;
-    text-align: center;
-    opacity: 100%;
-    transition: 1s;
-    margin: 0 0 0 0;
-    width: 90%;
-    font-size: 4rem;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  font-family: "Tommy personal use";
+  color: white;
+  font-size: 5rem;
+  text-align: center;
+  opacity: 100%;
+  transition: 1s;
+  margin: 0 0 0 0;
+  width: 90%;
+  font-size: 4rem;
 }
 
 .Content-Separator {
-    width: 80%;
-    border-radius: 30px;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    height: 0.20rem;
-    background-image: linear-gradient(#913611, #3a1101);
+  width: 80%;
+  border-radius: 30px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  height: 0.2rem;
+  background-image: linear-gradient(#913611, #3a1101);
 }
 
 .Content-BusinessValues-Container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    width: 100%;
-    flex-wrap: wrap;
-    align-items: center;
-    transition: 1s;
-    opacity: 0%;
-    margin-top: 8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  transition: 1s;
+  opacity: 0%;
+  margin-top: 8rem;
 }
 
 .Content-BusinessValues-Container-Item {
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  align-items: center;
+  justify-content: center;
 }
 
 .Content-BusinessValues-Container-Item-Icon {
-    width: 38%;
+  width: 38%;
 }
 
 .Content-BusinessValues-Container-Item-Text {
-    text-align: center;
-    color: #3a1101;
-    font-family: 'Tommy personal use';
+  text-align: center;
+  color: #3a1101;
+  font-family: "Tommy personal use";
 }
 
-.Content-InteractiveImageDescription-Container:hover .Content-InteractiveImageDescription-Container-Background {
-    opacity: 50%;
+.Content-InteractiveImageDescription-Container:hover
+  .Content-InteractiveImageDescription-Container-Background {
+  opacity: 50%;
 }
 
-.Content-InteractiveImageDescription-Container:hover .Content-InteractiveImageDescription-Container-Header-front {
-    opacity: 0%;
+.Content-InteractiveImageDescription-Container:hover
+  .Content-InteractiveImageDescription-Container-Header-front {
+  opacity: 0%;
 }
 
-.Content-InteractiveImageDescription-Container:hover .Content-InteractiveImageDescription-Container-Text {
-    opacity: 100%;
+.Content-InteractiveImageDescription-Container:hover
+  .Content-InteractiveImageDescription-Container-Text {
+  opacity: 100%;
 }
 
 .Content-InteractiveImageDescription-Container-Text {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    left: 50%;
-    top: 50%;
-    font-family: 'Tommy personal use';
-    color: white;
-    opacity: 0%;
-    transition: 1s;
-    text-align: justify;
-    width: 90%;
-    font-size: 1rem;
-    margin: 0 0 0 0;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  font-family: "Tommy personal use";
+  color: white;
+  opacity: 0%;
+  transition: 1s;
+  text-align: justify;
+  width: 90%;
+  font-size: 1rem;
+  margin: 0 0 0 0;
 }
-.Content-Works{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-
+.Content-Works {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
-.Content-Works-Item{
-    width: 30%;
-    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
-    background-color: white;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-
+.Content-Works-Item {
+  width: 30%;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.Content-Works-Item-Image{
-    width: 100%;
-    border-radius: 10px;
-    object-fit: cover;
+.Content-Works-Item-Image {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
 }
-.Content-Works-Item-Header{
-    font-family: 'Tommy personal use';
-    text-align: center;
-    margin-bottom: 0;
-    color: #3a1101;
-    
+.Content-Works-Item-Header {
+  font-family: "Tommy personal use";
+  text-align: center;
+  margin-bottom: 0;
+  color: #3a1101;
 }
-.Content-Works-Item-Description{
-    font-family: 'Tommy personal use';
-    text-align: center; 
-    width: 90%;
-    color: #3a1101;
+.Content-Works-Item-Description {
+  font-family: "Tommy personal use";
+  text-align: center;
+  width: 90%;
+  color: #3a1101;
 }
-.Content-WorkWithUs{
-   background-color: white;
-   border-radius: 30px;
-   padding: 1rem 1rem 1rem 1rem; 
-   margin-bottom: 2rem;
-   width: 50%;
-   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-   display: flex;
-   flex-direction: column;
-   width: 90%;
+.Content-WorkWithUs {
+  background-color: white;
+  border-radius: 30px;
+  padding: 1rem 1rem 1rem 1rem;
+  margin-bottom: 2rem;
+  width: 50%;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  width: 90%;
 }
-.Content-WorkWithUs-Header{
-    font-family: 'Tommy personal use';
-    color: #3a1101;
-    text-align: center;
+.Content-WorkWithUs-Header {
+  font-family: "Tommy personal use";
+  color: #3a1101;
+  text-align: center;
 }
 
-.Content-WorkWithUs-Info{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
+.Content-WorkWithUs-Info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
-.Content-WorkWithUs-CV-Text{
-    border: solid .2rem #3a1101;
-    border-radius: 30px;
-    font-family: 'Tommy personal use';
-    color: #3a1101;
-    padding: 1rem 1rem 1rem 1rem ;
-    text-align: center;
-    font-size: 1.3rem;
+.Content-WorkWithUs-CV-Text {
+  border: solid 0.2rem #3a1101;
+  border-radius: 30px;
+  font-family: "Tommy personal use";
+  color: #3a1101;
+  padding: 1rem 1rem 1rem 1rem;
+  text-align: center;
+  font-size: 1.3rem;
 }
 
-.Content-WorkWithUs-JobVacancies-Text{
-    font-family: 'Tommy personal use';
-    font-size: large;
-    color:#3a1101;
+.Content-WorkWithUs-JobVacancies-Text {
+  font-family: "Tommy personal use";
+  font-size: large;
+  color: #3a1101;
 }
 
-.Content-WorkWithUs-OccupationalRiskPrevention-Text{
-    font-family: 'Tommy personal use';
-    font-size: large;
-    color:#3a1101;
+.Content-WorkWithUs-OccupationalRiskPrevention-Text {
+  font-family: "Tommy personal use";
+  font-size: large;
+  color: #3a1101;
 }
-
 
 @media only screen and (max-width: 600px) {
-    .Content-InteractiveImageDescription-Container-Text {
-        font-size: 1rem;
-        top: 50%;
-        margin: 0 0 0 0;
-    }
+  .Content-InteractiveImageDescription-Container-Text {
+    font-size: 1rem;
+    top: 50%;
+    margin: 0 0 0 0;
+  }
 
-    .Content-InteractiveImageDescription-Container-Header-front {
-        font-size: 2rem;
-    }
+  .Content-InteractiveImageDescription-Container-Header-front {
+    font-size: 2rem;
+  }
 
-    .Content-BusinessValues-Container {
-        flex-direction: column;
-    }
-    .Content-InteractiveImageDescription-Container{
-        height: 15rem;
-    }
-    .Content-BusinessValues-Container{
-        opacity: 100%;
-        width: 100%;
-        margin-top: 0rem;
-    }
-    .Content-BusinessValues-Container-Item{
-        width: 100%;
-    }
-    .Content-Works{
-        flex-direction: column;
-        align-items: center;
-    }
-    .Content-Works-Item{
-        width: 90%;
-        margin-bottom: 1rem;
-    }
+  .Content-BusinessValues-Container {
+    flex-direction: column;
+  }
+  .Content-InteractiveImageDescription-Container {
+    height: 15rem;
+  }
+  .Content-BusinessValues-Container {
+    opacity: 100%;
+    width: 100%;
+    margin-top: 0rem;
+  }
+  .Content-BusinessValues-Container-Item {
+    width: 100%;
+  }
+  .Content-Works {
+    flex-direction: column;
+    align-items: center;
+  }
+  .Content-Works-Item {
+    width: 90%;
+    margin-bottom: 1rem;
+  }
 }
 
 @media only screen and (min-width: 950px) {
-    .Content-InteractiveImageDescription-Container-Text {
-        font-size: 1.5rem;
-        top: 50%;
-        margin: 0 0 0 0;
-    }
+  .Content-InteractiveImageDescription-Container-Text {
+    font-size: 1.5rem;
+    top: 50%;
+    margin: 0 0 0 0;
+  }
 }
 
 @font-face {
-    src: url(../Fonts/MADE\ Tommy\ Soft\ Medium\ PERSONAL\ USE.otf);
-    font-family: 'Tommy personal use';
+  src: url(../Fonts/MADE\ Tommy\ Soft\ Medium\ PERSONAL\ USE.otf);
+  font-family: "Tommy personal use";
 }

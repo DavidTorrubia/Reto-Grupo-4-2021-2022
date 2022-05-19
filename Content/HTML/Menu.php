@@ -16,30 +16,24 @@
 <?php include 'Header.php'; ?>
 
     <div class="Content">
-        <button class="Content-Menu-SlideUp" type="button" id="Content-Menu-SlideUp" onclick="ScrollUp()"><img
-                src="../Icons/Menu/UpArrow.png" class="Content-Menu-SlideUp-Image"></button>
-                <div class="Content-Menu-Searchbar-Aux">
-                    <input type="text" class="Content-Menu-Searchbar" id="Content-Menu-Searchbar" placeholder="Search ...">
-                </div>
+        <button class="Content-Menu-SlideUp" type="button" id="Content-Menu-SlideUp" onclick="ScrollUp()"><img src="../Icons/Menu/UpArrow.png" class="Content-Menu-SlideUp-Image"></button>
+        <div class="Content-Menu-Searchbar-Aux">
+            <input type="text" class="Content-Menu-Searchbar" id="Content-Menu-Searchbar" placeholder="Search ...">
+        </div>
         <h1 class="Content-Header"> Types </h1>
         <div class="Content-Menu-Types-Container">
             <div class="Content-Menu-Types-Container-Item1 Content-Menu-Types-Container-Item" onclick="ScrollToDyC()">
-                <img src="../Images/menu/TakeAwayImage.png"
-                    class="Content-Menu-Types-Container-Images Content-Menu-Types-Container-Item1-Image">
+                <img src="../Images/menu/TakeAwayImage.png" class="Content-Menu-Types-Container-Images Content-Menu-Types-Container-Item1-Image">
                 <h1 class="Content-Menu-Types-Container-Images-Text Content-Menu-Types-Container-Item1-text">Drinks <br>
                     & <br> Coffee</h1>
             </div>
-            <div class="Content-Menu-Types-Container-Item2 Content-Menu-Types-Container-Item"
-                onclick="ScrollToPastries()">
-                <img src="../Images/menu/cheesecake.png"
-                    class="Content-Menu-Types-Container-Images Content-Menu-Types-Container-Item2-Image">
+            <div class="Content-Menu-Types-Container-Item2 Content-Menu-Types-Container-Item" onclick="ScrollToPastries()">
+                <img src="../Images/menu/cheesecake.png" class="Content-Menu-Types-Container-Images Content-Menu-Types-Container-Item2-Image">
                 <h1 class="Content-Menu-Types-Container-Images-Text Content-Menu-Types-Container-Item2-text">Pastries
                 </h1>
             </div>
-            <div class="Content-Menu-Types-Container-Item3 Content-Menu-Types-Container-Item"
-                onclick="ScrollToSnacks()">
-                <img src="../Images/menu/Snacks.png"
-                    class="Content-Menu-Types-Container-Images Content-Menu-Types-Container-Item3-Image">
+            <div class="Content-Menu-Types-Container-Item3 Content-Menu-Types-Container-Item" onclick="ScrollToSnacks()">
+                <img src="../Images/menu/Snacks.png" class="Content-Menu-Types-Container-Images Content-Menu-Types-Container-Item3-Image">
                 <h1 class="Content-Menu-Types-Container-Images-Text Content-Menu-Types-Container-Item3-text">Snacks</h1>
             </div>
         </div>
