@@ -1,6 +1,6 @@
 @font-face {
   src: url(../Fonts/MADE\ Tommy\ Soft\ Medium\ PERSONAL\ USE.otf);
-  font-family: 'Tommy personal use';
+  font-family: "Tommy personal use";
 }
 
 .Content {
@@ -24,7 +24,7 @@
   overflow: hidden;
   width: 100%;
 }
-.carousel-open:checked+.carousel-item {
+.carousel-open:checked + .carousel-item {
   position: static;
   opacity: 100;
 }
@@ -43,7 +43,7 @@
 }
 
 .carousel-item-image-Header {
-  font-family: 'Tommy personal use';
+  font-family: "Tommy personal use";
   font-size: 3rem;
   color: white;
   text-align: left;
@@ -109,9 +109,9 @@
   color: #aaaaaa;
 }
 
-#carousel-1:checked~.control-1,
-#carousel-2:checked~.control-2,
-#carousel-3:checked~.control-3 {
+#carousel-1:checked ~ .control-1,
+#carousel-2:checked ~ .control-2,
+#carousel-3:checked ~ .control-3 {
   display: block;
 }
 
@@ -143,9 +143,21 @@
   color: #aaaaaa;
 }
 
-#carousel-1:checked~.control-1~.carousel-indicators li:nth-child(1) .carousel-bullet,
-#carousel-2:checked~.control-2~.carousel-indicators li:nth-child(2) .carousel-bullet,
-#carousel-3:checked~.control-3~.carousel-indicators li:nth-child(3) .carousel-bullet {
+#carousel-1:checked
+  ~ .control-1
+  ~ .carousel-indicators
+  li:nth-child(1)
+  .carousel-bullet,
+#carousel-2:checked
+  ~ .control-2
+  ~ .carousel-indicators
+  li:nth-child(2)
+  .carousel-bullet,
+#carousel-3:checked
+  ~ .control-3
+  ~ .carousel-indicators
+  li:nth-child(3)
+  .carousel-bullet {
   color: #428bca;
 }
 
@@ -157,9 +169,10 @@
   text-align: center;
   font-size: 27px;
   color: rgba(255, 255, 255, 1);
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   z-index: 9999;
-  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33),
+    -1px 0px 2px rgba(255, 255, 255, 0);
 }
 
 /*FIXED ADVERTISE*/
@@ -185,7 +198,7 @@
   align-items: center;
   justify-content: center;
   color: white;
-  font-family: 'Tommy personal use';
+  font-family: "Tommy personal use";
 }
 
 .FixedAdv-Container-Text {
@@ -199,13 +212,12 @@
   text-decoration: auto;
 }
 
-
 .Advertise-Title {
   font-size: 50px;
   background: linear-gradient(#ffffff, #bcbcbc);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: 'Tommy personal use';
+  font-family: "Tommy personal use";
   margin-bottom: 0;
   transition: 0.3s;
 }
@@ -215,23 +227,22 @@
   background: linear-gradient(#ffffff, #bcbcbc);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: 'Tommy personal use';
+  font-family: "Tommy personal use";
   transition: 0.3s;
 }
 
-#FixedAdv-Left:hover .Advertise-Title{
+#FixedAdv-Left:hover .Advertise-Title {
   font-size: 60px;
 }
-#FixedAdv-Left:hover .Advertise-Text{
+#FixedAdv-Left:hover .Advertise-Text {
   font-size: 30px;
 }
-#FixedAdv-Right:hover .Advertise-Title{
+#FixedAdv-Right:hover .Advertise-Title {
   font-size: 60px;
 }
-#FixedAdv-Right:hover .Advertise-Text{
+#FixedAdv-Right:hover .Advertise-Text {
   font-size: 30px;
 }
-
 
 #FixedAdv-Left {
   background-image: url(https://images.unsplash.com/photo-1591375198043-606387f65389?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
@@ -250,7 +261,7 @@
   background-repeat: no-repeat;
   background-position: center;
 }
-.Content-LocationsButton{
+.Content-LocationsButton {
   width: 100%;
   margin-top: 1.2rem;
   background-color: #da843d3a;
@@ -272,14 +283,14 @@
   width: 95%;
   transition: 1s;
 }
-.Content-LocationButton-Icon{
+.Content-LocationButton-Icon {
   border-radius: 50%;
   width: 3rem;
   padding: 0.2rem 0.2rem 0.2rem 0.2rem;
   transform: rotate(0deg);
   transition: 1s;
 }
-.Content-LocationButton-Header{
+.Content-LocationButton-Header {
   margin-right: 47%;
   margin-left: auto;
 }
@@ -292,14 +303,14 @@
   height: 100%;
 }
 .Content-Header {
-  font-family: 'Tommy personal use';
+  font-family: "Tommy personal use";
   text-align: center;
   color: #3a1101;
 }
 .Locations-Container {
   width: 100%;
-  background-color:rgb(255, 255, 255);
-  font-family: 'Tommy personal use';
+  background-color: rgb(255, 255, 255);
+  font-family: "Tommy personal use";
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
@@ -328,7 +339,7 @@
   margin: 0;
 }
 
-.Content-LandingText{
+.Content-LandingText {
   width: 50%;
   border-radius: 30px;
   margin-top: 8rem;
@@ -338,28 +349,31 @@
   margin-bottom: 4rem;
 }
 
-.Content-LandingText-Text{
-  font-family: 'Tommy personal use';
+.Content-LandingText-Text {
+  font-family: "Tommy personal use";
   text-align: justify;
   color: black;
 }
-.Content-LandingText-Header{
-  font-family: 'Tommy personal use';
+.Content-LandingText-Header {
+  font-family: "Tommy personal use";
   text-align: center;
   margin-bottom: 0rem;
   margin-top: 0.5rem;
   color: black;
 }
 
-
 @media only screen and (max-width: 600px) {
-  .carousel-item-image-Header {font-size: 1.4rem;}
-  .Content-LandingText{
+  .carousel-item-image-Header {
+    font-size: 1.4rem;
+  }
+  .Content-LandingText {
     opacity: 100%;
     margin-top: 4rem;
   }
-  .carousel-item-image-Text {font-size:1rem;}
-  .Content-LandingText{
+  .carousel-item-image-Text {
+    font-size: 1rem;
+  }
+  .Content-LandingText {
     width: 80%;
   }
   .FixedAdv {
@@ -370,7 +384,7 @@
   #FixedAdv-Right {
     margin-top: 0.5rem;
   }
-  .carousel-item-image-Container{
+  .carousel-item-image-Container {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -410,5 +424,5 @@
 }
 @font-face {
   src: url(../Fonts/MADE\ Tommy\ Soft\ Medium\ PERSONAL\ USE.otf);
-  font-family: 'Tommy personal use';
+  font-family: "Tommy personal use";
 }
