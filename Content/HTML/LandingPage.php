@@ -14,6 +14,7 @@
 
 <body>
  <?php include'Header.php';?>
+ 
     <div class="Content">
         <div class="carousel">
             <div class="carousel-inner">
