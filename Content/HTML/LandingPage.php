@@ -21,11 +21,11 @@
                     src="../Icons/MenuIcon.png" alt="imagen_menu"></button>
             <div class="Header-Item-Left-Container-Dropbutton-Content"
                 id="Header-Item-Left-Container-Dropbutton-Content">
-                <a href="../HTML/Menu.html">Menu</a>
-                <a href="../HTML/AboutUs.html">About us</a>
+                <a href="../HTML/Menu.php">Menu</a>
+                <a href="../HTML/AboutUs.php">About us</a>
             </div>
         </div>
-        <a href="../HTML/LandingPage.html"><img class="Header-Logo" src="../Images/Logo/LogoWhite.png" alt="logo"></a>
+        <a href="../HTML/LandingPage.php"><img class="Header-Logo" src="../Images/Logo/LogoWhite.png" alt="logo"></a>
         <div class="Header-Item Header-Item-Right-Container">
             <div class="Header-Item-Right-Container-UserDropButtonContainer">
                 <button type="button" class="Header-Item-Right-Container-UserDropButton"
@@ -75,13 +75,13 @@
                     <div>
                         <a type="button" class="Header-Item-Right-Container-UserDropButton-Content-Button UserConfig"
                             id="Header-Item-Right-Container-UserDropButton-Content-UserConfig "
-                            href="../HTML/UserPage.html">User Config</a>
+                            href="../HTML/UserPage.php">User Config</a>
                     </div>
                     <button type="button" class="Header-Item-Right-Container-UserDropButton-Content-Button"
                         id="Header-Item-Right-Container-UserDropButton-Content-Log off"> Log off</button>
                 </div>
             </div>
-            <a href="../HTML/ShoppingCart.html"><img class="Header-Imagen" src="../Icons/ShopppingListWhite.png" /></a>
+            <a href="../HTML/ShoppingCart.php"><img class="Header-Imagen" src="../Icons/ShopppingListWhite.png" /></a>
             <img class="Header-Imagen Header-Imagen-Bandera" src="../Images/flags/ukflag.png" />
         </div>
     </div>
@@ -137,7 +137,7 @@
                 Lorem Ipsum
             </h1>
             <p class="Content-LandingText-Text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in dolor id leo feugiat faucibus. Etiam interdum venenatis accumsan. Suspendisse ut finibus mi, vel elementum nisl. Suspendisse viverra porta ex nec congue. Nam nisl nunc, porta id vulputate eget, maximus ac nisi. In quis mattis augue. In hac habitasse platea dictumst. Morbi fringilla pharetra tempus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed elementum lectus at dui finibus vehicula. Donec et risus vel ante commodo varius. Phasellus sed est lacinia, faucibus enim lobortis, lobortis magna. Praesent feugiat pellentesque facilisis. Mauris sodales nunc aliquam, placerat massa sed, sagittis neque.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in dolor id leo feugiat faucibus. Etiam interdum venenatis accumsan. Suspendisse ut finibus mi, vel elementum nisl. Suspendisse viverra porta ex nec congue. Nam nisl nunc, porta id vulputate eget, maximus ac nisi. In quis mattis augue. In hac habitasse platea dictumst. Morbi fringilla pharetra tempus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed elementum lectus at dui finibus vehicula. Donec et risus vel ante commodo varius. Phasellus sed est lacinia, faucibus enim lobortis, lobortis magna. Praesent feugiat pellentesque facilisis. Mauris sodales nunc aliquam, placerat massa sed, sagittis neque. 
             </p>
         </div>
         <div class="FixedAdv">
@@ -149,7 +149,7 @@
 
             </div>
             <div class="FixedAdv-Container" id="FixedAdv-Right">
-                <a class="FixedAdv-Container-Text" href="AboutUs.html">
+                <a class="FixedAdv-Container-Text" href="AboutUs.php">
                     <h1 class="Advertise-Title">We are hiring!</h1>
                     <p class="Advertise-Text">Join to our team</p>
                 </a>
@@ -205,11 +205,11 @@
     </div>
     <div class="Footer">
         <div class="Footer-SelectionBar">
-            <a href="AboutUs.html">About Us</a>
+            <a href="AboutUs.php">About Us</a>
             <a href="">Help</a>
             <a href="https://mail.google.com/mail/u/1/?pli=1#inbox">Contact Us</a>
-            <a href="AboutUs.html">Work with us</a>
-            <a href="UserPage.html">Settings</a>
+            <a href="AboutUs.php">Work with us</a>
+            <a href="UserPage.php">Settings</a>
         </div>
         <p>ecoffe @Copyright</p>
     </div>

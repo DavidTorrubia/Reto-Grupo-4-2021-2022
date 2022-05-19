@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/AboutUsStyle.css">
     <link rel="stylesheet" href="../CSS/MainStyle.css">
+    <link rel="stylesheet" href="../CSS/MenuStyle.css">
     <script src="../JS/HeaderScripts.js"></script>
-    <title>Ecoffe - About us</title>
-    <script src="../JS/AboutUsScript.js"></script>
+    <script src="../JS/MenuScript.js"></script>
+    <title>Ecoffe - Menu</title>
 </head>
 
 <body>
@@ -21,11 +21,11 @@
                     src="../Icons/MenuIcon.png" alt="imagen_menu"></button>
             <div class="Header-Item-Left-Container-Dropbutton-Content"
                 id="Header-Item-Left-Container-Dropbutton-Content">
-                <a href="../HTML/Menu.html">Menu</a>
-                <a href="../HTML/AboutUs.html">About us</a>
+                <a href="../HTML/Menu.php">Menu</a>
+                <a href="../HTML/AboutUs.php">About us</a>
             </div>
         </div>
-        <a href="../HTML/LandingPage.html"><img class="Header-Logo" src="../Images/Logo/LogoWhite.png" alt="logo"></a>
+        <a href="../HTML/LandingPage.php"><img class="Header-Logo" src="../Images/Logo/LogoWhite.png" alt="logo"></a>
         <div class="Header-Item Header-Item-Right-Container">
             <div class="Header-Item-Right-Container-UserDropButtonContainer">
                 <button type="button" class="Header-Item-Right-Container-UserDropButton"
@@ -75,111 +75,64 @@
                     <div>
                         <a type="button" class="Header-Item-Right-Container-UserDropButton-Content-Button UserConfig"
                             id="Header-Item-Right-Container-UserDropButton-Content-UserConfig "
-                            href="../HTML/UserPage.html">User Config</a>
+                            href="../HTML/UserPage.php">User Config</a>
                     </div>
                     <button type="button" class="Header-Item-Right-Container-UserDropButton-Content-Button"
                         id="Header-Item-Right-Container-UserDropButton-Content-Log off"> Log off</button>
                 </div>
             </div>
-            <a href="../HTML/ShoppingCart.html"><img class="Header-Imagen" src="../Icons/ShopppingListWhite.png" /></a>
+            <a href="../HTML/ShoppingCart.php"><img class="Header-Imagen" src="../Icons/ShopppingListWhite.png" /></a>
             <img class="Header-Imagen Header-Imagen-Bandera" src="../Images/flags/ukflag.png" />
         </div>
     </div>
     <div class="Content">
-        <div class="Content-InteractiveImageDescription-Container">
-
-            <img src="https://images.pexels.com/photos/9892384/pexels-photo-9892384.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                class="Content-InteractiveImageDescription-Container-Background">
-            <div class="Content-InteractiveImageDescription-Container-Aux">
-                <h1 class="Content-InteractiveImageDescription-Container-Header-front">What do we represent?</h1>
-            </div>
-            <p class="Content-InteractiveImageDescription-Container-Text">We are an ecofriendly café witch works
-                with natural products. We do not use pesticides or similars to grow the coffee plants with the
-                objective of improve the planet with the best taste. We support local farmers with the objective of
-                reduce our carbon footprint, we also use biodegradables packages.</p>
-
-
-        </div>
-        <div class="Content-BusinessValues-Container" id="Content-BusinessValues-Container">
-            <div class="Content-BusinessValues-Container-Item">
-                <img class="Content-BusinessValues-Container-Item-Icon"
-                    src="../Icons/AboutUs/icons8-earth-96.png">
-                <h1 class="Content-BusinessValues-Container-Item-Text">Eco-friendly</h1>
-                <p>We ensure the minimal enviromental footprint</p>
-            </div>
-            <div class="Content-BusinessValues-Container-Item">
-                <img class="Content-BusinessValues-Container-Item-Icon"
-                    src="../Icons/AboutUs/icons8-astrology-96.png">
-                <h1 class="Content-BusinessValues-Container-Item-Text">Quality</h1>
-                <p>We make our products with the best quality ingredients</p>
-            </div>
-            <div class="Content-BusinessValues-Container-Item">
-                <img class="Content-BusinessValues-Container-Item-Icon" 
-                src="../Icons/AboutUs/icons8-connection-96.png">
-                <h1 class="Content-BusinessValues-Container-Item-Text">Social Responsability</h1>
-                <p>We take care of our clients and employees</p>
-            </div>
-        </div>
-        <div class="Content-Separator"></div>
-        <div class="Content-Works">
-            <div class="Content-Works-Item">
-                <img class="Content-Works-Item-Image"
-                    src="https://as1.ftcdn.net/v2/jpg/04/33/37/78/1000_F_433377839_FmBCe5bPE36qx8qYgIgwR9AOmONVTrLZ.jpg">
-                <h1 class="Content-Works-Item-Header">Manager</h1>
-                <p class="Content-Works-Item-Description">
-                    The manager's job is to encourage the workers and to administrate the business
-                </p>
-                <p class="Content-Works-Item-Description">
-                    1600€
-                </p>
-            </div>
-            <div class="Content-Works-Item">
-                <img class="Content-Works-Item-Image"
-                    src="https://as2.ftcdn.net/v2/jpg/01/31/27/37/1000_F_131273792_uhOADVbm9oCssx4lMV7Q8xWUFcjGGAI1.jpg">
-                <h1 class="Content-Works-Item-Header">Bartender</h1>
-                <p class="Content-Works-Item-Description">
-                    The bartender's job is to talk to customers and to serve them their order
-                </p>
-                <p class="Content-Works-Item-Description">
-                    1300€
-                </p>
-            </div>
-            <div class="Content-Works-Item">
-                <img class="Content-Works-Item-Image"
-                    src="https://cdn.create.vista.com/api/media/small/460816796/stock-photo-cropped-view-delivery-man-coffee">
-                <h1 class="Content-Works-Item-Header">Delivery man</h1>
-                <p class="Content-Works-Item-Description">
-                    The delivery man's job is to deliver the products to the customer's home
-                </p>
-                <p class="Content-Works-Item-Description">
-                    1300€
-                </p>
-            </div>
-        </div>
-        <div class="Content-Separator"></div>
-        <div class="Content-WorkWithUs">
-            <h1 class="Content-WorkWithUs-Header">Work with us</h1>
-            <div class="Content-WorkWithUs-CV">
-                <p class="Content-WorkWithUs-CV-Text">Send us your CV <a href="https://mail.google.com/mail/u/1/?pli=1#inbox">here</a></p>
-            </div>
-            <div class="Content-WorkWithUs-Info">
-                <div class="Content-WorkWithUs-JobVacancies">
-                    <h1 class="Content-WorkWithUs-JobVacancies-Text">Job vacancies</h1>
+        <button class="Content-Menu-SlideUp" type="button" id="Content-Menu-SlideUp" onclick="ScrollUp()"><img
+                src="../Icons/Menu/UpArrow.png" class="Content-Menu-SlideUp-Image"></button>
+                <div class="Content-Menu-Searchbar-Aux">
+                    <input type="text" class="Content-Menu-Searchbar" id="Content-Menu-Searchbar" placeholder="Search ...">
                 </div>
-                <div class="Content-WorkWithUs-OccupationalRiskPrevention">
-                    <h1 class="Content-WorkWithUs-OccupationalRiskPrevention-Text">Occupational Risk Prevention</h1>
-                </div>
+        <h1 class="Content-Header"> Types </h1>
+        <div class="Content-Menu-Types-Container">
+            <div class="Content-Menu-Types-Container-Item1 Content-Menu-Types-Container-Item" onclick="ScrollToDyC()">
+                <img src="../Images/menu/TakeAwayImage.png"
+                    class="Content-Menu-Types-Container-Images Content-Menu-Types-Container-Item1-Image">
+                <h1 class="Content-Menu-Types-Container-Images-Text Content-Menu-Types-Container-Item1-text">Drinks <br>
+                    & <br> Coffee</h1>
             </div>
-            
+            <div class="Content-Menu-Types-Container-Item2 Content-Menu-Types-Container-Item"
+                onclick="ScrollToPastries()">
+                <img src="../Images/menu/cheesecake.png"
+                    class="Content-Menu-Types-Container-Images Content-Menu-Types-Container-Item2-Image">
+                <h1 class="Content-Menu-Types-Container-Images-Text Content-Menu-Types-Container-Item2-text">Pastries
+                </h1>
+            </div>
+            <div class="Content-Menu-Types-Container-Item3 Content-Menu-Types-Container-Item"
+                onclick="ScrollToSnacks()">
+                <img src="../Images/menu/Snacks.png"
+                    class="Content-Menu-Types-Container-Images Content-Menu-Types-Container-Item3-Image">
+                <h1 class="Content-Menu-Types-Container-Images-Text Content-Menu-Types-Container-Item3-text">Snacks</h1>
+            </div>
+        </div>
+        <h1 class="Content-Header" id="Menu-Drinks-Coffee"> Drinks & Coffe </h1>
+        <div class="Content-Products-Container-DrinksCoffe">
+
+        </div>
+        <h1 class="Content-Header" id="Menu-Pastries"> Pastries </h1>
+        <div class="Content-Products-Container-Pastries">
+
+        </div>
+        <h1 class="Content-Header" id="Menu-Snacks"> Snacks </h1>
+        <div class="Content-Products-Container-Snacks">
+
         </div>
     </div>
     <div class="Footer">
         <div class="Footer-SelectionBar">
-            <a href="AboutUs.html">About Us</a>
+            <a href="AboutUs.php">About Us</a>
             <a href="">Help</a>
             <a href="https://mail.google.com/mail/u/1/?pli=1#inbox">Contact Us</a>
-            <a href="AboutUs.html">Work with us</a>
-            <a href="UserPage.html">Settings</a>
+            <a href="AboutUs.php">Work with us</a>
+            <a href="UserPage.php">Settings</a>
         </div>
         <p>ecoffe @Copyright</p>
     </div>
