@@ -21,11 +21,11 @@
                     src="../Icons/MenuIcon.png" alt="imagen_menu"></button>
             <div class="Header-Item-Left-Container-Dropbutton-Content"
                 id="Header-Item-Left-Container-Dropbutton-Content">
-                <a href="../HTML/Menu.html">Menu</a>
-                <a href="../HTML/AboutUs.html">About us</a>
+                <a href="../HTML/Menu.php">Menu</a>
+                <a href="../HTML/AboutUs.php">About us</a>
             </div>
         </div>
-        <a href="../HTML/LandingPage.html"><img class="Header-Logo" src="../Images/Logo/LogoWhite.png" alt="logo"></a>
+        <a href="../HTML/LandingPage.php"><img class="Header-Logo" src="../Images/Logo/LogoWhite.png" alt="logo"></a>
         <div class="Header-Item Header-Item-Right-Container">
 
             <div class="Header-Item-Right-Container-UserDropButtonContainer">
@@ -77,7 +77,7 @@
                         id="Header-Item-Right-Container-UserDropButton-Content-Log off"> Log off</button>
                 </div>
             </div>
-            <a href="../HTML/ShoppingCart.html"><img class="Header-Imagen" src="../Icons/ShopppingListWhite.png" /></a>
+            <a href="../HTML/ShoppingCart.php"><img class="Header-Imagen" src="../Icons/ShopppingListWhite.png" /></a>
             <img class="Header-Imagen Header-Imagen-Bandera" src="../Images/flags/ukflag.png" />
         </div>
     </div>
@@ -206,11 +206,11 @@
     </div>
     <div class="Footer">
         <div class="Footer-SelectionBar">
-            <a href="AboutUs.html">About Us</a>
+            <a href="AboutUs.php">About Us</a>
             <a href="">Help</a>
             <a href="https://mail.google.com/mail/u/1/?pli=1#inbox">Contact Us</a>
-            <a href="AboutUs.html">Work with us</a>
-            <a href="UserPage.html">Settings</a>
+            <a href="AboutUs.php">Work with us</a>
+            <a href="UserPage.php">Settings</a>
         </div>
         <p>ecoffe @Copyright</p>
     </div>

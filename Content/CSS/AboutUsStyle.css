@@ -167,12 +167,21 @@
    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
    display: flex;
    flex-direction: column;
+   width: 90%;
 }
 .Content-WorkWithUs-Header{
     font-family: 'Tommy personal use';
     color: #3a1101;
     text-align: center;
 }
+
+.Content-WorkWithUs-Info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
 .Content-WorkWithUs-CV-Text{
     border: solid .2rem #3a1101;
     border-radius: 30px;
@@ -181,6 +190,18 @@
     padding: 1rem 1rem 1rem 1rem ;
     text-align: center;
     font-size: 1.3rem;
+}
+
+.Content-WorkWithUs-JobVacancies-Text{
+    font-family: 'Tommy personal use';
+    font-size: large;
+    color:#3a1101;
+}
+
+.Content-WorkWithUs-OccupationalRiskPrevention-Text{
+    font-family: 'Tommy personal use';
+    font-size: large;
+    color:#3a1101;
 }
 
 
