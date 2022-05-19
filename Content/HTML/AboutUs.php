@@ -176,14 +176,14 @@
                 <div class="Content-WorkWithUs-OccupationalRiskPreventionLLink">
                     <h1 class="Content-WorkWithUs-OccupationalRiskPreventionLink-Text">
                         <a class="Content-WorkWithUs-OccupationalRiskPreventionLink-Link" 
-                        href='#'>
+                        onclick="JobVacancyDeploy()">
                         Occupational Risk Prevention</h1>
                 </div>
             </div>
             <div class="Content-WorkWithUs-JobVacancies">
                 <div class="Content-WorkWithUs-JobVacancies-Vacant">
                     <h1 class="Content-WorkWithUs-JobVacancies-Vacant-Name">Bartender</h1>
-                    <h2 class="Content-WorkWithUs-JobVacancies-Vacant-Name">Indefinite contract</h2>
+                    <h2 class="Content-WorkWithUs-JobVacancies-Vacant-Info">Indefinite contract</h2>
                     <h2 class="Content-WorkWithUs-JobVacancies-Vacant-Info">Full-time</h2>
                     <h2 class="Content-WorkWithUs-JobVacancies-Vacant-Info">Work schedule: M 7:00 - 15:00 / A 15:00 - 23:00</h2>
                     <h2 class="Content-WorkWithUs-JobVacancies-Vacant-Info">Zaragoza, C/Violeta Parra 8</h2>

@@ -219,6 +219,15 @@
     text-decoration: none;
 }
 
+.Content-WorkWithUs-JobVacancies{
+    /*display:none;*/
+    font-family: 'Tommy personal use';
+    margin: 2%;
+}
+
+.Content-WorkWithUs-JobVacancies-Vacant-Info{
+    font-size: larger;
+}
 
 @media only screen and (max-width: 600px) {
     .Content-InteractiveImageDescription-Container-Text {
