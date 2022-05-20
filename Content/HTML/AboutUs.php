@@ -168,15 +168,17 @@
             </div>
             <div class="Content-WorkWithUs-Info">
                 <div class="Content-WorkWithUs-JobVacanciesLink">
+                    <button class="Content-WorkWithUs-JobVacanciesLink-Link" 
+                    onclick="JobVacanciesDeploy()">
                     <h1 class="Content-WorkWithUs-JobVacanciesLink-Text">
-                        <a class="Content-WorkWithUs-JobVacanciesLink-Link" 
-                        href='#'>
-                        Job vacancies</h1>
+                        Job vacancies
+                    </h1>
+                    </button>
                 </div>
                 <div class="Content-WorkWithUs-OccupationalRiskPreventionLLink">
                     <h1 class="Content-WorkWithUs-OccupationalRiskPreventionLink-Text">
                         <a class="Content-WorkWithUs-OccupationalRiskPreventionLink-Link" 
-                        onclick="JobVacancyDeploy()">
+                        onclick="">
                         Occupational Risk Prevention</h1>
                 </div>
             </div>

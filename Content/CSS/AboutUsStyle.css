@@ -207,6 +207,8 @@
 .Content-WorkWithUs-JobVacanciesLink-Link{
     color:#3a1101;
     text-decoration: none;
+    background-color: none;
+    border-color: none;
 }
 
 .Content-WorkWithUs-OccupationalRiskPreventionLink-Text{
@@ -220,7 +222,7 @@
 }
 
 .Content-WorkWithUs-JobVacancies{
-    /*display:none;*/
+    display:none;
     font-family: 'Tommy personal use';
     margin: 2%;
 }
