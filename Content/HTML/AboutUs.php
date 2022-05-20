@@ -93,9 +93,9 @@
             <div class="Content-InteractiveImageDescription-Container-Aux">
                 <h1 class="Content-InteractiveImageDescription-Container-Header-front">What do we represent?</h1>
             </div>
-            <p class="Content-InteractiveImageDescription-Container-Text">We are an ecofriendly café witch works
-                with natural products. We do not use pesticides or similars to grow the coffee plants with the
-                objective of improve the planet with the best taste. We support local farmers with the objective of
+            <p class="Content-InteractiveImageDescription-Container-Text">We are an ecofriendly coffeeshop which works
+                with natural products. We do not use pesticides or similars to grow the coffee plants in order to 
+                improve the planet with the best taste. We support local farmers with the objective of
                 reduce our carbon footprint, we also use biodegradables packages.</p>
 
 
@@ -158,17 +158,64 @@
         </div>
         <div class="Content-Separator"></div>
         <div class="Content-WorkWithUs">
-            <h1 class="Content-WorkWithUs-Header">Work with us</h1>
+            <h1 class="Content-WorkWithUs-Header-Title">Work with us</h1>
+            <p class="Content-WorkWithUs-Header-Text">Each coffee shop is managed by five employees minimum: 
+                one manager, two bartenders and two delivery-men.<br> 
+                Nowadays we are five employees in Zaragoza and we are hiring employees 
+                for Zaragoza and our new coffee shop in Madrid.</p>
             <div class="Content-WorkWithUs-CV">
                 <p class="Content-WorkWithUs-CV-Text">Send us your CV <a href="https://mail.google.com/mail/u/1/?pli=1#inbox">here</a></p>
             </div>
             <div class="Content-WorkWithUs-Info">
-                <div class="Content-WorkWithUs-JobVacancies">
-                    <h1 class="Content-WorkWithUs-JobVacancies-Text">Job vacancies</h1>
+                <div class="Content-WorkWithUs-JobVacanciesLink">
+                    <button class="Content-WorkWithUs-JobVacanciesLink-Button" 
+                    onclick="JobVacanciesDeploy()">
+                        Job vacancies
+                    </button>
                 </div>
-                <div class="Content-WorkWithUs-OccupationalRiskPrevention">
-                    <h1 class="Content-WorkWithUs-OccupationalRiskPrevention-Text">Occupational Risk Prevention</h1>
+                <div class="Content-WorkWithUs-OccupationalRiskPreventionLLink">
+                    <button class="Content-WorkWithUs-OccupationalRiskPreventionLink-Button"
+                    onclick="OccupationalRiskPreventionDeploy()">
+                        Occupational Risk Prevention</button>
                 </div>
+            </div>
+            <div class="Content-WorkWithUs-JobVacancies" 
+            id="Content-WorkWithUs-JobVacancies">
+                <div class="Content-WorkWithUs-JobVacancies-Vacant">
+                    <h1 class="Content-WorkWithUs-JobVacancies-Vacant-Name">Bartender</h1>
+                    <h2 class="Content-WorkWithUs-JobVacancies-Vacant-Info">Indefinite contract</h2>
+                    <h2 class="Content-WorkWithUs-JobVacancies-Vacant-Info">Full-time</h2>
+                    <h2 class="Content-WorkWithUs-JobVacancies-Vacant-Info">Work schedule: M 7:00 - 15:00 / A 15:00 - 23:00</h2>
+                    <h2 class="Content-WorkWithUs-JobVacancies-Vacant-Info">Zaragoza, C/Violeta Parra 8</h2>
+                    <h2 class="Content-WorkWithUs-JobVacancies-Vacant-Info">Madrid, C/Gran Vía 41</h2>
+                    <br>
+                    <h2 class="Content-WorkWithUs-JobVacancies-Vacant-Description">Description</h2>
+                    <p class="Content-WorkWithUs-JobVacancies-Vacant-DescriptionText">
+                        Ecoffe is a company of coffeshops which is compromised with the natural enviroment.
+                        We ensure the minimal enviromental footprint, the best quality ingredients and 
+                        a warm friendly treatment between clients, suppliers and employees.
+                        <br>
+                        <br>
+                        <strong>Responsabilities:</strong><br>
+                        Customer service<br>
+                        Order management<br>
+                        Keep work area clean
+                        <br>
+                        <br>
+                        <strong>Requirements:</strong><br>
+                        Kind and friendly attitude<br>
+                        Desire to learn<br>
+                        Good presence<br>
+                        English skills<br>
+                        Spanish skills<br>
+                    </p>
+                </div>
+            </div>
+            <div class="Content-WorkWithUs-OccupationalRiskPrevention"
+            id="Content-WorkWithUs-OccupationalRiskPrevention">
+                <p class="Content-WorkWithUs-OccupationalRiskPrevention-Text">
+                    To receive more information, please contact with us
+                </p>
             </div>
             
         </div>
