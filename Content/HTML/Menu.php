@@ -11,10 +11,8 @@
     <script src="../JS/MenuScript.js"></script>
     <title>Ecoffe - Menu</title>
 </head>
-
 <body>
     <?php include 'Header.php'; ?>
-
     <div class="Content">
         <button class="Content-Menu-SlideUp" type="button" id="Content-Menu-SlideUp" onclick="ScrollUp()"><img src="../Icons/Menu/UpArrow.png" class="Content-Menu-SlideUp-Image"></button>
         <div class="Content-Menu-Searchbar-Aux">
@@ -38,26 +36,52 @@
             </div>
         </div>
         <h1 class="Content-Header" id="Menu-Drinks-Coffee"> Drinks & Coffe </h1>
-        <div class="Content-Products-Container-DrinksCoffe">
+        <div class="Content-Products-Container-DrinksCoffe Content-Products-Container">
             <?php
-            $number = mysqli_query($con, "SELECT COUNT(*) FROM PRODUCTOS WHERE ID_TIPOPROD = 0");
-            $result = mysqli_query($con, "SELECT * FROM PRODUCTOS WHERE ID_TIPOPROD = 0");
-                for ($i = 0; $i < $number; $i++) {
-                    ?>
-                        <div>
-                            echo $number;
-                        <div>
-                    <?php
-                }
+            $sql = "SELECT * FROM PRODUCTOS WHERE ID_TIPOPROD = 0";
+            $result = mysqli_query($con, $sql) or die('Error');
+            while ($row = mysqli_fetch_assoc($result)) {
+            ?>
+                <div class="Content-Products-Container-Item" <?PHP echo "id=P" . $row["ID_PRODUCTO"] ?>>
+                    <img <?PHP echo "src=" . $row["IMAGENPROD"] ?> class="Content-Products-Container-Item-Image">
+                    <h2 class="Content-Products-Container-Item-Header"><?PHP echo $row["NOMBRE"] ?></h2>
+                    <h3 class="Content-Products-Container-Item-Precio"><?PHP echo $row["PRECIO"] ?>€</h3>
+                </div>
+            <?PHP
+            }
             ?>
         </div>
         <h1 class="Content-Header" id="Menu-Pastries"> Pastries </h1>
-        <div class="Content-Products-Container-Pastries">
-
+        <div class="Content-Products-Container-Pastries Content-Products-Container">
+        <?php
+            $sql = "SELECT * FROM PRODUCTOS WHERE ID_TIPOPROD = 1";
+            $result = mysqli_query($con, $sql) or die('Error');
+            while ($row = mysqli_fetch_assoc($result)) {
+            ?>
+                <div class="Content-Products-Container-Item" <?PHP echo "id=P" . $row["ID_PRODUCTO"] ?>>
+                    <img <?PHP echo "src=" . $row["IMAGENPROD"] ?> class="Content-Products-Container-Item-Image">
+                    <h2 class="Content-Products-Container-Item-Header"><?PHP echo $row["NOMBRE"] ?></h2>
+                    <h3 class="Content-Products-Container-Item-Precio"><?PHP echo $row["PRECIO"] ?>€</h3>
+                </div>
+            <?PHP
+            }
+            ?>
         </div>
         <h1 class="Content-Header" id="Menu-Snacks"> Snacks </h1>
-        <div class="Content-Products-Container-Snacks">
-
+        <div class="Content-Products-Container-Snacks Content-Products-Container">
+        <?php
+            $sql = "SELECT * FROM PRODUCTOS WHERE ID_TIPOPROD = 2";
+            $result = mysqli_query($con, $sql) or die('Error');
+            while ($row = mysqli_fetch_assoc($result)) {
+            ?>
+                <div class="Content-Products-Container-Item" <?PHP echo "id=P" . $row["ID_PRODUCTO"] ?>>
+                    <img <?PHP echo "src=" . $row["IMAGENPROD"] ?> class="Content-Products-Container-Item-Image">
+                    <h2 class="Content-Products-Container-Item-Header"><?PHP echo $row["NOMBRE"] ?></h2>
+                    <h3 class="Content-Products-Container-Item-Precio"><?PHP echo $row["PRECIO"] ?>€</h3>
+                </div>
+            <?PHP
+            }
+            ?>
         </div>
     </div>
     <?php include 'Footer.php'; ?>
