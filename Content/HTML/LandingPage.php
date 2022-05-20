@@ -166,9 +166,10 @@
             </div>
             <div class="Locations-Container">
                 <div class="Locations-Container-item">
-                    <h1 class="Locations-Container-Header">Ejemplo</h1>
-                    <p class="Locations-Container-Text">Ejemplo ejemplo ejemplo ejemplo ejemplo ejemplo ejemplo ejemplo
-                        ejemplo ejemplo ejemplo ejemplo ejemplo ejemplo</p>
+                    <h1 class="Locations-Container-Header">Zaragoza</h1>
+                    <p class="Locations-Container-Text">
+                        C/ Violeta Parra 9<br>
+                        50015, Zaragoza, Spain </p>
                 </div>
                 <div class="Locations-Container-item">
                     <h1 class="Locations-Container-Header">Ejemplo</h1>
