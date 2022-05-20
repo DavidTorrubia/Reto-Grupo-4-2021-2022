@@ -168,21 +168,19 @@
             </div>
             <div class="Content-WorkWithUs-Info">
                 <div class="Content-WorkWithUs-JobVacanciesLink">
-                    <button class="Content-WorkWithUs-JobVacanciesLink-Link" 
+                    <button class="Content-WorkWithUs-JobVacanciesLink-Button" 
                     onclick="JobVacanciesDeploy()">
-                    <h1 class="Content-WorkWithUs-JobVacanciesLink-Text">
                         Job vacancies
-                    </h1>
                     </button>
                 </div>
                 <div class="Content-WorkWithUs-OccupationalRiskPreventionLLink">
-                    <h1 class="Content-WorkWithUs-OccupationalRiskPreventionLink-Text">
-                        <a class="Content-WorkWithUs-OccupationalRiskPreventionLink-Link" 
-                        onclick="">
-                        Occupational Risk Prevention</h1>
+                    <button class="Content-WorkWithUs-OccupationalRiskPreventionLink-Button"
+                    onclick="OccupationalRiskPreventionDeploy()">
+                        Occupational Risk Prevention</button>
                 </div>
             </div>
-            <div class="Content-WorkWithUs-JobVacancies">
+            <div class="Content-WorkWithUs-JobVacancies" 
+            id="Content-WorkWithUs-JobVacancies">
                 <div class="Content-WorkWithUs-JobVacancies-Vacant">
                     <h1 class="Content-WorkWithUs-JobVacancies-Vacant-Name">Bartender</h1>
                     <h2 class="Content-WorkWithUs-JobVacancies-Vacant-Info">Indefinite contract</h2>
@@ -212,6 +210,12 @@
                         Spanish skills<br>
                     </p>
                 </div>
+            </div>
+            <div class="Content-WorkWithUs-OccupationalRiskPrevention"
+            id="Content-WorkWithUs-OccupationalRiskPrevention">
+                <p class="Content-WorkWithUs-OccupationalRiskPrevention-Text">
+                    To receive more information, please contact with us
+                </p>
             </div>
             
         </div>

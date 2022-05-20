@@ -102,7 +102,7 @@
                     <img src="../Images/LandingPage/Frappuccino.jpg" class="carousel-item-image">
                     <div class="carousel-item-image-Container">
                         <h1 class="carousel-item-image-Header">Frappuccino</h1>
-                        <p class="carousel-item-image-Text">Cofee whith milk, chocolate and ice cream</p>
+                        <p class="carousel-item-image-Text">Cofee with milk, chocolate and ice cream</p>
                     </div>
                 </div>
                 <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
