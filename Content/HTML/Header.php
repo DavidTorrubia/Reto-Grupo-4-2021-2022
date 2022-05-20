@@ -63,7 +63,7 @@
                             href="../HTML/UserPage.php">User Config</a>
                     </div>
                     <button type="button" class="Header-Item-Right-Container-UserDropButton-Content-Button"
-                        id="Header-Item-Right-Container-UserDropButton-Content-Log off"> Log off</button>
+                        id="Header-Item-Right-Container-UserDropButton-Content-Log off"> Log out</button>
                 </div>
             </div>
             <a href="../HTML/ShoppingCart.php"><img class="Header-Imagen" src="../Icons/ShopppingListWhite.png" /></a>

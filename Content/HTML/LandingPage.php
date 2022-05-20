@@ -13,7 +13,7 @@
 </head>
 
 <body>
- <?php include'Header.php';?>
+<?php include'Header.php';?>
  
     <div class="Content">
         <div class="carousel">

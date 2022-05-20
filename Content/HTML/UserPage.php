@@ -13,7 +13,7 @@
 </head>
 
 <body>
-<?php include 'Header.php'; ?>
+    <?php include 'Header.php'; ?>
 
     <div class="Content">
         <div class="Content-User">
@@ -44,22 +44,27 @@
                     <button class="Content-UserConfig-Item-Directions-Button" type="button" onclick="DeployCreateAddres()">Create New Address</button>
                     <form class="Content-UserConfig-Item-Directions-Content" id="Content-UserConfig-Item-Directions-Content-Create">
                         <div class="Content-UserConfig-Item">
-                            <h2 class="Content-UserConfig-Item-Header">Country</h2>
-                            <input type="text" class="Content-UserConfig-Item-Field" placeholder="Spain">
+                            <h2 class="Content-UserConfig-Item-Header">Address</h2>
+                            <input type="text" class="Content-UserConfig-Item-Field" placeholder="Calle Violeta Parra" name="Adress">
                         </div>
                         <div class="Content-UserConfig-Item">
-                            <h2 class="Content-UserConfig-Item-Header">Ciudad</h2>
-                            <input type="text" class="Content-UserConfig-Item-Field" placeholder="Madrid">
+                            <h2 class="Content-UserConfig-Item-Header">Number</h2>
+                            <input type="text" class="Content-UserConfig-Item-Field" placeholder="8" name="Number">
+                        </div>
+                        <div class="Content-UserConfig-Item">
+                            <h2 class="Content-UserConfig-Item-Header">Stairs' direction</h2>
+                            <input type="text" class="Content-UserConfig-Item-Field" placeholder="right" name="Stairs">
+                        </div>
+                        <div class="Content-UserConfig-Item">
+                            <h2 class="Content-UserConfig-Item-Header">Floor</h2>
+                            <input type="text" class="Content-UserConfig-Item-Field" placeholder="2B" name="Floor">
                         </div>
                         <div class="Content-UserConfig-Item">
                             <h2 class="Content-UserConfig-Item-Header">Postal Code</h2>
-                            <input type="text" class="Content-UserConfig-Item-Field" placeholder="50011">
+                            <input type="text" class="Content-UserConfig-Item-Field" placeholder="50011" name="P_Code">
                         </div>
-                        <div class="Content-UserConfig-Item">
-                            <h2 class="Content-UserConfig-Item-Header">Street Address</h2>
-                            <input type="text" class="Content-UserConfig-Item-Field" placeholder="Via Hispanidad">
-                        </div>
-                        <button class="Content-UserConfig-Item-Directions-Content-Button" type="button">Create</button>
+
+                        <button class="Content-UserConfig-Item-Directions-Content-Button" type="button" onclick="Insertar_Dir($Adress,$Number,$Stair,$P_Code,$Floor)">Create</button>
                     </form>
                     <button class="Content-UserConfig-Item-Directions-Button" type="button" onclick="DeployRemoveAddres()">Remove Address</button>
                     <div class="Content-UserConfig-Item-Directions-Content" id="Content-UserConfig-Item-Directions-Content-Remove">
@@ -111,7 +116,7 @@
                 </div>
             </div>
 
-        </div> 
+        </div>
         <div class="Content-Receipts">
             <div class="Content-Receipts-List">
                 <h1 class="Content-Receipts-List-Header"> Receipts </h1>
