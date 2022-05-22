@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/MainStyle.css">
+    <link rel="stylesheet" href="../CSS/AdminPageStyle.css">
     <title>Ecoffe - AdminPage</title>
 </head>
 
@@ -88,70 +89,70 @@
     <div class="Content">
         <div class="Content-Buscador">
             <h1 class="Content-Buscador-Text">Buscar:</h1>
-            <div class="Content-Buscador-Filtros">
-                <input type="checkbox" id="Content-Buscador-Filtros-Usuarios" name="Content-Buscador-Filtros-Usuarios" value="Content-Buscador-Filtros-Usuarios">
-                <label for="Content-Buscador-Filtros-Usuarios">Usuarios</label>
-                <input type="checkbox" id="Content-Buscador-Filtros-Productos" name="Content-Buscador-Filtros-Productos" value="Content-Buscador-Filtros-Productos">
-                <label for="Content-Buscador-Filtros-Productos">Productos</label>
+            <div class="Content-Buscador-Filters">
+                <input type="checkbox" id="Content-Buscador-Filters-Usuarios" 
+                name="Content-Buscador-Filters-Usuarios" 
+                value="Content-Buscador-Filters-Usuarios">
+                <label for="Content-Buscador-Filters-Usuarios">Usuarios</label>
+                <input type="checkbox" id="Content-Buscador-Filters-Productos" 
+                name="Content-Buscador-Filters-Productos" 
+                value="Content-Buscador-Filters-Productos">
+                <label for="Content-Buscador-Filters-Productos">Productos</label>
             </div>
-            <div class="Content-Buscador-Campos">
-                <label for="Content-Buscador-Campos-ID">Buscar por ID:</label><br>
-                <input type="text" id="Content-Buscador-Campos-ID" name="Content-Buscador-Campos-ID"><br>
+            <div class="Content-Buscador-Fields">
+                <label for="Content-Buscador-Fields-ID">Buscar por ID:</label><br>
+                <input type="text" id="Content-Buscador-Fields-ID" 
+                name="Content-Buscador-Fields-ID"><br>
                 <label for="lname">Buscar por nombre:</label><br>
-                <input type="text" id="Content-Buscador-Campos-ID" name="Content-Buscador-Campos-ID"><br>
+                <input type="text" id="Content-Buscador-Fields-name" 
+                name="Content-Buscador-Fields-name"><br>
             </div>
+            <input type="button" class="Content-Buscador-Button"
+            onclick="alert('Se han encontrado los siguientes resultados:')" 
+            value="Buscar">
         </div>
         <div class="Content-Resultados">
-            <h1 class="Content-Resultados-Text">Resultados</h1>
-            <div class="Content-Resultados-Fields">
-                <h2 class="Content-Resultados-Fields-Text">Select</h2>
-                <h2 class="Content-Resultados-Fields-Text" 
-                id="Content-Resultados-Fields-Field1">Field 1</h2>
-                <h2 class="Content-Resultados-Fields-Text" 
-                id="Content-Resultados-Fields-Field2">Field 2</h2>
-                <h2 class="Content-Resultados-Fields-Text" 
-                id="Content-Resultados-Fields-Field3">Field 3</h2>
-                <h2 class="Content-Resultados-Fields-Text" 
-                id="Content-Resultados-Fields-Field4">Field 4</h2>
-                <h2 class="Content-Resultados-Fields-Text" 
-                id="Content-Resultados-Fields-Field5">Field 5</h2>
-                <h2 class="Content-Resultados-Fields-Text" 
-                id="Content-Resultados-Fields-Field6">Field 6</h2>
-                <h2 class="Content-Resultados-Fields-Text" 
-                id="Content-Resultados-Fields-Field7">Field 7</h2>
-            </div>
-            <div class="Content-Resultados-Resultado">
-                <input type="checkbox" id="Content-Resultados-Resultado-Checkbox" 
-                name="Content-Resultados-Resultado-Checkbox">
-                <p class="Content-Resultados-Resultado-Text"
-                id="Content-Resultados-Resultado-Field1">Field 1</p>
-                <p class="Content-Resultados-Resultado-Text"
-                id="Content-Resultados-Resultado-Field2">Field 2</p>
-                <p class="Content-Resultados-Resultado-Text"
-                id="Content-Resultados-Resultado-Field3">Field 3</p>
-                <p class="Content-Resultados-Resultado-Text"
-                id="Content-Resultados-Resultado-Field14">Field 4</p>
-                <p class="Content-Resultados-Resultado-Text"
-                id="Content-Resultados-Resultado-Field5">Field 5</p>
-                <p class="Content-Resultados-Resultado-Text"
-                id="Content-Resultados-Resultado-Field6">Field 6</p>
-                <p class="Content-Resultados-Resultado-Text"
-                id="Content-Resultados-Resultado-Field7">Field 7</p>
-            </div>
+            <h2 class="Content-Resultados-Text">Resultados:</h2>
+            <h3 class="Content-Resultados-Tabla">Nombre Tabla</h3>
+            <table>
+                <tr>
+                    <th>Selec</th>
+                    <th>Campo1</th>
+                    <th>Campo2</th>
+                    <th>Campo3</th>
+                    <th>Campo4</th>
+                    <th>Campo5</th>
+                    <th>Campo6</th>
+                    <th>Campo7</th>
+                </tr>
+                    <td>
+                            <input type="checkbox" id="Content-Resultados-Resultado-Checkbox" 
+                            name="Content-Resultados-Resultado-Checkbox">
+
+                    </td>
+                    <td>Campo1</td>
+                    <td>Campo2</td>
+                    <td>Campo3</td>
+                    <td>Campo4</td>
+                    <td>Campo5</td>
+                    <td>Campo6</td>
+                    <td>Campo7</td>
+                
+            </table>
         </div>
         <div class="Content-Resultados-Content-Opciones">
         <input type="button" class="Content-Resultados-Content-Opciones-Add"
-            onclick="alert('Do you want to add a new item?')" 
-            value="Add">
+            onclick="alert('Quieres añadir objetos a la base de datos?')" 
+            value="Añadir">
             <input type="button" class="Content-Resultados-Content-Opciones-Modify"
-            onclick="alert('Do you want to modify the selected items?')" 
-            value="Modify">
+            onclick="alert('Quieres modificar los elementos seleccionados?')" 
+            value="Modificar">
             <input type="button" class="Content-Resultados-Content-Opciones-Delete"
-            onclick="alert('Do you want to delete the selected items?')" 
-            value="Delete">
+            onclick="alert('Quieres eliminar los elementos seleccionados?')" 
+            value="Eliminar">
             <input type="button" class="Content-Resultados-Content-Opciones-Save"
-            onclick="alert('Do you want to delete save this changes?')" 
-            value="Save">
+            onclick="alert('Quieres guardar los cambios realizados en la base de datos?')" 
+            value="Guardar">
         </div>
     </div>
 
