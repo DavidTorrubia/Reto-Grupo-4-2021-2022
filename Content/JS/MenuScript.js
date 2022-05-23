@@ -38,3 +38,16 @@ function scrollFunction() {
     mysearchbox.style.top = "2rem";
   }
 }
+
+function Busqueda(){
+  let Barra_busqueda = document.getElementById('Content-Menu-Searchbar').value.toLowerCase()
+  let Producto = document.getElementsByClassName('Content-Products-Container-Item-Header');
+    
+  for (i = 0; i < Producto.length; i++) { 
+      if (!Producto[i].innerHTML.toLowerCase().includes(Barra_busqueda)) {
+          Producto[i].parentNode.style.display="none";
+      }else{
+        Producto[i].parentNode.style.display="block";
+      }
+}
+}
