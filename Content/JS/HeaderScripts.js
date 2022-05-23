@@ -28,8 +28,10 @@ function UserMenuDeploy () {
     } else if (UserDropIsDeployed == true){
         Boton.style.backgroundColor="transparent";
         Desplegable.classList.remove("deployed");
-        DesplegableLogin.style.display="none";
-        DesplegableSignUp.style.display="none";
+        if (DesplegableLogin != null){
+            DesplegableLogin.style.display="none";
+            DesplegableSignUp.style.display="none";
+        } 
         LoginMenuIDeployed = false;
         UserDropIsDeployed = false;
         SignUpMenuIDeployed = false;
