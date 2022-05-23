@@ -37,7 +37,7 @@
   left: 10%;
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient(#ffffff00, #8e8e8e6f);
+  background-image: linear-gradient(#7777774b, #ffffff98);
   border-radius: 30px;
   padding: 0.7rem 1rem 0.7rem 1rem;
 }
@@ -45,7 +45,7 @@
 .carousel-item-image-Header {
   font-family: "Tommy personal use";
   font-size: 3rem;
-  color: white;
+  color: #3a1101;
   text-align: left;
   margin-bottom: 1rem;
   margin-top: 1rem;
@@ -56,7 +56,7 @@
 .carousel-item-image-Text {
   font-family: Helvetica, sans-serif;
   text-align: left;
-  color: #fff;
+  color: #1b0800;
   font-size: 2rem;
   margin-top: 0rem;
   text-align: left;

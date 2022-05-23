@@ -32,7 +32,7 @@
                     <img src="../Images/LandingPage/Frappuccino.jpg" class="carousel-item-image">
                     <div class="carousel-item-image-Container">
                         <h1 class="carousel-item-image-Header">Frappuccino</h1>
-                        <p class="carousel-item-image-Text">Cofee whith milk, chocolate and ice cream</p>
+                        <p class="carousel-item-image-Text">Cofee with milk, chocolate and ice cream</p>
                     </div>
                 </div>
                 <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
@@ -96,9 +96,10 @@
             </div>
             <div class="Locations-Container">
                 <div class="Locations-Container-item">
-                    <h1 class="Locations-Container-Header">Ejemplo</h1>
-                    <p class="Locations-Container-Text">Ejemplo ejemplo ejemplo ejemplo ejemplo ejemplo ejemplo ejemplo
-                        ejemplo ejemplo ejemplo ejemplo ejemplo ejemplo</p>
+                    <h1 class="Locations-Container-Header">Zaragoza</h1>
+                    <p class="Locations-Container-Text">
+                        C/ Violeta Parra 9<br>
+                        50015, Zaragoza, Spain </p>
                 </div>
                 <div class="Locations-Container-item">
                     <h1 class="Locations-Container-Header">Ejemplo</h1>
