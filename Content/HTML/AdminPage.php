@@ -90,14 +90,63 @@
         <div class="Content-Buscador">
             <h1 class="Content-Buscador-Text">Buscar:</h1>
             <div class="Content-Buscador-Filters">
-                <input type="checkbox" id="Content-Buscador-Filters-Usuarios" 
+                <input type="checkbox" 
+                class="Content-Buscador-FilterCheckbox"
+                id="Content-Buscador-Filters-Usuarios" 
                 name="Content-Buscador-Filters-Usuarios" 
                 value="Content-Buscador-Filters-Usuarios">
-                <label for="Content-Buscador-Filters-Usuarios">Usuarios</label>
-                <input type="checkbox" id="Content-Buscador-Filters-Productos" 
+                <label for="Content-Buscador-Filters-Usuarios"
+                class="Content-Buscador-FilterText">Usuarios</label>
+
+                <input type="checkbox" 
+                class="Content-Buscador-FilterCheckbox"
+                id="Content-Buscador-Filters-Direcciones" 
+                name="Content-Buscador-Filters-Direcciones" 
+                value="Content-Buscador-Filters-Direcciones">
+                <label for="Content-Buscador-Filters-Direcciones"
+                class="Content-Buscador-FilterText">Direcciones</label>
+
+                <input type="checkbox" 
+                class="Content-Buscador-FilterCheckbox"
+                id="Content-Buscador-Filters-Pedidos" 
+                name="Content-Buscador-Filters-Pedidos" 
+                value="Content-Buscador-Filters-Pedidos">
+                <label for="Content-Buscador-Filters-Pedidos"
+                class="Content-Buscador-FilterText">Pedidos</label>
+                
+                <input type="checkbox" 
+                class="Content-Buscador-FilterCheckbox"
+                id="Content-Buscador-Filters-Facturas" 
+                name="Content-Buscador-Filters-Facturas" 
+                value="Content-Buscador-Filters-Facturas">
+                <label for="Content-Buscador-Filters-Facturas"
+                class="Content-Buscador-FilterText">Facturas</label>
+
+                <input type="checkbox" 
+                class="Content-Buscador-FilterCheckbox"
+                id="Content-Buscador-Filters-Productos" 
                 name="Content-Buscador-Filters-Productos" 
                 value="Content-Buscador-Filters-Productos">
-                <label for="Content-Buscador-Filters-Productos">Productos</label>
+                <label for="Content-Buscador-Filters-Productos"
+                class="Content-Buscador-FilterText">Productos</label>
+
+                <input type="checkbox" 
+                class="Content-Buscador-FilterCheckbox"
+                id="Content-Buscador-Filters-TiposProductos" 
+                name="Content-Buscador-Filters-TiposProductos" 
+                value="Content-Buscador-Filters-TiposProductos">
+                <label for="Content-Buscador-Filters-TiposProductos"
+                class="Content-Buscador-FilterText">Tipos productos</label>
+
+                <input type="checkbox" 
+                class="Content-Buscador-FilterPromociones"
+                id="Content-Buscador-Filters-Promociones" 
+                name="Content-Buscador-Filters-Promociones" 
+                value="Content-Buscador-Filters-Promociones">
+                <label for="Content-Buscador-Filters-Promociones"
+                class="Content-Buscador-FilterText">Promociones</label>
+
+
             </div>
             <div class="Content-Buscador-Fields">
                 <label for="Content-Buscador-Fields-ID">Buscar por ID:</label><br>
@@ -113,10 +162,10 @@
         </div>
         <div class="Content-Resultados">
             <h2 class="Content-Resultados-Text">Resultados:</h2>
-            <h3 class="Content-Resultados-Tabla">Nombre Tabla</h3>
-            <table>
+            <h3 class="Content-Resultados-TextTabla">Nombre Tabla</h3>
+            <table class="Content-Resultados-Tabla">
                 <tr>
-                    <th>Selec</th>
+                    <th>Select</th>
                     <th>Campo1</th>
                     <th>Campo2</th>
                     <th>Campo3</th>
@@ -125,10 +174,11 @@
                     <th>Campo6</th>
                     <th>Campo7</th>
                 </tr>
+                <tr>
                     <td>
-                            <input type="checkbox" id="Content-Resultados-Resultado-Checkbox" 
-                            name="Content-Resultados-Resultado-Checkbox">
-
+                        <input type="checkbox" 
+                        id="Content-Resultados-Resultado-Checkbox" 
+                        name="Content-Resultados-Resultado-Checkbox">
                     </td>
                     <td>Campo1</td>
                     <td>Campo2</td>
@@ -137,22 +187,54 @@
                     <td>Campo5</td>
                     <td>Campo6</td>
                     <td>Campo7</td>
-                
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" 
+                        id="Content-Resultados-Resultado-Checkbox" 
+                        name="Content-Resultados-Resultado-Checkbox">
+                    </td>
+                    <td>Campo1</td>
+                    <td>Campo2</td>
+                    <td>Campo3</td>
+                    <td>Campo4</td>
+                    <td>Campo5</td>
+                    <td>Campo6</td>
+                    <td>Campo7</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" 
+                        id="Content-Resultados-Resultado-Checkbox" 
+                        name="Content-Resultados-Resultado-Checkbox">
+                    </td>
+                    <td>Campo1</td>
+                    <td>Campo2</td>
+                    <td>Campo3</td>
+                    <td>Campo4</td>
+                    <td>Campo5</td>
+                    <td>Campo6</td>
+                    <td>Campo7</td>
+                </tr>
             </table>
-        </div>
-        <div class="Content-Resultados-Content-Opciones">
-        <input type="button" class="Content-Resultados-Content-Opciones-Add"
-            onclick="alert('Quieres añadir objetos a la base de datos?')" 
-            value="Añadir">
-            <input type="button" class="Content-Resultados-Content-Opciones-Modify"
-            onclick="alert('Quieres modificar los elementos seleccionados?')" 
-            value="Modificar">
-            <input type="button" class="Content-Resultados-Content-Opciones-Delete"
-            onclick="alert('Quieres eliminar los elementos seleccionados?')" 
-            value="Eliminar">
-            <input type="button" class="Content-Resultados-Content-Opciones-Save"
-            onclick="alert('Quieres guardar los cambios realizados en la base de datos?')" 
-            value="Guardar">
+            <div class="Content-Resultados-Opciones">
+                <input type="button" class="Content-Resultados-Opciones"
+                id="Content-Resultados-Opciones-Add"
+                onclick="alert('Quieres añadir objetos a la base de datos?')" 
+                value="Añadir">
+                <input type="button" class="Content-Resultados-Opciones"
+                id="Content-Resultados-Opciones-Modify"
+                onclick="alert('Quieres modificar los elementos seleccionados?')" 
+                value="Modificar">
+                <input type="button" class="Content-Resultados-Opciones"
+                id="Content-Resultados-Opciones-Delete"
+                onclick="alert('Quieres eliminar los elementos seleccionados?')" 
+                value="Eliminar">
+                <input type="button" class="Content-Resultados-Opciones"
+                id="Content-Resultados-Opciones-Save"
+                onclick="alert('Quieres guardar los cambios realizados en la base de datos?')" 
+                value="Guardar">
+            </div>
         </div>
     </div>
 
