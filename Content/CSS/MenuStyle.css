@@ -156,6 +156,8 @@
   border-radius: 30px;
   transition: 0.3s;
   overflow: hidden;
+  max-height: 18rem;
+  min-height: 18rem;
 }
 .Content-Products-Container-Item:hover {
   width: 32%;
@@ -164,7 +166,7 @@
   object-fit: cover;
   width: 100%;
   box-sizing: border-box;
-  max-height: 13rem;
+  max-height: 12rem;
 }
 .Content-Products-Container-Item-Header {
   font-family: "Tommy personal use";

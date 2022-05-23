@@ -72,7 +72,9 @@
                     <div>
                         <a type="button" class="Header-Item-Right-Container-UserDropButton-Content-Button UserConfig" id="Header-Item-Right-Container-UserDropButton-Content-UserConfig " href="../HTML/UserPage.php">User Config</a>
                     </div>
-                    <button type="button" class="Header-Item-Right-Container-UserDropButton-Content-Button" id="Header-Item-Right-Container-UserDropButton-Content-Log off"> Log out</button>
+                    <form action="../PhpScripts/Logoff.php">
+                    <input type="submit" class="Header-Item-Right-Container-UserDropButton-Content-Button" id="Header-Item-Right-Container-UserDropButton-Content-Log off" value="Log out">
+                    </form>
                 <?php
                 }
                 ?>
