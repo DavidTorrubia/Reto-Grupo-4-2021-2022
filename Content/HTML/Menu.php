@@ -16,7 +16,7 @@
     <div class="Content">
         <button class="Content-Menu-SlideUp" type="button" id="Content-Menu-SlideUp" onclick="ScrollUp()"><img src="../Icons/Menu/UpArrow.png" class="Content-Menu-SlideUp-Image"></button>
         <div class="Content-Menu-Searchbar-Aux">
-            <input type="text" class="Content-Menu-Searchbar" id="Content-Menu-Searchbar" placeholder="Search ...">
+            <input type="text" onkeyup="Busqueda()" class="Content-Menu-Searchbar" id="Content-Menu-Searchbar" placeholder="Search ...">
         </div>
         <h1 class="Content-Header"> Types </h1>
         <div class="Content-Menu-Types-Container">
