@@ -1,0 +1,103 @@
+.Content {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.Content-Buscador{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin: 1% 5%;
+}
+
+.Content-Buscador-Filters{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.Content-Buscador-FilterCheckbox{
+    margin-right:0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.Content-Buscador-FilterText{
+    margin-right:2rem;
+    margin-bottom: 0.5rem;
+}
+
+.Content-Buscador-Fields{
+    display: flex;
+    flex-direction: row;
+}
+
+#Content-Buscador-Fields-ID{
+    margin-left: 0.25rem;
+    margin-right: 2rem;
+}
+
+#Content-Buscador-Fields-name{
+    margin-left: 0.25rem;
+    margin-right: 2rem;
+}
+
+.Content-Resultados-Opciones{
+    margin-right: 1.5rem;
+}
+
+#Content-Resultados-Opciones-Save{
+    margin-right: 0.25rem;
+    margin-left: auto;
+}
+
+@media only screen and (max-width: 600px) {
+    .Content-Buscador-Fields {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+    }
+}
+
+.Content-Buscador-Button{
+    margin-top:1rem;
+    width: 100%;
+}
+
+
+.Content-Resultados{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin: 1% 5%;
+    background-color: white;
+    padding-left: 2rem;
+    padding-right: 1rem;
+    padding-bottom: 2rem;
+}
+
+.Content-Resultados-Tabla{
+    border-style: solid;
+    border-collapse: collapse;
+    border-width: 0.20rem;
+    width: 100%;
+}
+
+th, td{
+    text-align: center;
+    border-style: solid;
+    border-width: 0.10rem;
+}
+
+th{
+    background-color: gray;
+    color: white;
+}
+
+.Content-Resultados-Opciones{
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+}
+
+
