@@ -9,17 +9,20 @@
     <link rel="stylesheet" href="../CSS/MainStyle.css">
     <script src="../JS/HeaderScripts.js"></script>
     <script src="../JS/LandingPageScripts.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvu_yP8noN4t377JxS6_vsk5tiRu6rTAc&callback=initMap">
+</script>
     <title>Ecoffe - Landing Page</title>
 </head>
 
 <body>
-<?php include'Header.php';?>
- 
+    <?php include 'Header.php'; ?>
+
     <div class="Content">
         <div class="carousel">
             <div class="carousel-inner">
-                <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden=""
-                    checked="checked">
+                <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
                 <div class="carousel-item">
                     <img src="../Images/LandingPage/orangeCoctel.png" class="carousel-item-image">
                     <div class="carousel-item-image-Container ">
@@ -67,7 +70,7 @@
                 Lorem Ipsum
             </h1>
             <p class="Content-LandingText-Text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in dolor id leo feugiat faucibus. Etiam interdum venenatis accumsan. Suspendisse ut finibus mi, vel elementum nisl. Suspendisse viverra porta ex nec congue. Nam nisl nunc, porta id vulputate eget, maximus ac nisi. In quis mattis augue. In hac habitasse platea dictumst. Morbi fringilla pharetra tempus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed elementum lectus at dui finibus vehicula. Donec et risus vel ante commodo varius. Phasellus sed est lacinia, faucibus enim lobortis, lobortis magna. Praesent feugiat pellentesque facilisis. Mauris sodales nunc aliquam, placerat massa sed, sagittis neque. 
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in dolor id leo feugiat faucibus. Etiam interdum venenatis accumsan. Suspendisse ut finibus mi, vel elementum nisl. Suspendisse viverra porta ex nec congue. Nam nisl nunc, porta id vulputate eget, maximus ac nisi. In quis mattis augue. In hac habitasse platea dictumst. Morbi fringilla pharetra tempus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed elementum lectus at dui finibus vehicula. Donec et risus vel ante commodo varius. Phasellus sed est lacinia, faucibus enim lobortis, lobortis magna. Praesent feugiat pellentesque facilisis. Mauris sodales nunc aliquam, placerat massa sed, sagittis neque.
             </p>
         </div>
         <div class="FixedAdv">
@@ -86,14 +89,12 @@
             </div>
         </div>
 
-        <button type="button" class="Content-LocationsButton" onclick="LocationMenuDeploy()"> 
+        <button type="button" class="Content-LocationsButton" onclick="LocationMenuDeploy()">
             <img src="../Icons/LandingPage/flecha.png" class="Content-LocationButton-Icon" id="Content-LocationButton-Icon">
             <h1 class="Content-Header Content-LocationButton-Header">Find Us!</h1>
         </button>
         <div class="Locations" id="Locations">
-            <div class="map" id="Map">
-                <img src="../Images/LandingPage/Locations.PNG" class="Map-image">
-            </div>
+            <div id="Map" class="map"></div>
             <div class="Locations-Container">
                 <div class="Locations-Container-item">
                     <h1 class="Locations-Container-Header">Ejemplo</h1>

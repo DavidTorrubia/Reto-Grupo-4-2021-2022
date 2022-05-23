@@ -24,3 +24,19 @@ function scrollFunction() {
     Text.style.marginTop="8rem"
   }
 }
+
+let map;
+
+function initMap() {
+  map = new google.maps.Map(document.getElementById("Map"), {
+    center: { lat: 40.420062183992236, lng: -3.700051971164347 },
+    zoom: 15,
+  });
+ new google.maps.Marker({
+    position: { lat: 40.420062183992236, lng: -3.700051971164347 },
+    map
+
+  });
+}
+initMap();
+window.initMap = initMap;
