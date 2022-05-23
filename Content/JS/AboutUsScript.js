@@ -21,3 +21,15 @@ function JobVacanciesDeploy(){
     JobVacanciesIsDeployed = false; 
   }
 }
+
+var ORPIsDeployed = false;
+function OccupationalRiskPreventionDeploy(){
+  const Deployable = document.getElementById("Content-WorkWithUs-OccupationalRiskPrevention");
+  if (ORPIsDeployed == false) { 
+    Deployable.style.display="flex"; 
+    ORPIsDeployed = true;
+  } else if(JORPIsDeployed == true){ 
+    Deployable.style.display="none";
+    ORPIsDeployed = false; 
+  }
+}

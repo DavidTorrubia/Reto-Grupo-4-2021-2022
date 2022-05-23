@@ -58,7 +58,7 @@
             $result = mysqli_query($con, $sql) or die('Error');
             while ($row = mysqli_fetch_assoc($result)) {
             ?>
-                <div class="Content-Products-Container-Item" <?PHP echo "id=P" . $row["ID_PRODUCTO"] ?>>
+                <div class="Content-Products-Container-Item" <?PHP echo "id=P" . $row["ID_PRODUCTO"] ?> name>
                     <img <?PHP echo "src=" . $row["IMAGENPROD"] ?> class="Content-Products-Container-Item-Image">
                     <h2 class="Content-Products-Container-Item-Header"><?PHP echo $row["NOMBRE"] ?></h2>
                     <h3 class="Content-Products-Container-Item-Precio"><?PHP echo $row["PRECIO"] ?>€</h3>

@@ -203,24 +203,26 @@
     font-size: large;
 }
 
-.Content-WorkWithUs-JobVacanciesLink-Link{
+.Content-WorkWithUs-JobVacanciesLink-Button{
     color:#3a1101;
     text-decoration: none;
-    background-color: none;
-    border-color: none;
-}
-
-.Content-WorkWithUs-OccupationalRiskPreventionLink-Text{
+    background-color: rgba(255, 255, 255, 0);
+    border-color: rgba(255, 255, 255, 0);
     font-family: 'Tommy personal use';
     font-size: large;
 }
 
-.Content-WorkWithUs-OccupationalRiskPreventionLink-Link{
+.Content-WorkWithUs-OccupationalRiskPreventionLink-Button{
     color:#3a1101;
     text-decoration: none;
+    background-color: rgba(255, 255, 255, 0);
+    border-color: rgba(255, 255, 255, 0);
+    font-family: 'Tommy personal use';
+    font-size: large;
 }
 
 .Content-WorkWithUs-JobVacancies{
+    color:#3a1101;
     display:none;
     font-family: 'Tommy personal use';
     margin: 2%;
@@ -228,6 +230,15 @@
 
 .Content-WorkWithUs-JobVacancies-Vacant-Info{
     font-size: larger;
+}
+
+.Content-WorkWithUs-OccupationalRiskPrevention{
+    color:#3a1101;
+    display:none;
+    font-family: 'Tommy personal use';
+    margin: 2%;
+    justify-content: center;
+    font-size: small;
 }
 
 @media only screen and (max-width: 600px) {
