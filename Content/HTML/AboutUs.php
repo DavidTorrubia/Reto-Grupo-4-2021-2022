@@ -88,7 +88,7 @@
     <div class="Content">
         <div class="Content-InteractiveImageDescription-Container">
 
-            <img src=""
+            <img src="../Images/LandingPage/FieldBackground.jpg"
                 class="Content-InteractiveImageDescription-Container-Background">
             <div class="Content-InteractiveImageDescription-Container-Aux">
                 <h1 class="Content-InteractiveImageDescription-Container-Header-front">What do we represent?</h1>
