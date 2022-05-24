@@ -88,7 +88,7 @@
     <div class="Content">
         <div class="Content-InteractiveImageDescription-Container">
 
-            <img src="https://images.pexels.com/photos/9892384/pexels-photo-9892384.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+            <img src=""
                 class="Content-InteractiveImageDescription-Container-Background">
             <div class="Content-InteractiveImageDescription-Container-Aux">
                 <h1 class="Content-InteractiveImageDescription-Container-Header-front">What do we represent?</h1>
