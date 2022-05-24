@@ -297,11 +297,9 @@
 .map {
   justify-content: center;
   height: 20rem;
+  width: 52rem;
 }
 
-.Map-image {
-  height: 100%;
-}
 .Content-Header {
   font-family: "Tommy personal use";
   text-align: center;
@@ -403,15 +401,7 @@
     max-height: 15rem;
   }
 
-  .map {
-    width: 100%;
-    height: auto;
-    box-sizing: border-box;
-  }
-
-  .Map-image {
-    box-sizing: border-box;
-    height: auto;
+  #Map {
     width: 100%;
   }
 }
