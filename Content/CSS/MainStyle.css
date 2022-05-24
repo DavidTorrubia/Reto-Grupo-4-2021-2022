@@ -249,6 +249,20 @@ body {
     padding-top: 1rem;
     height: fit-content;
     min-height: 40rem;
+    z-index: 1;
+    position: relative;
+}
+.Content::after {
+    background-image: url("../Images/background.webp");
+    width: 100%;
+    position: absolute;
+    content: " ";
+    top: 0;
+    left: 0;
+    background-size: contain;
+    z-index: -2;
+    opacity: 15%;
+    bottom: 0;
 }
 
 .Header-Logo:hover {
