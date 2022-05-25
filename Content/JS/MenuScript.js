@@ -52,7 +52,7 @@ function Busqueda(){
 }
 }
 
-function ProductDetails(id){
+function ProductDetailsPage(){
   document.location.assign("ProductDetails.php");
-  alert(id);
-}
+  alert('Vas a cambiar de pagina')
+  }
