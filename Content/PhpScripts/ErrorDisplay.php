@@ -1,0 +1,10 @@
+<?php
+switch ($_SESSION['Error']){
+    case 1: echo '<script language="javascript">alert("Incorrect Password");</script>'; break;
+    case 2: echo '<script language="javascript">alert("Incorrect Email");</script>'; break;
+    case 3: echo '<script language="javascript">alert("Email Already on use");</script>'; break;
+    case 4; echo '<script language="javascript">alert("You must repeat your password correctly");</script>'; break;
+    case 5; echo '<script language="javascript">alert("Unable To Continue Changes Reverted");</script>'; break;
+    
+}
+$_SESSION['Error'] = 0;

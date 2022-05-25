@@ -20,7 +20,7 @@
     <?php include 'Header.php'; ?>
 
     <div class="Content">
-        <div class="carousel">
+    <a href="../HTML/Menu.php"><div class="carousel">
             <div class="carousel-inner">
                 <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
                 <div class="carousel-item">
@@ -64,7 +64,7 @@
                     </li>
                 </ol>
             </div>
-        </div>
+        </div></a>
         <div class="Content-LandingText" id="Content-LandingText">
             <h1 class="Content-LandingText-Header">
                 Lorem Ipsum
