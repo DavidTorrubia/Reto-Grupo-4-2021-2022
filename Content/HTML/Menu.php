@@ -38,7 +38,7 @@
         <h1 class="Content-Header" id="Menu-Drinks-Coffee"> Drinks & Coffe </h1>
         <div class="Content-Products-Container-DrinksCoffe Content-Products-Container">
             <?php
-            $sql = "SELECT * FROM PRODUCTOS WHERE ID_TIPOPROD = 0";
+            $sql = "SELECT * FROM PRODUCTOS WHERE ID_TIPOPROD = 1";
             $result = mysqli_query($con, $sql) or die('Error');
             while ($row = mysqli_fetch_assoc($result)) {
             ?>
@@ -54,7 +54,7 @@
         <h1 class="Content-Header" id="Menu-Pastries"> Pastries </h1>
         <div class="Content-Products-Container-Pastries Content-Products-Container">
         <?php
-            $sql = "SELECT * FROM PRODUCTOS WHERE ID_TIPOPROD = 1";
+            $sql = "SELECT * FROM PRODUCTOS WHERE ID_TIPOPROD = 2";
             $result = mysqli_query($con, $sql) or die('Error');
             while ($row = mysqli_fetch_assoc($result)) {
             ?>
@@ -70,7 +70,7 @@
         <h1 class="Content-Header" id="Menu-Snacks"> Snacks </h1>
         <div class="Content-Products-Container-Snacks Content-Products-Container">
         <?php
-            $sql = "SELECT * FROM PRODUCTOS WHERE ID_TIPOPROD = 2";
+            $sql = "SELECT * FROM PRODUCTOS WHERE ID_TIPOPROD = 3";
             $result = mysqli_query($con, $sql) or die('Error');
             while ($row = mysqli_fetch_assoc($result)) {
             ?>

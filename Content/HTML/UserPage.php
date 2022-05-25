@@ -109,7 +109,7 @@
                 </form>
                 <div class="Content-UserConfig-Item Directions">
                     <button class="Content-UserConfig-Item-Directions-Button" type="button" onclick="DeployCreateAddres()">Create New Address</button>
-                    <form class="Content-UserConfig-Item-Directions-Content" id="Content-UserConfig-Item-Directions-Content-Create">
+                    <form class="Content-UserConfig-Item-Directions-Content" id="Content-UserConfig-Item-Directions-Content-Create" method="post" action="../PhpScripts/DirectionCreation.php">
                         <div class="Content-UserConfig-Item">
                             <h2 class="Content-UserConfig-Item-Header">Country</h2>
                             <input type="text" class="Content-UserConfig-Item-Field" placeholder="Spain" name="country">
@@ -135,7 +135,7 @@
                             <input type="text" class="Content-UserConfig-Item-Field" placeholder="50011" name="p_code">
                         </div>
 
-                        <button class="Content-UserConfig-Item-Directions-Content-Button" type="button" onclick="Insertar_Dir($Adress,$Number,$Stair,$P_Code,$Floor)">Create</button>
+                        <input type="submit" class="Content-UserConfig-Item-Directions-Content-Button">
                     </form>
                     <button class="Content-UserConfig-Item-Directions-Button" type="button" onclick="DeployRemoveAddres()">Remove Address</button>
                     <div class="Content-UserConfig-Item-Directions-Content" id="Content-UserConfig-Item-Directions-Content-Remove">
@@ -153,10 +153,10 @@
                                 $Direction = explode('/', $row["DIRECCION"]);
                             ?>
                                 <div class="Content-UserConfig-Item-Directions-Content-RemoveList-Item Example">
-                                    <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header"><?php echo $Direction[0]; ?></h1>
-                                    <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header"><?php echo $Direction[2]; ?></h1>
-                                    <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header"><?php echo $Direction[3]; ?></h1>
-                                    <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header"><?php echo $Direction[4]; ?></h1>
+                                    <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header"><?php echo ucfirst((strtolower($Direction[0]))) ; ?></h1>
+                                    <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header"><?php echo ucfirst((strtolower($Direction[1]))); ?></h1>
+                                    <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header"><?php echo ucfirst((strtolower($Direction[5]))); ?></h1>
+                                    <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header"><?php echo ucfirst((strtolower($Direction[2]))); ?></h1>
                                     <input type="checkbox" class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-CheckBox">
                                 </div>
                             <?php

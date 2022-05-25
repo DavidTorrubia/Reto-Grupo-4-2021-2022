@@ -5,6 +5,6 @@ switch ($_SESSION['Error']){
     case 3: echo '<script language="javascript">alert("Email Already on use");</script>'; break;
     case 4; echo '<script language="javascript">alert("You must repeat your password correctly");</script>'; break;
     case 5; echo '<script language="javascript">alert("Unable To Continue Changes Reverted");</script>'; break;
-    
+    case 6; echo '<script language="javascript">alert("You already have that Adress");</script>'; break;
 }
 $_SESSION['Error'] = 0;
