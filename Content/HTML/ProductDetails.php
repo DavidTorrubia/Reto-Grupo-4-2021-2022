@@ -15,13 +15,18 @@
     <?php include 'Header.php'; ?>
 
     <div class="Content">
-        <div class="image">
-            <?php 
-            
-            ?>
+        <?php
+        $_SESSION['Menu'] = $id_prod;
+        $sql = "SELECT * FROM PRODUCTOS WHERE ID_PRODUCTO = '.$id_prod.'";
+        $result = mysqli_query($con, $sql) or die('Error');
+        $fila = mysqli_fetch_array($result);
+        ?>
+        <div class="Content-Image">
+            <img <?PHP echo "src=" . $fila["IMAGENPROD"] ?>>
         </div>
-        <div class="Content">
-
+        <div class="Content-Description">
+        <p ><?PHP echo $fila["NOMBRE"] ?></p>
+                    <h3 class="Content-Products-Container-Item-Precio"><?PHP echo $row["PRECIO"] ?>€</h3>
         </div>
     </div>
 
