@@ -25,7 +25,9 @@
             <img <?PHP echo "src=" . $fila["IMAGENPROD"] ?>>
         </div>
         <div class="Content-Description">
-        <p ><?PHP echo $fila["NOMBRE"] ?></p>
+        <p ><?PHP echo $fila["NOMBRE"]?></p>
+        <p ><?PHP echo $_SESSION['Menu']?></p>
+        <p ><?PHP echo $id_prod?></p>
                     <h3 class="Content-Products-Container-Item-Precio"><?PHP echo $row["PRECIO"] ?>€</h3>
         </div>
     </div>

@@ -52,7 +52,9 @@ function Busqueda(){
 }
 }
 
-function ProductDetailsPage(){
-  document.location.assign("ProductDetails.php");
-  alert('Vas a cambiar de pagina')
-  }
+function ProductDetailsPage(id){
+  alert('Vas a cambiar de pagina '+id);
+  let element = document.getElementById("P" + id);
+  element.innerHTML = "<?php $_SESSION['Menu'] = " + id + " ;echo $_SESSION['Menu']; ?>";
+  //document.location.assign("ProductDetails.php");
+  } 
