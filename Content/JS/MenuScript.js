@@ -51,3 +51,8 @@ function Busqueda(){
       }
 }
 }
+
+function ProductDetails(id){
+  document.location.assign("ProductDetails.php");
+  alert(id);
+}
