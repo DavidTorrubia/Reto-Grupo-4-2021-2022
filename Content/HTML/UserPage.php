@@ -135,11 +135,11 @@
                             <input type="text" class="Content-UserConfig-Item-Field" placeholder="50011" name="p_code">
                         </div>
 
-                        <input type="submit" class="Content-UserConfig-Item-Directions-Content-Button">
+                        <input type="submit" class="Content-UserConfig-Item-Directions-Content-Button Create" value="Crear" >
                     </form>
                     <button class="Content-UserConfig-Item-Directions-Button" type="button" onclick="DeployRemoveAddres()">Remove Address</button>
-                    <div class="Content-UserConfig-Item-Directions-Content" id="Content-UserConfig-Item-Directions-Content-Remove">
-                        <form class="Content-UserConfig-Item-Directions-Content-RemoveList">
+                    <form class="Content-UserConfig-Item-Directions-Content" id="Content-UserConfig-Item-Directions-Content-Remove" method="post" action="../PhpScripts/RemoveDirection.php">
+                        <div class="Content-UserConfig-Item-Directions-Content-RemoveList">
                             <div class="Content-UserConfig-Item-Directions-Content-RemoveList-Item Guide">
                                 <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header Guide">Country</h1>
                                 <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header Guide">City</h1>
@@ -147,26 +147,26 @@
                                 <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header Guide">Address</h1>
                             </div>
                             <?php
-                            $sql = "SELECT DIRECCION FROM DIRECCIONES WHERE ID_USUARIO =" . $WebPageUser->get_id();
+                            $sql = "SELECT * FROM DIRECCIONES WHERE ID_USUARIO =" . $WebPageUser->get_id();
                             $result = mysqli_query($con, $sql) or die('Error');
                             while ($row = mysqli_fetch_assoc($result)) {
                                 $Direction = explode('/', $row["DIRECCION"]);
                             ?>
                                 <div class="Content-UserConfig-Item-Directions-Content-RemoveList-Item Example">
-                                    <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header"><?php echo ucfirst((strtolower($Direction[0]))) ; ?></h1>
+                                    <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header"><?php echo ucfirst((strtolower($Direction[0]))); ?></h1>
                                     <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header"><?php echo ucfirst((strtolower($Direction[1]))); ?></h1>
                                     <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header"><?php echo ucfirst((strtolower($Direction[5]))); ?></h1>
                                     <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header"><?php echo ucfirst((strtolower($Direction[2]))); ?></h1>
-                                    <input type="checkbox" class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-CheckBox">
+                                    <input type="checkbox" class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-CheckBox" value="<?php echo $row["ID_DIRECCION"] ?>" name="Checkbox[]">
                                 </div>
                             <?php
                             }
                             ?>
 
 
-                        </form>
-                        <button class="Content-UserConfig-Item-Directions-Content-Button">Remove Selected</button>
-                    </div>
+                        </div>
+                        <input type="submit" class="Content-UserConfig-Item-Directions-Content-Button" value="Remove Selected">
+                    </form>
                 </div>
             </div>
 
