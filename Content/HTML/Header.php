@@ -1,13 +1,7 @@
 <div class="Header">
-    <?php include "../PhpScripts/UserCreation.php" ;
-    if ($_SESSION['Error'] == 1){
-        echo '<script language="javascript">alert("No es una contraseña correcta");</script>';
-        $_SESSION['Error'] = 0;
-    } else if ($_SESSION['Error'] == 2){
-        echo '<script language="javascript">alert("No es un correo correcto");</script>';
-        $_SESSION['Error'] = 0;
-    }
-    
+    <?php include '../PhpScripts/Conexion.php'; ?>
+    <?php include "../PhpScripts/UserCreation.php";
+    include "../PhpScripts/ErrorDisplay.php";
     ?>
     <div class="Header-Background"></div>
     <div class="Header-Item Header-Item-Left-Container">
@@ -29,7 +23,18 @@
     <a href="../HTML/LandingPage.php"><img class="Header-Logo" src="../Images/Logo/LogoWhite.png" alt="logo"></a>
     <div class="Header-Item Header-Item-Right-Container">
         <div class="Header-Item-Right-Container-UserDropButtonContainer">
-            <button type="button" class="Header-Item-Right-Container-UserDropButton" id="Header-Item-Right-Container-UserDropButton" onclick="UserMenuDeploy()"><img class="Header-Imagen Header-Image-Usericon" src="../Images/defaultUserImage.jpg" /></button>
+            <button type="button" class="Header-Item-Right-Container-UserDropButton" id="Header-Item-Right-Container-UserDropButton" onclick="UserMenuDeploy()"><img class="Header-Imagen Header-Image-Usericon" src="<?php if ($WebPageUser->get_isLogged() == true) {
+                                                                                                                                                                                                                            $sql = "SELECT IMAGENPERFIL FROM USUARIOS WHERE ID_USUARIO =" . $WebPageUser->get_id();
+                                                                                                                                                                                                                            $resultado = mysqli_query($con, $sql) or die('Error: ' . mysqli_error($con));
+                                                                                                                                                                                                                            while ($row = mysqli_fetch_assoc($resultado)) {
+                                                                                                                                                                                                                                echo $row["IMAGENPERFIL"];
+                                                                                                                                                                                                                                if ($row["IMAGENPERFIL"] == null) {
+                                                                                                                                                                                                                                    echo "../Images/defaultUserImage.jpg";
+                                                                                                                                                                                                                                }
+                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                        } else {
+                                                                                                                                                                                                                            echo "../Images/defaultUserImage.jpg";
+                                                                                                                                                                                                                        } ?>" /></button>
             <div class="Header-Item-Right-Container-UserDropButton-Content" id="Header-Item-Right-Container-UserDropButton-Content">
                 <?php
                 if ($WebPageUser->get_isLogged() == false) {
@@ -73,7 +78,7 @@
                         <a type="button" class="Header-Item-Right-Container-UserDropButton-Content-Button UserConfig" id="Header-Item-Right-Container-UserDropButton-Content-UserConfig " href="../HTML/UserPage.php">User Config</a>
                     </div>
                     <form action="../PhpScripts/Logoff.php">
-                    <input type="submit" class="Header-Item-Right-Container-UserDropButton-Content-Button" id="Header-Item-Right-Container-UserDropButton-Content-Log off" value="Log out">
+                        <input type="submit" class="Header-Item-Right-Container-UserDropButton-Content-Button" id="Header-Item-Right-Container-UserDropButton-Content-Log off" value="Log out">
                     </form>
                 <?php
                 }
@@ -84,4 +89,3 @@
         <img class="Header-Imagen Header-Imagen-Bandera" src="../Images/flags/ukflag.png" />
     </div>
 </div>
-<?php include '../PhpScripts/Conexion.php'; ?>

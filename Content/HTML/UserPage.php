@@ -18,7 +18,18 @@
     <div class="Content">
         <div class="Content-User">
             <div class="Content-User-UserProfile">
-                <img src="../Images/User/ProfileImage.png" class="Content-User-UserProfile-Image">
+                <img src="<?php if ($WebPageUser->get_isLogged() == true) {
+                                $sql = "SELECT IMAGENPERFIL FROM USUARIOS WHERE ID_USUARIO =" . $WebPageUser->get_id();
+                                $resultado = mysqli_query($con, $sql) or die('Error: ' . mysqli_error($con));
+                                while ($row = mysqli_fetch_assoc($resultado)) {
+                                    echo $row["IMAGENPERFIL"];
+                                    if ($row["IMAGENPERFIL"] == null) {
+                                        echo "../Images/defaultUserImage.jpg";
+                                    }
+                                }
+                            } else {
+                                echo "../Images/defaultUserImage.jpg";
+                            } ?>" class="Content-User-UserProfile-Image">
                 <div class="Content-User-UserProfile-Data">
                     <h1 class="Content-User-UserProfile-Data-Username">
                         <?php if ($WebPageUser->get_name() == null) {
@@ -59,10 +70,10 @@
                 </div>
             </div>
             <div class="Content-UserConfig">
-                <form class="Content-UserConfig-User">
+                <form class="Content-UserConfig-User" method="post" action="../PhpScripts/AlterUser.php">
                     <div class="Content-UserConfig-Item half">
                         <h2 class="Content-UserConfig-Item-Header">First Name</h2>
-                        <input type="text" class="Content-UserConfig-Item-Field" name="Name" placeholder=<?php if ($WebPageUser->get_name() == null) {
+                        <input type="text" class="Content-UserConfig-Item-Field" name="name" placeholder=<?php if ($WebPageUser->get_name() == null) {
                                                                                                                 echo "User" . $WebPageUser->get_id();
                                                                                                             } else {
                                                                                                                 echo $WebPageUser->get_name();
@@ -70,7 +81,7 @@
                     </div>
                     <div class="Content-UserConfig-Item half">
                         <h2 class="Content-UserConfig-Item-Header">Last Name</h2>
-                        <input type="text" class="Content-UserConfig-Item-Field" name="LastName" placeholder=<?php $sql = "SELECT APELLIDOS FROM USUARIOS WHERE ID_USUARIO =" . $WebPageUser->get_id();
+                        <input type="text" class="Content-UserConfig-Item-Field" name="lastname" placeholder=<?php $sql = "SELECT APELLIDOS FROM USUARIOS WHERE ID_USUARIO =" . $WebPageUser->get_id();
                                                                                                                 $result = mysqli_query($con, $sql) or die('Error');
                                                                                                                 if ($row = mysqli_fetch_assoc($result)) {
                                                                                                                     echo $row["APELLIDOS"];
@@ -82,7 +93,7 @@
                     </div>
                     <div class="Content-UserConfig-Item">
                         <h2 class="Content-UserConfig-Item-Header">Email</h2>
-                        <input type="text" class="Content-UserConfig-Item-Field" name="Email" placeholder=<?php $sql = "SELECT CORREO FROM USUARIOS WHERE ID_USUARIO =" . $WebPageUser->get_id();
+                        <input type="text" class="Content-UserConfig-Item-Field" name="email" placeholder=<?php $sql = "SELECT CORREO FROM USUARIOS WHERE ID_USUARIO =" . $WebPageUser->get_id();
                                                                                                             $result = mysqli_query($con, $sql) or die('Error');
                                                                                                             $row = mysqli_fetch_assoc($result);
                                                                                                             echo $row['CORREO'];
@@ -90,35 +101,41 @@
                     </div>
                     <div class="Content-UserConfig-Item">
                         <h2 class="Content-UserConfig-Item-Header">Password</h2>
-                        <input type="password" class="Content-UserConfig-Item-Field" placeholder="Password" name="Password">
+                        <input type="password" class="Content-UserConfig-Item-Field" placeholder="Password" name="password">
+                        <h2 class="Content-UserConfig-Item-Header">Repeat Password</h2>
+                        <input type="password" class="Content-UserConfig-Item-Field" placeholder="Password" name="passwordrepeat">
                     </div>
                     <input type="submit" class="Content-UserConfig-Item-Button" type="button" value="Save Changes">
                 </form>
                 <div class="Content-UserConfig-Item Directions">
                     <button class="Content-UserConfig-Item-Directions-Button" type="button" onclick="DeployCreateAddres()">Create New Address</button>
-                    <form class="Content-UserConfig-Item-Directions-Content" id="Content-UserConfig-Item-Directions-Content-Create">
+                    <form class="Content-UserConfig-Item-Directions-Content" id="Content-UserConfig-Item-Directions-Content-Create" method="post" action="../PhpScripts/DirectionCreation.php">
+                        <div class="Content-UserConfig-Item">
+                            <h2 class="Content-UserConfig-Item-Header">Country</h2>
+                            <input type="text" class="Content-UserConfig-Item-Field" placeholder="Spain" name="country">
+                        </div>
+                        <div class="Content-UserConfig-Item">
+                            <h2 class="Content-UserConfig-Item-Header">City</h2>
+                            <input type="text" class="Content-UserConfig-Item-Field" placeholder="Zaragoza" name="city">
+                        </div>
                         <div class="Content-UserConfig-Item">
                             <h2 class="Content-UserConfig-Item-Header">Address</h2>
-                            <input type="text" class="Content-UserConfig-Item-Field" placeholder="Calle Violeta Parra" name="Adress">
+                            <input type="text" class="Content-UserConfig-Item-Field" placeholder=" Violeta Parra 8" name="adress">
                         </div>
-                        <div class="Content-UserConfig-Item">
-                            <h2 class="Content-UserConfig-Item-Header">Number</h2>
-                            <input type="text" class="Content-UserConfig-Item-Field" placeholder="8" name="Number">
-                        </div>
-                        <div class="Content-UserConfig-Item">
+                        <div class="Content-UserConfig-Item half">
                             <h2 class="Content-UserConfig-Item-Header">Stairs' direction</h2>
-                            <input type="text" class="Content-UserConfig-Item-Field" placeholder="right" name="Stairs">
+                            <input type="text" class="Content-UserConfig-Item-Field" placeholder="right" name="stairs">
                         </div>
-                        <div class="Content-UserConfig-Item">
+                        <div class="Content-UserConfig-Item half">
                             <h2 class="Content-UserConfig-Item-Header">Floor</h2>
-                            <input type="text" class="Content-UserConfig-Item-Field" placeholder="2B" name="Floor">
+                            <input type="text" class="Content-UserConfig-Item-Field" placeholder="2B" name="floor">
                         </div>
                         <div class="Content-UserConfig-Item">
                             <h2 class="Content-UserConfig-Item-Header">Postal Code</h2>
-                            <input type="text" class="Content-UserConfig-Item-Field" placeholder="50011" name="P_Code">
+                            <input type="text" class="Content-UserConfig-Item-Field" placeholder="50011" name="p_code">
                         </div>
 
-                        <button class="Content-UserConfig-Item-Directions-Content-Button" type="button" onclick="Insertar_Dir($Adress,$Number,$Stair,$P_Code,$Floor)">Create</button>
+                        <input type="submit" class="Content-UserConfig-Item-Directions-Content-Button">
                     </form>
                     <button class="Content-UserConfig-Item-Directions-Button" type="button" onclick="DeployRemoveAddres()">Remove Address</button>
                     <div class="Content-UserConfig-Item-Directions-Content" id="Content-UserConfig-Item-Directions-Content-Remove">
@@ -136,10 +153,10 @@
                                 $Direction = explode('/', $row["DIRECCION"]);
                             ?>
                                 <div class="Content-UserConfig-Item-Directions-Content-RemoveList-Item Example">
-                                    <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header"><?php echo $Direction[0]; ?></h1>
-                                    <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header"><?php echo $Direction[2]; ?></h1>
-                                    <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header"><?php echo $Direction[3]; ?></h1>
-                                    <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header"><?php echo $Direction[4]; ?></h1>
+                                    <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header"><?php echo ucfirst((strtolower($Direction[0]))) ; ?></h1>
+                                    <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header"><?php echo ucfirst((strtolower($Direction[1]))); ?></h1>
+                                    <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header"><?php echo ucfirst((strtolower($Direction[5]))); ?></h1>
+                                    <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header"><?php echo ucfirst((strtolower($Direction[2]))); ?></h1>
                                     <input type="checkbox" class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-CheckBox">
                                 </div>
                             <?php

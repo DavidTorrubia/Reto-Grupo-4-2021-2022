@@ -109,6 +109,7 @@
   margin-bottom: 3rem;
   overflow: hidden;
   min-height: min-content;
+  min-height: 18rem;
 }
 
 .Content-Header {
@@ -192,6 +193,24 @@
 @font-face {
   src: url(../Fonts/MADE\ Tommy\ Soft\ Medium\ PERSONAL\ USE.otf);
   font-family: "Tommy personal use";
+}
+@media only screen and (max-width: 1200px) {
+  .Content-Menu-Types-Container {
+    min-height: 13rem;
+  }
+
+}
+@media only screen and (max-width: 1000px) {
+  .Content-Menu-Types-Container {
+    min-height: 12rem;
+  }
+
+}
+@media only screen and (max-width: 800px) {
+  .Content-Menu-Types-Container {
+    min-height: 9rem;
+  }
+
 }
 
 @media only screen and (max-width: 600px) {
