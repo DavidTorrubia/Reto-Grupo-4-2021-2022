@@ -391,6 +391,12 @@
   #FixedAdv-Right {
     margin-top: 0.5rem;
   }
+  .carousel-item-image-Container {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+  }
   .Locations {
     flex-direction: column;
     width: 98%;

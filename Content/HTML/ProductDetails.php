@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,13 +10,22 @@
     <link rel="stylesheet" href="../CSS/ProductDetailsStyle.css">
     <script src="../JS/HeaderScripts.js"></script>
 </head>
+
 <body>
-<?php include 'Header.php'; ?>
+    <?php include 'Header.php'; ?>
 
-<div class="Content">
+    <div class="Content">
+        <div class="image">
+            <?php 
+            
+            ?>
+        </div>
+        <div class="Content">
 
-</div>
+        </div>
+    </div>
 
-<?php include 'Footer.php'; ?>
+    <?php include 'Footer.php'; ?>
 </body>
+
 </html>
