@@ -9,9 +9,21 @@
     <link rel="stylesheet" href="../CSS/MenuStyle.css">
     <script src="../JS/HeaderScripts.js"></script>
     <script src="../JS/MenuScript.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <title>Ecoffe - Menu</title>
 </head>
+
 <body>
+    <script>
+        function goto(id) {
+            $.ajax({
+                url: "../HTML/ProductDetails.php", 
+                success: function(response) {
+                    window.location.replace("../HTML/ProductDetails.php?id="+id);
+                }
+            })
+        }
+    </script>
     <?php include 'Header.php'; ?>
     <div class="Content">
         <button class="Content-Menu-SlideUp" type="button" id="Content-Menu-SlideUp" onclick="ScrollUp()"><img src="../Icons/Menu/UpArrow.png" class="Content-Menu-SlideUp-Image"></button>
@@ -42,23 +54,24 @@
             $result = mysqli_query($con, $sql) or die('Error');
             while ($row = mysqli_fetch_assoc($result)) {
             ?>
-                <div class="Content-Products-Container-Item" <?PHP echo "id=P" . $row["ID_PRODUCTO"]?> onclick="ProductDetailsPage(<?php echo $row['ID_PRODUCTO']?>)">
+                <div class="Content-Products-Container-Item" <?PHP echo "id=P" . $row["ID_PRODUCTO"] ?> onclick="goto(<?php echo $row['ID_PRODUCTO']; ?>)">
                     <img <?PHP echo "src=" . $row["IMAGENPROD"] ?> class="Content-Products-Container-Item-Image">
                     <h2 class="Content-Products-Container-Item-Header"><?PHP echo $row["NOMBRE"] ?></h2>
                     <h3 class="Content-Products-Container-Item-Precio"><?PHP echo $row["PRECIO"] ?>€</h3>
                 </div>
+
             <?PHP
             }
             ?>
         </div>
         <h1 class="Content-Header" id="Menu-Pastries"> Pastries </h1>
         <div class="Content-Products-Container-Pastries Content-Products-Container">
-        <?php
+            <?php
             $sql = "SELECT * FROM PRODUCTOS WHERE ID_TIPOPROD = 2";
             $result = mysqli_query($con, $sql) or die('Error');
             while ($row = mysqli_fetch_assoc($result)) {
             ?>
-                <div class="Content-Products-Container-Item" <?PHP echo "id=P" . $row["ID_PRODUCTO"] ?> >
+                <div class="Content-Products-Container-Item" <?PHP echo "id=P" . $row["ID_PRODUCTO"] ?> onclick="goto(<?php echo $row['ID_PRODUCTO']; ?>)">
                     <img <?PHP echo "src=" . $row["IMAGENPROD"] ?> class="Content-Products-Container-Item-Image">
                     <h2 class="Content-Products-Container-Item-Header"><?PHP echo $row["NOMBRE"] ?></h2>
                     <h3 class="Content-Products-Container-Item-Precio"><?PHP echo $row["PRECIO"] ?>€</h3>
@@ -69,12 +82,12 @@
         </div>
         <h1 class="Content-Header" id="Menu-Snacks"> Snacks </h1>
         <div class="Content-Products-Container-Snacks Content-Products-Container">
-        <?php
+            <?php
             $sql = "SELECT * FROM PRODUCTOS WHERE ID_TIPOPROD = 3";
             $result = mysqli_query($con, $sql) or die('Error');
             while ($row = mysqli_fetch_assoc($result)) {
             ?>
-                <div class="Content-Products-Container-Item" <?PHP echo "id=P" . $row["ID_PRODUCTO"] ?>>
+                <div class="Content-Products-Container-Item" <?PHP echo "id=P" . $row["ID_PRODUCTO"] ?> onclick="goto(<?php echo $row['ID_PRODUCTO']; ?>)">
                     <img <?PHP echo "src=" . $row["IMAGENPROD"] ?> class="Content-Products-Container-Item-Image">
                     <h2 class="Content-Products-Container-Item-Header"><?PHP echo $row["NOMBRE"] ?></h2>
                     <h3 class="Content-Products-Container-Item-Precio"><?PHP echo $row["PRECIO"] ?>€</h3>
