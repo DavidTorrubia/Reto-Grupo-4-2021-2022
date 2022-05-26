@@ -1,103 +1,165 @@
 .Content {
     display: flex;
     flex-direction: column;
-    align-items: left;
+    align-items: center;
 }
-
-.Content-Buscador{
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    margin: 1% 5%;
-}
-
-.Content-Buscador-Filters{
-    display: flex;
-    flex-direction: row;
-    
-}
-
-.Content-Buscador-FilterCheckbox{
-    margin-right:0.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.Content-Buscador-FilterText{
-    margin-right:2rem;
-    margin-bottom: 0.5rem;
-}
-
-.Content-Buscador-Fields{
-    display: flex;
-    flex-direction: row;
-}
-
-#Content-Buscador-Fields-ID{
-    margin-left: 0.25rem;
-    margin-right: 2rem;
-}
-
-#Content-Buscador-Fields-name{
-    margin-left: 0.25rem;
-    margin-right: 2rem;
-}
-
-.Content-Resultados-Opciones{
-    margin-right: 1.5rem;
-}
-
-#Content-Resultados-Opciones-Save{
-    margin-right: 0.25rem;
-    margin-left: auto;
-}
-
-@media only screen and (max-width: 600px) {
-    .Content-Buscador-Fields {
-        display: flex;
-        flex-direction: column;
-        align-items: left;
-    }
-}
-
-.Content-Buscador-Button{
-    margin-top:1rem;
-    width: 100%;
-}
-
-
-.Content-Resultados{
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    margin: 1% 5%;
+.Content-DataAlteration{
     background-color: white;
-    padding-left: 2rem;
-    padding-right: 1rem;
-    padding-bottom: 2rem;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    width: 90%;
 }
-
-.Content-Resultados-Tabla{
-    border-style: solid;
-    border-collapse: collapse;
-    border-width: 0.20rem;
-    width: 100%;
-}
-
-th, td{
-    text-align: center;
-    border-style: solid;
-    border-width: 0.10rem;
-}
-
-th{
-    background-color: gray;
-    color: white;
-}
-
-.Content-Resultados-Opciones{
+.Content-SelectionBar{
     display: flex;
     flex-direction: row;
+    justify-content: left;
+    margin-bottom: 0.5rem;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    flex-wrap: wrap;
+
+}
+.Content-DataAlteration-Elements-Item-Header{
+    font-family: "Tommy personal use";
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.18);
+    text-align: center;
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+}
+.Content-DataAlteration-Elements-Item-Login{
+    display: flex;
+    flex-direction: row;
+    font-size: 1.5rem;
+    font-family: "Tommy personal use";
     margin-top: 1rem;
 }
+.Content-DataAlteration-Elements-Item-Login input {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.Content-DataAlteration-Elements-Item-Submit{
+    width: 80%;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+
+}
+.Content-DataAlteration-Elements-Item-Input{
+    width:80%;
+    text-align: left;
+    padding-left: 1rem;
+}
+.Content-DataAlteration-Elements-Item-Header-Small{
+    font-family: "Tommy personal use";
+    width: 80%;
+    text-align: left;
+    margin-bottom: 0.5rem;
+}
+.Content-DataAlteration-Elements-Item-Action{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+.Content-DataAlteration-Elements-Item-Action label{
+    font-family: "Tommy personal use";
+    font-size: 1.5rem;
+} 
+.Content-DataAlteration-Elements{
+    display: flex;
+    flex-direction: column;
+}
+.Content-DataAlteration-Elements-Item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+}
+.Content-DataAlteration-Elements-Item-Style{
+    width: 90%;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-direction: column;
+}
+.Content-DataAlteration-Elements-Item-List{
+    display: flex;
+    flex-direction: column;
+    min-height: 15rem;
+    max-height: 15rem;
+    overflow-y: scroll;
+    width: 100%;
+    position: relative;
+}
+.Content-DataAlteration-Elements-Item-Container{
+    width: 90%;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+.Content-DataAlteration-Elements-Item-List-Item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: 0.3s;
+}
+.Content-DataAlteration-Elements-Item-List-Item:hover {
+    background-color: rgba(0, 0, 0, 0.081);
+}
+.Content-DataAlteration-Elements-Item-List-Item-Example{
+    background-color: rgb(206, 206, 206);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;  
+    box-sizing: border-box;
+    width: 100%;
+    padding-right: 1rem;
+}
+.Content-DataAlteration-Elements-Item-List-Item-Example input {
+    opacity: 0%;
+}
+.Content-DataAlteration-Elements-Item-List-Item-Info{
+    font-family: "Tommy personal use";
+    text-align: center;
+}
+.Content-DataAlteration-Elements-Item-List-Item-Info.ID{
+    width: 10%;
+}
+.Content-DataAlteration-Elements-Item-List-Item-Radio{
+    align-items: center;
+}
+.Content-DataAlteration-Elements-Item-List-Item-Info.CORREO{
+    width: 40%;
+}
+.Content-DataAlteration-Elements-Item-List-Item-Info.CONTRASENA{
+    width: 10%;
+}
+.Content-DataAlteration-Elements-Item-List-Item-Info.NOMBRE{
+    width: 10%;
+}
+.Content-DataAlteration-Elements-Item-List-Item-Info.APELLIDOS{
+    width: 10%;
+}
+.Content-DataAlteration-Elements-Item-List-Item-Info.ES_ADMIN{
+    width: 5%;
+}
+.Content-SelectionBar-Item{
+    font-family: "Tommy personal use";
+    border: transparent;
+    width: 25%;
+    font-size: 2rem;
+    background-color: transparent;
+    transition: 0.3s;
+}
+.Content-SelectionBar-Item:hover {
+    background-color: rgba(0, 0, 0, 0.048);
+}
+
+@font-face {
+    src: url(../Fonts/MADE\ Tommy\ Soft\ Medium\ PERSONAL\ USE.otf);
+    font-family: "Tommy personal use";
+  }
 
 

@@ -19,7 +19,7 @@
             $.ajax({
                 url: "../HTML/ProductDetails.php", 
                 success: function(response) {
-                    window.location.replace("../HTML/ProductDetails.php?id="+id);
+                window.location.replace("../HTML/ProductDetails.php?id="+id);
                 }
             })
         }

@@ -54,16 +54,16 @@
                     <button type="button" class="Header-Item-Right-Container-UserDropButton-Content-Button" id="Header-Item-Right-Container-UserDropButton-Content-SignUp" onclick="SignUpDeploy()"> Sign
                         Up</button>
                     <div class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu" id="Header-Item-Right-Container-UserDropButton-Content-SignUpMenu">
-                        <form class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-form">
+                        <form class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-form" method="get" action="../PhpScripts/SingUp.php">
                             <h3 class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Header">Email</h3>
-                            <input type="text" class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Input">
+                            <input type="text" class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Input" name="email">
                             <h3 class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Header">Password
                             </h3>
-                            <input type="password" class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Input">
+                            <input type="password" class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Input" name="password">
                             <h3 class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Header">Repeat
                                 Password
                             </h3>
-                            <input type="password" class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Input">
+                            <input type="password" class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Input" name="repassword">
                             <input type="submit" value="Sign Up" class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Submit">
                         </form>
                     </div>
