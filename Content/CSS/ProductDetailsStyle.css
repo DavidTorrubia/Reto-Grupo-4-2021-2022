@@ -1,3 +1,38 @@
-.Content-Image{
-    
+.Content{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 9rem;
+}
+
+.Content-Image img{
+    width: 40rem;
+    border: solid black;
+}
+
+.Content-Letter-Details-Description{
+    padding-top: 3rem;
+}
+
+.Content-Letter-Details-Titles{
+    padding: 2.5rem 4rem 1rem;
+    margin: 0;
+}
+
+.Content-Letter-Details{
+    display: flex;
+    padding: 2rem;
+}
+
+.Content-Letter-Buy{
+    display: flex;
+    justify-content: space-around;
+}
+
+.Content-Letter{
+    padding-right: 13rem;
+}
+
+.Content-Letter h1{
+    text-align-last: center;
+    font-size: 3rem;
 }

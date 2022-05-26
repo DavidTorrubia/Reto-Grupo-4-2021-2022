@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../CSS/MainStyle.css">
     <link rel="stylesheet" href="../CSS/ProductDetailsStyle.css">
     <script src="../JS/HeaderScripts.js"></script>
+    <script src="../JS/ProductDetails.js"></script>
 </head>
 
 <body>
@@ -26,11 +27,24 @@
         <div class="Content-Image">
             <img <?PHP echo "src=" . $fila["IMAGENPROD"] ?>>
         </div>
-        <div class="Content-Description">
-            <p><?PHP echo $fila["NOMBRE"] ?></p>
-            <p><?PHP echo $_SESSION['Menu'] ?></p>
-            <p><?PHP echo $id_prod ?></p>
-            <h3 class="Content-Products-Container-Item-Precio"><?PHP echo $row["PRECIO"] ?>€</h3>
+        
+        <div class="Content-Letter">
+        <h1><?PHP echo $fila["NOMBRE"] ?></h1>
+            <div class="Content-Letter-Details">
+                <div class="Content-Letter-Details-Titles">
+                    <h2>Description</h2>
+                    <h2>Price</h2>
+                </div>
+                <div class="Content-Letter-Details-Description">
+                    <h3><?PHP echo $fila["DETALLE"] ?></h3>
+                    <h3 class="Content-Products-Container-Item-Precio"><?PHP echo $fila["PRECIO"] ?>€</h3>
+                </div>
+            </div>
+            <div class="Content-Letter-Buy">
+                <input type="number" name="number" min="1" max="<?php echo $fila["STOCK"]?>" onchange="Precio_productos(<?php echo $fila['PRECIO']?>,<?php $_GET['number']?>)">
+                   <h2></h2>
+                <button>Purchase</button>
+            </div>
         </div>
     </div>
 
