@@ -17,16 +17,22 @@ if (!isset($_SESSION)) {
     $sql = "Select * from USUARIOS where CORREO ID_USUARIO = " . $id ;
     $result = mysqli_query($con, $sql) or die('Error');
     $rowcount = mysqli_fetch_assoc($result);
-    try {
-        $sql = "INSERT INTO USUARIOS (CORREO,CONTRASENA,ES_ADMIN) VALUES ('" . $email . "','" . $password . "', 0)";
-        $result = mysqli_query($con, $sql) or die('Error');
-        $sql = "COMMIT";
-        $result = mysqli_query($con, $sql) or die('Error');
-    } catch (mysqli_sql_exception $ex) {
-        $_SESSION['Error'] = 5;
-        $sql = "ROLLBACK";
-        $result = mysqli_query($con, $sql) or die('Error');
+    if ($selec == 1) {
+
+    } else if ($selec == 2){
+        try {
+            $sql = "DELETE FROM table_name WHERE condition;";
+            $result = mysqli_query($con, $sql) or die('Error');
+            $sql = "COMMIT";
+            $result = mysqli_query($con, $sql) or die('Error');
+        } catch (mysqli_sql_exception $ex) {
+            $_SESSION['Error'] = 5;
+            $sql = "ROLLBACK";
+            $result = mysqli_query($con, $sql) or die('Error');
+        }
     }
+
+    
 
     header("Location: ../HTML/AdminPage.php");
 }

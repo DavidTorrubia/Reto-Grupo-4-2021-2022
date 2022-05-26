@@ -24,28 +24,21 @@
         $result = mysqli_query($con, $sql) or die('Error');
         $fila = mysqli_fetch_array($result);
         ?>
-        <div class="Content-Image">
-            <img <?PHP echo "src=" . $fila["IMAGENPROD"] ?>>
-        </div>
-        
-        <div class="Content-Letter">
-        <h1><?PHP echo $fila["NOMBRE"] ?></h1>
-            <div class="Content-Letter-Details">
-                <div class="Content-Letter-Details-Titles">
-                    <h2>Description</h2>
-                    <h2>Price</h2>
-                </div>
-                <div class="Content-Letter-Details-Description">
-                    <h3><?PHP echo $fila["DETALLE"] ?></h3>
-                    <h3 class="Content-Products-Container-Item-Precio"><?PHP echo $fila["PRECIO"] ?>€</h3>
-                </div>
-            </div>
-            <div class="Content-Letter-Buy">
-                <input type="number" name="number" min="1" max="<?php echo $fila["STOCK"]?>" onchange="Precio_productos(<?php echo $fila['PRECIO']?>,<?php $_GET['number']?>)">
-                   <h2></h2>
-                <button>Purchase</button>
+        <div class="Content-Container">
+            <img class="Content-Image" <?PHP echo "src=" . $fila["IMAGENPROD"] ?>>
+            <div class="Content-Letter">
+                <h1 class="Content-Letter-header"><?php echo $fila["NOMBRE"] ?></h1>
+                <p class="Content-Letter-Desc">
+                    <?php echo $fila["DETALLE"] ?>
+                </p>
+                <h3 class="Content-Letter-Price"><?php echo $fila["PRECIO"] ?>€</h1>
+                <form class="Content-Letter-Button-Container">
+                    <input type="number" name="quantity" min="1" max="<?php echo $fila["STOCK"] ?>" class="Content-Letter-Button-Container-input">
+                    <input type="submit" name="buy" value="add to cart" class="Content-Letter-Button-Container-input">
+                </form>
             </div>
         </div>
+
     </div>
 
     <?php include 'Footer.php'; ?>
