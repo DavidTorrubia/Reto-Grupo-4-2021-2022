@@ -2,6 +2,7 @@
     <?php include '../PhpScripts/Conexion.php'; ?>
     <?php include "../PhpScripts/UserCreation.php";
     include "../PhpScripts/ErrorDisplay.php";
+    include "../PhpScripts/CreateCart.php";
     ?>
     <div class="Header-Background"></div>
     <div class="Header-Item Header-Item-Left-Container">

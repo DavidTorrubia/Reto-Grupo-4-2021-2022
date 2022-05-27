@@ -27,14 +27,16 @@
         <div class="Content-Container">
             <img class="Content-Image" <?PHP echo "src=" . $fila["IMAGENPROD"] ?>>
             <div class="Content-Letter">
+                <img class="Content-Image-Responsive" <?PHP echo "src=" . $fila["IMAGENPROD"] ?>>
                 <h1 class="Content-Letter-header"><?php echo $fila["NOMBRE"] ?></h1>
                 <p class="Content-Letter-Desc">
                     <?php echo $fila["DETALLE"] ?>
                 </p>
-                <h3 class="Content-Letter-Price"><?php echo $fila["PRECIO"] ?>€</h1>
-                <form class="Content-Letter-Button-Container">
-                    <input type="number" name="quantity" min="1" max="<?php echo $fila["STOCK"] ?>" class="Content-Letter-Button-Container-input">
-                    <input type="submit" name="buy" value="add to cart" class="Content-Letter-Button-Container-input">
+                <h3 class="Content-Letter-Price"><?php echo $fila["PRECIO"] ?>€ per unit</h1>
+                <form class="Content-Letter-Button-Container" method="get" action="../PhpScripts/AddCart.php?id=">
+                    <input type="number" name="quantity" min="1" max="<?php echo $fila["STOCK"] ?>" class="Content-Letter-Button-Container-input quantity">
+                    <input type="hidden" name="id" value="<?php echo $fila["ID_PRODUCTO"] ?>">
+                    <input type="submit" name="buy" value="add to cart" class="Content-Letter-Button-Container-input submit">
                 </form>
             </div>
         </div>
