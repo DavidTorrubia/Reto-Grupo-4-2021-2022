@@ -33,11 +33,15 @@
                     <?php echo $fila["DETALLE"] ?>
                 </p>
                 <h3 class="Content-Letter-Price"><?php echo $fila["PRECIO"] ?>€ per unit</h1>
-                <form class="Content-Letter-Button-Container" method="get" action="../PhpScripts/AddCart.php?id=">
-                    <input type="number" name="quantity" min="1" max="<?php echo $fila["STOCK"] ?>" class="Content-Letter-Button-Container-input quantity">
-                    <input type="hidden" name="id" value="<?php echo $fila["ID_PRODUCTO"] ?>">
-                    <input type="submit" name="buy" value="add to cart" class="Content-Letter-Button-Container-input submit">
-                </form>
+                    <form class="Content-Letter-Button-Container" method="get" action="../PhpScripts/AddCart.php">
+                        <?php if (($WebPageUser)->get_isLogged()) { ?>
+                            <input type="number" name="quantity" min="1" max="<?php echo $fila["STOCK"] ?>" class="Content-Letter-Button-Container-input quantity">
+                            <input type="hidden" name="id" value="<?php echo $fila["ID_PRODUCTO"] ?>">
+                            <input type="submit" name="buy" value="add to cart" class="Content-Letter-Button-Container-input submit">
+                        <?php } else { ?>
+                            <h3 class="Content-Letter-Price" >You must be logged in to buy products</h3>
+                        <?php } ?>
+                    </form>
             </div>
         </div>
 

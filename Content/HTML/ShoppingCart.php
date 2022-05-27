@@ -16,90 +16,121 @@
     <?php include 'Header.php'; ?>
 
     <div class="Content">
-        <h1 class="Content-ShoppingCart-Title">Order</h1>
-        <div class="Content-ShoppingCart">
-            <div class="Content-ShoppingCart-ProductsList">
-                <?php
-                for ($i = 0; $i < count($_SESSION["cart"]); $i++) {
-                    $ids = array_keys($_SESSION["cart"] );
-                    $sql = "SELECT * FROM PRODUCTOS WHERE ID_TIPOPROD =".$ids[$i];
-                    $result = mysqli_query($con, $sql) or die('Error');
-                    $row = mysqli_fetch_assoc($result)
-                ?>
-                    <div class="Content-ShoppingCart-ProductsList-Item">
-                        <img class="Content-ShoppingCart-ProductsList-Item-Image" src="<?php echo $row["IMAGENPROD"] ?>">
-                        <h1 class="Content-ShoppingCart-ProductsList-Item-Name"><?php echo $row["NOMBRE"] ?></h1>
-                        <h1 class="Content-ShoppingCart-ProductsList-Item-Quantity-Text">Quantity: </h1>
-                        <h1 class="Content-ShoppingCart-ProductsList-Item-Quantity-Text" id="Content-ShoppingCart-ProductsList-Item-Quantity-Number" name="Content-ShoppingCart-ProductsList-Item-Quantity-Number" value="1"> <?php echo $_SESSION["cart"][$ids[$i]];?> </h1>
-                        <p class="Content-ShoppingCart-ProductsList-Item-Cost"><?php echo $row["PRECIO"] ?>€</p>
-                        <img class="Content-ShoppingCart-ProductsList-Item-Delete" src="../Images/ShoppingCart/Quit.png">
+        <?php if (($WebPageUser)->get_isLogged()) { ?>
+            <h1 class="Content-ShoppingCart-Title">Order</h1>
+            <div class="Content-ShoppingCart">
+                <div class="Content-ShoppingCart-ProductsList">
+                    <?php
+                    $ids = array_keys($_SESSION["cart"]);
+                    for ($i = 0; $i < count($_SESSION["cart"]); $i++) {
+                        if ($ids[$i] != 0) {
+                            $sql = "SELECT * FROM PRODUCTOS WHERE ID_PRODUCTO =" . $ids[$i];
+                            $result = mysqli_query($con, $sql) or die('Error');
+                            $row = mysqli_fetch_assoc($result)
+
+                    ?>
+                            <div>
+                                <form class="Content-ShoppingCart-ProductsList-Item" method="get" action="../PhpScripts/RemoveCart.php">
+                                    <img class="Content-ShoppingCart-ProductsList-Item-Image" src="<?php echo $row["IMAGENPROD"] ?>">
+                                    <h1 class="Content-ShoppingCart-ProductsList-Item-Name"><?php echo $row["NOMBRE"] ?></h1>
+                                    <h1 class="Content-ShoppingCart-ProductsList-Item-Quantity-Text">Quantity: </h1>
+                                    <h1 class="Content-ShoppingCart-ProductsList-Item-Quantity-Text" id="Content-ShoppingCart-ProductsList-Item-Quantity-Number" name="Content-ShoppingCart-ProductsList-Item-Quantity-Number" value="1"> <?php echo $_SESSION["cart"][$ids[$i]]; ?> </h1>
+                                    <p class="Content-ShoppingCart-ProductsList-Item-Cost"><?php echo $row["PRECIO"] ?>€</p>
+                                    <input type="hidden" name="id" value="<?php echo $ids[$i] ?>">
+                                    <input type="image" alt="Submit" class="Content-ShoppingCart-ProductsList-Item-Delete" src="../Images/ShoppingCart/Quit.png">
+                                </form>
+                            </div>
+                    <?php
+                        }
+                    }
+                    ?>
+                </div>
+                <div class="Content-ShoppingCart-Receipt">
+                    <h1 class="Content-ShoppingCart-Receipt-Title">Receipt</h1>
+                    <hr class="Content-ShoppingCart-Receipt-Line">
+                    <div class="Content-ShoppingCart-Receipt-Line-container">
+                        <?php
+                        $preciototal;
+                        for ($i = 0; $i < count($_SESSION["cart"]); $i++) {
+                            $sql = "SELECT * FROM PRODUCTOS WHERE ID_PRODUCTO =" . $ids[$i];
+                            $result = mysqli_query($con, $sql) or die('Error');
+                            $row = mysqli_fetch_assoc($result)
+                        ?>
+                            <div class="Content-ShoppingCart-Receipt-Item">
+                                <h1 class="Content-ShoppingCart-Receipt-Item-Name"><?php echo $row["NOMBRE"] ?></h1>
+                                <p class="Content-ShoppingCart-Receipt-Item-Quantity"><?php echo $_SESSION["cart"][$ids[$i]]; ?> un</p>
+                                <p class="Content-ShoppingCart-Receipt-Item-Cost"> <?php echo $_SESSION["cart"][$ids[$i]] + $row["PRECIO"];
+                                                                                    $preciototal += $_SESSION["cart"][$ids[$i]] + $row["PRECIO"]  ?>€</p>
+                            </div>
+                        <?php } ?>
                     </div>
-                <?php
-                }
-                ?>
-            </div>
-            <div class="Content-ShoppingCart-Receipt">
-                <h1 class="Content-ShoppingCart-Receipt-Title">Receipt</h1>
-                <hr class="Content-ShoppingCart-Receipt-Line">
-                <div class="Content-ShoppingCart-Receipt-Item">
-                    <h1 class="Content-ShoppingCart-Receipt-Item-Name">Orange Expresso</h1>
-                    <p class="Content-ShoppingCart-Receipt-Item-Quantity">1 un</p>
-                    <p class="Content-ShoppingCart-Receipt-Item-Cost">3€</p>
-                </div>
-                <div class="Content-ShoppingCart-Receipt-Delivery-Costs">
-                    <h1 class="Content-ShoppingCart-Receipt-Delivery-Costs-Name">Delivery Costs</h1>
-                    <p class="Content-ShoppingCart-Receipt-Delivery-Costs-Cost">2€</p>
-                </div>
-                <hr class="Content-ShoppingCart-Receipt-Line">
-                <div class="Content-ShoppingCart-Receipt-Total">
-                    <h1 class="Content-ShoppingCart-Receipt-Total-Text">Total</h1>
-                    <p class="Content-ShoppingCart-Receipt-Total-Cost">20€</p>
+                    <hr class="Content-ShoppingCart-Receipt-Line">
+                    <div class="Content-ShoppingCart-Receipt-Total">
+                        <h1 class="Content-ShoppingCart-Receipt-Total-Text">Total:</h1>
+                        <p class="Content-ShoppingCart-Receipt-Total-Cost"><?php echo $preciototal ?>€</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="Content-Payment-Button">
-            <button type="button" class="Content-Payment-Button-Item" onclick="PaymentDeploy()">
-                Payment
-            </button>
-        </div>
-        <div class="Content-Payment" id="Content-Payment">
-            <!--Está oculto hasta que se le da al botón-->
-            <div class="Content-Payment-Container">
-                <div class="Content-Payment-Container-Method">
-                    <p class="Content-Payment-Container-Method-Text">Choose your method of payment:</p>
-                    <form>
-                        <input type="radio" id="Content-Payment-Payment-Container-Method-CreditCard" name="Content-Payment-Payment-Container-Method-CreditCard" value="Content-Payment-Payment-Container-Method-CreditCard">
-                        <label class="Content-Payment-Container-Method-Label-Text" for="Content-Payment-Payment-Container-Method-CreditCard">Credit card</label><br>
-                        <input type="radio" id="Content-Payment-Payment-Container-Method-DebtCard" name="Content-Payment-Payment-Container-Method-DebtCard" value="Content-Payment-Payment-Container-Method-DebtCard">
-                        <label class="Content-Payment-Container-Method-Label-Text" for="Content-Payment-Payment-Container-Method-DebtCard">Debt card</label><br>
-                        <input type="radio" id="Content-Payment-Payment-Container-Method-PayPal" name="Content-Payment-Container-Payment-Method-PayPal" value="Content-Payment-Payment-Container-Method-PayPal">
-                        <label class="Content-Payment-Container-Method-Label-Text" for="Content-Payment-Payment-Container-Method-PayPal">PayPal</label>
-                    </form>
+            <form class="Content-tramitation">
+                <div class="Content-tramitation-Container">
+                    <h1 class="Content-ShoppingCart-Title">Payment Method</h1>
+                    <div class="Content-Payment-List" id="Content-Payment">
+                        <?php
+                        $sql = "SELECT * FROM METODOSPAGO WHERE ID_USUARIO =" . $WebPageUser->get_id();
+                        $result = mysqli_query($con, $sql) or die('Error');
+                        while ($row = mysqli_fetch_assoc($result)) {
+                        ?>
+                            <label class="Content-Payment-List-Item">
+                                <h1 class="Content-Payment-List-Item-Info"><?php echo $row['DETALLE']; ?></h1>             
+                                <?php 
+                                $sql = "SELECT * FROM TIPOSMETODOPAGO WHERE ID_TIPOMETPAGO =" . $row['ID_TIPOMETPAGO'];
+                                $result = mysqli_query($con, $sql) or die('Error');
+                                $row2 = mysqli_fetch_assoc($result)
+                                ?>
+                                <h1 class="Content-Payment-List-Item-Info"><?php echo $row2['NOMBRE']; ?></h1>
+                                <input type="radio" class="" value="<?php echo $row["ID_METPAGO"] ?>" name="Checkbox[]">
+                            </label>
+                        <?php
+                        }
+                        ?>
+                    </div>
                 </div>
-                <form class="Content-Payment-Container-Info">
-                    <label class="Content-Payment-Container-Info-Label-Text" for="Content-Payment-Container-Info-CardNumber">Card number</label><br>
-                    <input type="text" class="Content-Payment-Container-Info-Field" id="Content-Payment-Container-Info-CardNumber" name="Content-Payment-Container-Info-CardNumber"><br>
+                <div class="Content-tramitation-Container">
+                    <h1 class="Content-ShoppingCart-Title">Shipping Details</h1>
+                    <div class="Content-Payment-List" id="Content-Payment">
+                        <?php
+                        $sql = "SELECT * FROM DIRECCIONES WHERE ID_USUARIO =" . $WebPageUser->get_id();
+                        $result = mysqli_query($con, $sql) or die('Error');
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            $Direction = explode('/', $row["DIRECCION"]);
+                        ?>
+                            <label class="Content-Payment-List-Item">
+                                <h1 class="Content-Payment-List-Item-Info"><?php echo ucfirst((strtolower($Direction[0]))); ?></h1>
+                                <h1 class="Content-Payment-List-Item-Info"><?php echo ucfirst((strtolower($Direction[1]))); ?></h1>
+                                <h1 class="Content-Payment-List-Item-Info"><?php echo ucfirst((strtolower($Direction[5]))); ?></h1>
+                                <h1 class="Content-Payment-List-Item-Info"><?php echo ucfirst((strtolower($Direction[2]))); ?></h1>
+                                <input type="radio" class="" value="<?php echo $row["ID_DIRECCION"] ?>" name="Checkbox[]">
+                            </label>
+                        <?php
+                        }
+                        ?>
+                    </div>
+                </div>
 
-                    <label class="Content-Payment-Container-Info-Label-Text" for="Content-Payment-Container-Info-CardHolder">Cardholder name</label><br>
-                    <input type="text" class="Content-Payment-Container-Info-Field" id="Content-Payment-Container-Info-CardCardHolder" name="Content-Payment-Container-Info-CardCardHolder"><br>
+                <div>
 
-                    <label class="Content-Payment-Container-Info-Label-Text" for="Content-Payment-Container-Info-ExpiryDate">Expiry date</label><br>
-                    <input type="text" class="Content-Payment-Container-Info-Field 
-                    id=" Content-Payment-Container-Info-ExpiryDate" name="Content-Payment-Container-Info-ExpiryDate" placeholder="MM/YY"><br>
-
-                    <label class="Content-Payment-Container-Info-Label-Text" for="Content-Payment-Container-Info-SecurityNumber">Security number</label><br>
-                    <input type="text" class="Content-Payment-Container-Info-Field" id="Content-Payment-Container-Info-SecurityNumber" name="Content-Payment-Container-Info-SecurityNumber" placeholder="CVC"><br>
-                </form>
-            </div>
-            <div class="Content-Payment-Pay-Button">
-                <button type="button" class="Content-Payment-Pay-Button-Item" onclick="PayFeedback()">
-                    Pay
-                </button>
-            </div>
-        </div>
+                </div>
+            </form>
 
 
+        <?php } else { ?>
+            <script language="javascript">
+                alert("You must be logged in to acces the shopping cart");
+                window.location.replace("../HTML/LandingPage.php");
+            </script>
+        <?php } ?>
     </div>
+
     <?php include 'Footer.php'; ?>
 </body>
 

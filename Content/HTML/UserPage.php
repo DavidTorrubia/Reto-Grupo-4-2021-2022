@@ -152,13 +152,13 @@
                             while ($row = mysqli_fetch_assoc($result)) {
                                 $Direction = explode('/', $row["DIRECCION"]);
                             ?>
-                                <div class="Content-UserConfig-Item-Directions-Content-RemoveList-Item Example">
+                                <label class="Content-UserConfig-Item-Directions-Content-RemoveList-Item Example">
                                     <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header"><?php echo ucfirst((strtolower($Direction[0]))); ?></h1>
                                     <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header"><?php echo ucfirst((strtolower($Direction[1]))); ?></h1>
                                     <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header"><?php echo ucfirst((strtolower($Direction[5]))); ?></h1>
                                     <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header"><?php echo ucfirst((strtolower($Direction[2]))); ?></h1>
                                     <input type="checkbox" class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-CheckBox" value="<?php echo $row["ID_DIRECCION"] ?>" name="Checkbox[]">
-                                </div>
+                            </label>
                             <?php
                             }
                             ?>

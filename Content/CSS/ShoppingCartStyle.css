@@ -3,13 +3,49 @@
   text-align: center;
   color: #3a1101;
 }
-
+.Content-Payment-List {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  min-height: 10rem;
+  max-height: 10rem;
+}
 .Content-ShoppingCart {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
-
+.Content-ShoppingCart-Receipt-Line-container {
+  min-height: 10rem;
+}
+.Content-tramitation-Container {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  background-color: white;
+}
+.Content-Payment-List-Item-Info {
+  font-size: 1rem;
+  font-family: "Tommy personal use";
+}
+.Content-tramitation {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1rem;
+  justify-content: space-evenly;
+}
+.Content-Payment-List-Item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: 0.3s;
+}
+.Content-Payment-List-Item:hover {
+  background-color: rgba(0, 0, 0, 0.062);
+}
 .Content-ShoppingCart-Receipt {
   width: 30%;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -24,6 +60,7 @@
   width: 60%;
   flex-direction: column;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  min-height: 20rem;
 }
 
 .Content-ShoppingCart-ProductsList-Item {
