@@ -135,7 +135,7 @@
                             <input type="text" class="Content-UserConfig-Item-Field" placeholder="50011" name="p_code">
                         </div>
 
-                        <input type="submit" class="Content-UserConfig-Item-Directions-Content-Button Create" value="Crear" >
+                        <input type="submit" class="Content-UserConfig-Item-Directions-Content-Button Create" value="Create" >
                     </form>
                     <button class="Content-UserConfig-Item-Directions-Button" type="button" onclick="DeployRemoveAddres()">Remove Address</button>
                     <form class="Content-UserConfig-Item-Directions-Content" id="Content-UserConfig-Item-Directions-Content-Remove" method="post" action="../PhpScripts/RemoveDirection.php">

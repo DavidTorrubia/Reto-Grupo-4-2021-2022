@@ -100,44 +100,21 @@
         <div class="Locations" id="Locations">
             <div id="Map" class="map"></div>
             <div class="Locations-Container">
-                <div class="Locations-Container-item">
+                <div class="Locations-Container-item" onclick="Localizacion('Zaragoza')">
                     <h1 class="Locations-Container-Header">Zaragoza</h1>
                     <p class="Locations-Container-Text">
                         C/ Violeta Parra 9<br>
-                        50015, Zaragoza, Spain </p>
+                        50015, Zaragoza, Spain</p>
                 </div>
-                <div class="Locations-Container-item">
-                    <h1 class="Locations-Container-Header">Ejemplo</h1>
-                    <p class="Locations-Container-Text">Ejemplo ejemplo ejemplo ejemplo ejemplo ejemplo ejemplo ejemplo
-                        ejemplo ejemplo ejemplo ejemplo ejemplo ejemplo</p>
-                </div>
-                <div class="Locations-Container-item">
-                    <h1 class="Locations-Container-Header">Ejemplo</h1>
-                    <p class="Locations-Container-Text">Ejemplo ejemplo ejemplo ejemplo ejemplo ejemplo ejemplo ejemplo
-                        ejemplo ejemplo ejemplo ejemplo ejemplo ejemplo</p>
-                </div>
-                <div class="Locations-Container-item">
-                    <h1 class="Locations-Container-Header">Ejemplo</h1>
-                    <p class="Locations-Container-Text">Ejemplo ejemplo ejemplo ejemplo ejemplo ejemplo ejemplo ejemplo
-                        ejemplo ejemplo ejemplo ejemplo ejemplo ejemplo</p>
-                </div>
-                <div class="Locations-Container-item">
-                    <h1 class="Locations-Container-Header">Ejemplo</h1>
-                    <p class="Locations-Container-Text">Ejemplo ejemplo ejemplo ejemplo ejemplo ejemplo ejemplo ejemplo
-                        ejemplo ejemplo ejemplo ejemplo ejemplo ejemplo</p>
-                </div>
-                <div class="Locations-Container-item">
-                    <h1 class="Locations-Container-Header">Ejemplo</h1>
-                    <p class="Locations-Container-Text">Ejemplo ejemplo ejemplo ejemplo ejemplo ejemplo ejemplo ejemplo
-                        ejemplo ejemplo ejemplo ejemplo ejemplo ejemplo</p>
-                </div>
-                <div class="Locations-Container-item">
-                    <h1 class="Locations-Container-Header">Ejemplo</h1>
-                    <p class="Locations-Container-Text">Ejemplo ejemplo ejemplo ejemplo ejemplo ejemplo ejemplo ejemplo
-                        ejemplo ejemplo ejemplo ejemplo ejemplo ejemplo</p>
+                <div class="Locations-Container-item" onclick="Localizacion('Madrid')">
+                    <h1 class="Locations-Container-Header">Madrid</h1>
+                    <p class="Locations-Container-Text">
+                        C/ Gran Via 20<br>
+                        28013, Madrid, Spain</p>
                 </div>
             </div>
         </div>
+    </div>
     </div>
     <?php include 'Footer.php'; ?>
 </body>
