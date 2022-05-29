@@ -82,7 +82,7 @@
                     The delivery man's job is to deliver the products to the customer's home
                 </p>
                 <p class="Content-Works-Item-Description">
-                    1300€
+                    1000€
                 </p>
             </div>
         </div>
