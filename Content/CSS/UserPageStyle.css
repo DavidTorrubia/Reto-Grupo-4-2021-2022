@@ -160,6 +160,7 @@
   width: 100%;
   align-items: center;
   transition: 0.3s;
+  cursor: pointer;
 }
 .Content-UserConfig-Item-Directions-Content-RemoveList-Item:hover {
   background-color: rgba(0, 0, 0, 0.067);

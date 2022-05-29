@@ -19,7 +19,7 @@
     <?php include 'Header.php'; ?>
 
     <div class="Content">
-        <a href="../HTML/AboutUs.php" class="content-href"><video class="Content-video" autoplay muted id="myVideo" loop>
+        <a href="../HTML/AboutUs.php" class="content-href Content-video-Display"><video class="Content-video" autoplay muted id="myVideo" loop>
                 <source src="../videos/Ecoffe.mp4" type="video/mp4" class="Content-video-source">
             </video></a>
         <a href="../HTML/Menu.php" class="content-href">

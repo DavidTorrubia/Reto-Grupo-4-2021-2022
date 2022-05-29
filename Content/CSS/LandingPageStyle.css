@@ -380,6 +380,12 @@
 }
 
 @media only screen and (max-width: 600px) {
+  .Content-video a{
+    display: none;
+  }
+  .Content-video-Display{
+    display: none;
+  }
   .carousel-item-image-Header {
     font-size: 1.4rem;
   }
@@ -400,12 +406,6 @@
 
   #FixedAdv-Right {
     margin-top: 0.5rem;
-  }
-  .carousel-item-image-Container {
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 60%;
   }
   .Locations {
     flex-direction: column;
