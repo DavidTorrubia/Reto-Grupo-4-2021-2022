@@ -135,7 +135,7 @@
                             <input type="text" class="Content-UserConfig-Item-Field" placeholder="50011" name="p_code">
                         </div>
 
-                        <input type="submit" class="Content-UserConfig-Item-Directions-Content-Button Create" value="Create" >
+                        <input type="submit" class="Content-UserConfig-Item-Directions-Content-Button Create" value="Create">
                     </form>
                     <button class="Content-UserConfig-Item-Directions-Button" type="button" onclick="DeployRemoveAddres()">Remove Address</button>
                     <form class="Content-UserConfig-Item-Directions-Content" id="Content-UserConfig-Item-Directions-Content-Remove" method="post" action="../PhpScripts/RemoveDirection.php">
@@ -158,7 +158,7 @@
                                     <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header"><?php echo ucfirst((strtolower($Direction[5]))); ?></h1>
                                     <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header"><?php echo ucfirst((strtolower($Direction[2]))); ?></h1>
                                     <input type="checkbox" class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-CheckBox" value="<?php echo $row["ID_DIRECCION"] ?>" name="Checkbox[]">
-                            </label>
+                                </label>
                             <?php
                             }
                             ?>
@@ -174,7 +174,7 @@
         <div class="Content-Receipts">
             <div class="Content-Receipts-List">
                 <h1 class="Content-Receipts-List-Header"> Receipts </h1>
-                <?php 
+                <?php
                 $sql = "SELECT * FROM FACTURAS WHERE ID_USUARIO =" . $WebPageUser->get_id();
                 $result = mysqli_query($con, $sql) or die('Error');
                 while ($row = mysqli_fetch_assoc($result)) {
@@ -182,11 +182,11 @@
                     $result2 = mysqli_query($con, $sql) or die('Error');
                     $row2 = mysqli_fetch_assoc($result2)
                 ?>
-                <div class="Content-Receipts-List-Header-Item">
-                    <h2 class="Content-Receipts-List-Header-Item-text"><?php echo $row2["FECHA"]?></h2>
-                    <h2 class="Content-Receipts-List-Header-Item-text"><?php echo $row["PRECIOTOTAL"]?>€</h2>
-                </div>
-                <?php }?>
+                    <div class="Content-Receipts-List-Header-Item">
+                        <h2 class="Content-Receipts-List-Header-Item-text"><?php echo $row2["FECHA"] ?></h2>
+                        <h2 class="Content-Receipts-List-Header-Item-text"><?php echo $row["PRECIOTOTAL"] ?>€</h2>
+                    </div>
+                <?php } ?>
             </div>
         </div>
     </div>

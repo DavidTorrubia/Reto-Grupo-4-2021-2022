@@ -35,7 +35,7 @@
                 <h3 class="Content-Letter-Price"><?php echo $fila["PRECIO"] ?>€ per unit</h1>
                     <form class="Content-Letter-Button-Container" method="get" action="../PhpScripts/AddCart.php">
                         <?php if (($WebPageUser)->get_isLogged()) { ?>
-                            <input type="number" name="quantity"  max="<?php echo $fila["STOCK"] ?>" min="1" class="Content-Letter-Button-Container-input quantity" value="">
+                            <input type="number" name="quantity"  max="<?php echo $fila["STOCK"] ?>" min="1" class="Content-Letter-Button-Container-input quantity" value="" placeholder="1-99">
                             <input type="hidden" name="id" value="<?php echo $fila["ID_PRODUCTO"] ?>">
                             <input type="submit" name="buy" value="add to cart" class="Content-Letter-Button-Container-input submit">
                         <?php } else { ?>

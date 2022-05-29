@@ -61,9 +61,11 @@ if (!isset($_SESSION)) {
                         $sql = "ROLLBACK";
                         $result = mysqli_query($con, $sql) or die('Error');
                     }
-                    for ($u = 0; $u < count($_SESSION["cart"]); $u++) {
-                        $ids = array_keys($_SESSION["cart"]);
-                        unset($_SESSION["cart"][$ids[$u]]);
+                    $num = count($_SESSION["cart"]);
+                    echo $num;
+                    $ids = array_keys($_SESSION["cart"]);
+                    for ($u = 0; $u < $num; $u++) {
+                        unset($_SESSION["cart"][$ids[$u]]);     
                     }
                 } catch (mysqli_sql_exception $ex) {
                     $_SESSION['Error'] = 5;
