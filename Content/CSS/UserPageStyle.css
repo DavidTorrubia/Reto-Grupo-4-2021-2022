@@ -45,7 +45,7 @@
 }
 .Content-UserConfig-User{
   margin-top: 1rem;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.608);
   display: flex;
   flex-direction: row;
   width: 90%;
@@ -77,6 +77,10 @@
 .half {
   width: 43% !important;
 }
+.Content-UserConfig-Item-Direction-Admin{
+  width: 90%;
+  margin-top: 1rem;
+}
 .Content-UserConfig-Item {
   display: flex;
   flex-direction: column;
@@ -102,13 +106,14 @@
 .Content-UserConfig-Item-Directions-Content {
   display: flex;
   flex-direction: column;
+  padding-bottom: 1rem;
 }
+
 #Content-UserConfig-Item-Directions-Content-Create {
-  display: flex;
+  display: none;
   flex-direction: row;
   background-color: rgba(255, 255, 255, 0.653);
   align-items: center;
-  display: none;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
@@ -117,7 +122,6 @@
   flex-direction: column;
   background-color: rgba(255, 255, 255, 0.653);
   align-items: center;
-  display: none;
   margin-bottom: 3rem;
 }
 .Content-UserConfig-Item-Button {
@@ -192,12 +196,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 70%;
-  background-color: white;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.653);
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   min-height: 30rem;
   max-height: 30rem;
   overflow-y: scroll;
+}
+.Content-Receipts-Container{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
 }
 .Content-Receipts-List-Header {
   background-image: linear-gradient(#913611, #3a1101);
@@ -208,6 +217,8 @@
   text-align: center;
   font-weight: 600;
   margin-bottom: 0rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 .Content-Receipts-List-Header-Item {
   display: flex;
@@ -227,6 +238,77 @@
 .Content-Receipts-List-Header-Item:hover {
   background-color: rgba(0, 0, 0, 0.067);
 }
+.Content-Add-Payment{
+  background-color: rgba(255, 255, 255, 0.608);
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-top: 1rem;
+}
+.Content-Add-Payment-Header{
+  font-family: "Tommy personal use";
+  background-image: linear-gradient(#913611, #3a1101);
+  color: white;
+  text-align: center;
+  margin: 0 0 0 0;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  width: 100%;
+  font-size: 2rem;
+  border: transparent;
+}
+.Content-Add-Payment-type{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+}
+.Content-Add-Payment-type-item{
+  border: transparent;
+  height: 100%;
+  background-color: white;
+  width: 100%;
+  font-size: 1.5rem;
+  font-family: "Tommy personal use";
+  cursor: pointer;
+  font-weight: 1000;
+  transition: 0.3s;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+}
+.Content-Add-Payment-type-item:hover{
+  background-color: rgba(0, 0, 0, 0.062);
+}
+.Content-Add-Payment-Form{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-bottom: 1rem;
+  min-height: 15rem;
+}
+#Payment-CreditCard {
+  display: flex;
+}
+#Payment-Paypal{
+  display: none;
+}
+#Payment-bank{
+  display: none;
+}
+.Content-Add-Payment-Form-submit{
+  width: 90%;
+  border-radius: 30px;
+  background-color: #006d77;
+  font-family: "Tommy personal use";
+  color: white;
+  border: transparent;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
 
 @font-face {
   src: url(../Fonts/MADE\ Tommy\ Soft\ Medium\ PERSONAL\ USE.otf);
@@ -236,14 +318,16 @@
   .Content {
     flex-direction: column;
   }
-  .Content-Receipts-List {
-    width: 90%;
-    margin-top: 1rem;
-  }
+.Content-Receipts-Container{
+  width: 90%;
+}
   .Content-Receipts {
     width: 100%;
   }
   .Content-User {
     width: 100%;
+  }
+  .Content-Add-Payment{
+    width: 90%;
   }
 }

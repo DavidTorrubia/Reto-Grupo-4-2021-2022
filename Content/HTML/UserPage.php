@@ -71,6 +71,7 @@
             </div>
             <div class="Content-UserConfig">
                 <form class="Content-UserConfig-User" method="post" action="../PhpScripts/AlterUser.php">
+                    <h1 class="Content-Add-Payment-Header">Update account</h1>
                     <div class="Content-UserConfig-Item half">
                         <h2 class="Content-UserConfig-Item-Header">First Name</h2>
                         <input type="text" class="Content-UserConfig-Item-Field" name="name" placeholder=<?php if ($WebPageUser->get_name() == null) {
@@ -105,10 +106,14 @@
                         <h2 class="Content-UserConfig-Item-Header">Repeat Password</h2>
                         <input type="password" class="Content-UserConfig-Item-Field" placeholder="Password" name="passwordrepeat">
                     </div>
-                    <input type="submit" class="Content-UserConfig-Item-Button" type="button" value="Save Changes">
+                    <input type="submit" class="Content-Add-Payment-Form-submit" type="button" value="Save Changes">
                 </form>
-                <div class="Content-UserConfig-Item Directions">
-                    <button class="Content-UserConfig-Item-Directions-Button" type="button" onclick="DeployCreateAddres()">Create New Address</button>
+                <div class="Content-UserConfig-Item-Direction-Admin">
+                    <h1 class="Content-Add-Payment-Header">Update directions</h1>
+                    <div class="Content-Add-Payment-type">
+                        <button class="Content-Add-Payment-type-item" type="button" onclick="ChangeDirectionState(1)">Create New Address</button>
+                        <button class="Content-Add-Payment-type-item" type="button" onclick="ChangeDirectionState(2)">Remove Address</button>
+                    </div>
                     <form class="Content-UserConfig-Item-Directions-Content" id="Content-UserConfig-Item-Directions-Content-Create" method="post" action="../PhpScripts/DirectionCreation.php">
                         <div class="Content-UserConfig-Item">
                             <h2 class="Content-UserConfig-Item-Header">Country</h2>
@@ -135,9 +140,8 @@
                             <input type="text" class="Content-UserConfig-Item-Field" placeholder="50011" name="p_code">
                         </div>
 
-                        <input type="submit" class="Content-UserConfig-Item-Directions-Content-Button Create" value="Create">
+                        <input type="submit" class="Content-Add-Payment-Form-submit" value="Create">
                     </form>
-                    <button class="Content-UserConfig-Item-Directions-Button" type="button" onclick="DeployRemoveAddres()">Remove Address</button>
                     <form class="Content-UserConfig-Item-Directions-Content" id="Content-UserConfig-Item-Directions-Content-Remove" method="post" action="../PhpScripts/RemoveDirection.php">
                         <div class="Content-UserConfig-Item-Directions-Content-RemoveList">
                             <div class="Content-UserConfig-Item-Directions-Content-RemoveList-Item Guide">
@@ -165,28 +169,74 @@
 
 
                         </div>
-                        <input type="submit" class="Content-UserConfig-Item-Directions-Content-Button" value="Remove Selected">
+                        <input type="submit" class="Content-Add-Payment-Form-submit" value="Remove Selected">
                     </form>
                 </div>
             </div>
 
         </div>
         <div class="Content-Receipts">
-            <div class="Content-Receipts-List">
+            <div class="Content-Receipts-Container">
                 <h1 class="Content-Receipts-List-Header"> Receipts </h1>
-                <?php
-                $sql = "SELECT * FROM FACTURAS WHERE ID_USUARIO =" . $WebPageUser->get_id();
-                $result = mysqli_query($con, $sql) or die('Error');
-                while ($row = mysqli_fetch_assoc($result)) {
-                    $sql = "SELECT * FROM PEDIDOS WHERE ID_PEDIDO =" . $row["ID_PEDIDO"];
-                    $result2 = mysqli_query($con, $sql) or die('Error');
-                    $row2 = mysqli_fetch_assoc($result2)
-                ?>
-                    <div class="Content-Receipts-List-Header-Item">
-                        <h2 class="Content-Receipts-List-Header-Item-text"><?php echo $row2["FECHA"] ?></h2>
-                        <h2 class="Content-Receipts-List-Header-Item-text"><?php echo $row["PRECIOTOTAL"] ?>€</h2>
+                <div class="Content-Receipts-List">
+
+                    <?php
+                    $sql = "SELECT * FROM FACTURAS WHERE ID_USUARIO =" . $WebPageUser->get_id();
+                    $result = mysqli_query($con, $sql) or die('Error');
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        $sql = "SELECT * FROM PEDIDOS WHERE ID_PEDIDO =" . $row["ID_PEDIDO"];
+                        $result2 = mysqli_query($con, $sql) or die('Error');
+                        $row2 = mysqli_fetch_assoc($result2)
+                    ?>
+                        <div class="Content-Receipts-List-Header-Item">
+                            <h2 class="Content-Receipts-List-Header-Item-text"><?php echo $row2["FECHA"] ?></h2>
+                            <h2 class="Content-Receipts-List-Header-Item-text"><?php echo $row["PRECIOTOTAL"] ?>€</h2>
+                        </div>
+                    <?php } ?>
+                </div>
+            </div>
+            <div class="Content-Add-Payment">
+                <h1 class="Content-Add-Payment-Header">Add payment method</h1>
+                <div class="Content-Add-Payment-type">
+                    <button class="Content-Add-Payment-type-item" onclick="ChangePaymentMethod(1)"> Credit Card </button>
+                    <button class="Content-Add-Payment-type-item" onclick="ChangePaymentMethod(2)"> Paypal </button>
+                    <button class="Content-Add-Payment-type-item" onclick="ChangePaymentMethod(3)"> Bank account </button>
+                </div>
+
+                <form class="Content-Add-Payment-Form" id="Payment-CreditCard">
+                    <div class="Content-UserConfig-Item">
+                        <h2 class="Content-UserConfig-Item-Header">Card Number</h2>
+                        <input type="text" class="Content-UserConfig-Item-Field" name="card" placeholder="xxxx-xxxx-xxxx">
                     </div>
-                <?php } ?>
+                    <div class="Content-UserConfig-Item half">
+                        <h2 class="Content-UserConfig-Item-Header">CVC</h2>
+                        <input type="text" class="Content-UserConfig-Item-Field" name="cvc" placeholder="123">
+                    </div>
+                    <div class="Content-UserConfig-Item half">
+                        <h2 class="Content-UserConfig-Item-Header">Expire Date</h2>
+                        <input type="text" class="Content-UserConfig-Item-Field" name="expiredate" placeholder="11/2024">
+                    </div>
+                    <input type="hidden" value="1" name="type">
+                    <input type="submit" class="Content-Add-Payment-Form-submit" value="Create Payment Method">
+                </form>
+                <form class="Content-Add-Payment-Form" id="Payment-Paypal">
+                    <div class="Content-UserConfig-Item">
+                        <h2 class="Content-UserConfig-Item-Header">Email</h2>
+                        <input type="text" class="Content-UserConfig-Item-Field" name="email" placeholder="example@example.com">
+                    </div>
+                    <input type="hidden" value="2" name="type">
+                    <input type="submit" class="Content-Add-Payment-Form-submit" value="Create Payment Method">
+                </form>
+                <form class="Content-Add-Payment-Form" id="Payment-bank">
+                    <div class="Content-UserConfig-Item">
+                        <h2 class="Content-UserConfig-Item-Header">Bank account number</h2>
+                        <input type="text" class="Content-UserConfig-Item-Field" name="account" placeholder="PR3049483920">
+                    </div>
+                    <input type="hidden" value="3" name="type">
+                    <input type="submit" class="Content-Add-Payment-Form-submit" value="Create Payment Method">
+                </form>
+
+
             </div>
         </div>
     </div>
