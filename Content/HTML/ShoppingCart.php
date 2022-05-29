@@ -16,10 +16,13 @@
     <?php include 'Header.php'; ?>
 
     <div class="Content">
+        <h1 class="Content-ShoppingCart-Title background-shop">Information</h1>
         <?php if (($WebPageUser)->get_isLogged()) { ?>
-            <h1 class="Content-ShoppingCart-Title">Order</h1>
             <div class="Content-ShoppingCart">
+
                 <div class="Content-ShoppingCart-ProductsList">
+                    <h1 class="Content-ShoppingCart-Title">Order</h1>
+                    <hr class="Content-ShoppingCart-Receipt-Line">
                     <?php
                     $ids = array_keys($_SESSION["cart"]);
                     for ($i = 0; $i < count($_SESSION["cart"]); $i++) {
@@ -30,14 +33,14 @@
 
                     ?>
                             <div>
-                                <form class="Content-ShoppingCart-ProductsList-Item" method="get" action="../PhpScripts/RemoveCart.php">
+                                <form class="Content-ShoppingCart-ProductsList-Item cursor" method="get" action="../PhpScripts/RemoveCart.php">
                                     <img class="Content-ShoppingCart-ProductsList-Item-Image" src="<?php echo $row["IMAGENPROD"] ?>">
                                     <h1 class="Content-ShoppingCart-ProductsList-Item-Name"><?php echo $row["NOMBRE"] ?></h1>
                                     <h1 class="Content-ShoppingCart-ProductsList-Item-Quantity-Text">Quantity: </h1>
                                     <h1 class="Content-ShoppingCart-ProductsList-Item-Quantity-Text" id="Content-ShoppingCart-ProductsList-Item-Quantity-Number" name="Content-ShoppingCart-ProductsList-Item-Quantity-Number" value="1"> <?php echo $_SESSION["cart"][$ids[$i]]; ?> </h1>
                                     <p class="Content-ShoppingCart-ProductsList-Item-Cost"><?php echo $row["PRECIO"] ?>€</p>
                                     <input type="hidden" name="id" value="<?php echo $ids[$i] ?>">
-                                    <input type="image" alt="Submit" class="Content-ShoppingCart-ProductsList-Item-Delete" src="../Images/ShoppingCart/Quit.png">
+                                    <input type="image" alt="Submit" class="Content-ShoppingCart-ProductsList-Item-Delete cursor" src="../Images/ShoppingCart/Quit.png">
                                 </form>
                             </div>
                     <?php
@@ -59,8 +62,8 @@
                             <div class="Content-ShoppingCart-Receipt-Item">
                                 <h1 class="Content-ShoppingCart-Receipt-Item-Name"><?php echo $row["NOMBRE"] ?></h1>
                                 <p class="Content-ShoppingCart-Receipt-Item-Quantity"><?php echo $_SESSION["cart"][$ids[$i]]; ?> un</p>
-                                <p class="Content-ShoppingCart-Receipt-Item-Cost"> <?php echo $_SESSION["cart"][$ids[$i]] + $row["PRECIO"];
-                                                                                    $preciototal += $_SESSION["cart"][$ids[$i]] + $row["PRECIO"]  ?>€</p>
+                                <p class="Content-ShoppingCart-Receipt-Item-Cost"> <?php echo $_SESSION["cart"][$ids[$i]] * $row["PRECIO"];
+                                                                                    $preciototal += $_SESSION["cart"][$ids[$i]] * $row["PRECIO"]  ?>€</p>
                             </div>
                         <?php } ?>
                     </div>
@@ -71,32 +74,10 @@
                     </div>
                 </div>
             </div>
-            <form class="Content-tramitation">
-                <div class="Content-tramitation-Container">
-                    <h1 class="Content-ShoppingCart-Title">Payment Method</h1>
-                    <div class="Content-Payment-List" id="Content-Payment">
-                        <?php
-                        $sql = "SELECT * FROM METODOSPAGO WHERE ID_USUARIO =" . $WebPageUser->get_id();
-                        $result = mysqli_query($con, $sql) or die('Error');
-                        while ($row = mysqli_fetch_assoc($result)) {
-                        ?>
-                            <label class="Content-Payment-List-Item">
-                                <h1 class="Content-Payment-List-Item-Info"><?php echo $row['DETALLE']; ?></h1>             
-                                <?php 
-                                $sql = "SELECT * FROM TIPOSMETODOPAGO WHERE ID_TIPOMETPAGO =" . $row['ID_TIPOMETPAGO'];
-                                $result = mysqli_query($con, $sql) or die('Error');
-                                $row2 = mysqli_fetch_assoc($result)
-                                ?>
-                                <h1 class="Content-Payment-List-Item-Info"><?php echo $row2['NOMBRE']; ?></h1>
-                                <input type="radio" class="" value="<?php echo $row["ID_METPAGO"] ?>" name="Checkbox[]">
-                            </label>
-                        <?php
-                        }
-                        ?>
-                    </div>
-                </div>
-                <div class="Content-tramitation-Container">
-                    <h1 class="Content-ShoppingCart-Title">Shipping Details</h1>
+            <h1 class="Content-ShoppingCart-Title background-shop">Tramitation</h1>
+            <form class="Content-tramitation" method="get" action="../PhpScripts/OrderTramitation.php">
+                <div class="Content-tramitation-Container Direction">
+                    <h1 class="Content-ShoppingCart-Title background2">Shipping Details</h1>
                     <div class="Content-Payment-List" id="Content-Payment">
                         <?php
                         $sql = "SELECT * FROM DIRECCIONES WHERE ID_USUARIO =" . $WebPageUser->get_id();
@@ -104,22 +85,43 @@
                         while ($row = mysqli_fetch_assoc($result)) {
                             $Direction = explode('/', $row["DIRECCION"]);
                         ?>
-                            <label class="Content-Payment-List-Item">
+                            <label class="Content-Payment-List-Item cursor">
                                 <h1 class="Content-Payment-List-Item-Info"><?php echo ucfirst((strtolower($Direction[0]))); ?></h1>
                                 <h1 class="Content-Payment-List-Item-Info"><?php echo ucfirst((strtolower($Direction[1]))); ?></h1>
-                                <h1 class="Content-Payment-List-Item-Info"><?php echo ucfirst((strtolower($Direction[5]))); ?></h1>
                                 <h1 class="Content-Payment-List-Item-Info"><?php echo ucfirst((strtolower($Direction[2]))); ?></h1>
-                                <input type="radio" class="" value="<?php echo $row["ID_DIRECCION"] ?>" name="Checkbox[]">
+                                <h1 class="Content-Payment-List-Item-Info"><?php echo ucfirst((strtolower($Direction[5]))); ?></h1>
+                                <input type="radio" class="" value="<?php echo $row["ID_DIRECCION"] ?>" name="Checkbox2[]">
                             </label>
                         <?php
                         }
                         ?>
                     </div>
                 </div>
-
-                <div>
-
+                <div class="Content-tramitation-Container Payment">
+                    <h1 class="Content-ShoppingCart-Title background2">Payment Method</h1>
+                    <div class="Content-Payment-List" id="Content-Payment">
+                        <?php
+                        $sql = "SELECT * FROM METODOSPAGO WHERE ID_USUARIO =" . $WebPageUser->get_id();
+                        $result = mysqli_query($con, $sql) or die('Error');
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            $sql = "SELECT * FROM TIPOSMETODOPAGO WHERE ID_TIPOMETPAGO =" . $row['ID_TIPOMETPAGO'];
+                            $result2 = mysqli_query($con, $sql) or die('Error');
+                            $row2 = mysqli_fetch_assoc($result2);
+                            $detail = explode('/', $row["DETALLE"]);
+                        ?>
+                            <label class="Content-Payment-List-Item cursor">
+                                <h1 class="Content-Payment-List-Item-Info-Payment"><?php echo $detail[0]; ?></h1>
+                                <h1 class="Content-Payment-List-Item-Info-Payment"><?php echo $row2['NOMBRE']; ?></h1>
+                                <input type="radio" class="" value="<?php echo $row["ID_METPAGO"] ?>" name="Checkbox3[]">
+                            </label>
+                        <?php
+                        }
+                        ?>
+                    </div>
                 </div>
+                <input type="hidden" value="<?php echo $preciototal ?>" name="price">
+                <input type="submit" value="Pay and continue" class="Content-tramitation-Container-Submit cursor">
+
             </form>
 
 

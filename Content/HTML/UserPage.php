@@ -174,26 +174,19 @@
         <div class="Content-Receipts">
             <div class="Content-Receipts-List">
                 <h1 class="Content-Receipts-List-Header"> Receipts </h1>
+                <?php 
+                $sql = "SELECT * FROM FACTURAS WHERE ID_USUARIO =" . $WebPageUser->get_id();
+                $result = mysqli_query($con, $sql) or die('Error');
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $sql = "SELECT * FROM PEDIDOS WHERE ID_PEDIDO =" . $row["ID_PEDIDO"];
+                    $result2 = mysqli_query($con, $sql) or die('Error');
+                    $row2 = mysqli_fetch_assoc($result2)
+                ?>
                 <div class="Content-Receipts-List-Header-Item">
-                    <h2 class="Content-Receipts-List-Header-Item-text">Date</h2>
-                    <h2 class="Content-Receipts-List-Header-Item-text">Price</h2>
+                    <h2 class="Content-Receipts-List-Header-Item-text"><?php echo $row2["FECHA"]?></h2>
+                    <h2 class="Content-Receipts-List-Header-Item-text"><?php echo $row["PRECIOTOTAL"]?>€</h2>
                 </div>
-                <div class="Content-Receipts-List-Header-Item">
-                    <h2 class="Content-Receipts-List-Header-Item-text">Date</h2>
-                    <h2 class="Content-Receipts-List-Header-Item-text">Price</h2>
-                </div>
-                <div class="Content-Receipts-List-Header-Item">
-                    <h2 class="Content-Receipts-List-Header-Item-text">Date</h2>
-                    <h2 class="Content-Receipts-List-Header-Item-text">Price</h2>
-                </div>
-                <div class="Content-Receipts-List-Header-Item">
-                    <h2 class="Content-Receipts-List-Header-Item-text">Date</h2>
-                    <h2 class="Content-Receipts-List-Header-Item-text">Price</h2>
-                </div>
-                <div class="Content-Receipts-List-Header-Item">
-                    <h2 class="Content-Receipts-List-Header-Item-text">Date</h2>
-                    <h2 class="Content-Receipts-List-Header-Item-text">Price</h2>
-                </div>
+                <?php }?>
             </div>
         </div>
     </div>

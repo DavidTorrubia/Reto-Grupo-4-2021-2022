@@ -16,7 +16,6 @@
 .carousel {
   position: relative;
   box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
-  margin-top: 3rem;
 }
 
 .carousel-inner {
@@ -291,6 +290,17 @@
   margin-top: 1.2rem;
   width: 95%;
   transition: 1s;
+}
+.Content-video{
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+}
+.content-href{
+  margin-top: 3rem;
+}
+.Content-video-source{
+  width: 100%;
 }
 .Content-LocationButton-Icon {
   border-radius: 50%;

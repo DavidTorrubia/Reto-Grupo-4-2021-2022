@@ -10,9 +10,8 @@
     <script src="../JS/HeaderScripts.js"></script>
     <script src="../JS/LandingPageScripts.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <script async
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvu_yP8noN4t377JxS6_vsk5tiRu6rTAc&callback=initMap">
-</script>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvu_yP8noN4t377JxS6_vsk5tiRu6rTAc&callback=initMap">
+    </script>
     <title>Ecoffe - Landing Page</title>
 </head>
 
@@ -20,51 +19,56 @@
     <?php include 'Header.php'; ?>
 
     <div class="Content">
-    <a href="../HTML/Menu.php"><div class="carousel">
-            <div class="carousel-inner">
-                <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
-                <div class="carousel-item">
-                    <img src="../Images/LandingPage/orangeCoctel.png" class="carousel-item-image">
-                    <div class="carousel-item-image-Container ">
-                        <h1 class="carousel-item-image-Header">Orange Expresso</h1>
-                        <p class="carousel-item-image-Text">Orange Juice Mixed with expresso coffee</p>
+        <a href="../HTML/AboutUs.php" class="content-href"><video class="Content-video" autoplay muted id="myVideo" loop>
+                <source src="../videos/Ecoffe.mp4" type="video/mp4" class="Content-video-source">
+            </video></a>
+        <a href="../HTML/Menu.php" class="content-href">
+            <div class="carousel">
+                <div class="carousel-inner">
+                    <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
+                    <div class="carousel-item">
+                        <img src="../Images/LandingPage/orangeCoctel.png" class="carousel-item-image">
+                        <div class="carousel-item-image-Container ">
+                            <h1 class="carousel-item-image-Header">Fruit Coctails</h1>
+                            <p class="carousel-item-image-Text">Orange, Grapes and Pineapple Juice with Special Liquor</p>
+                        </div>
                     </div>
-                </div>
-                <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
-                <div class="carousel-item">
-                    <img src="../Images/LandingPage/Frappuccino.jpg" class="carousel-item-image">
-                    <div class="carousel-item-image-Container">
-                        <h1 class="carousel-item-image-Header">Frappuccino</h1>
-                        <p class="carousel-item-image-Text">Cofee with milk, chocolate and ice cream</p>
+                    <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+                    <div class="carousel-item">
+                        <img src="../Images/LandingPage/Frappuccino.jpg" class="carousel-item-image">
+                        <div class="carousel-item-image-Container">
+                            <h1 class="carousel-item-image-Header">Frappuccino</h1>
+                            <p class="carousel-item-image-Text">Cofee with milk, chocolate and ice cream</p>
+                        </div>
                     </div>
-                </div>
-                <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
-                <div class="carousel-item">
-                    <img src="../Images/LandingPage/IcedCoffee.jpg" class="carousel-item-image">
-                    <div class="carousel-item-image-Container">
-                        <h1 class="carousel-item-image-Header">Iced coffee</h1>
-                        <p class="carousel-item-image-Text">Try our new cold cofees selections</p>
+                    <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
+                    <div class="carousel-item">
+                        <img src="../Images/LandingPage/IcedCoffee.jpg" class="carousel-item-image">
+                        <div class="carousel-item-image-Container">
+                            <h1 class="carousel-item-image-Header">Iced coffee</h1>
+                            <p class="carousel-item-image-Text">Try our new cold cofees selections</p>
+                        </div>
                     </div>
+                    <label for="carousel-3" class="carousel-control prev control-1">‹</label>
+                    <label for="carousel-2" class="carousel-control next control-1">›</label>
+                    <label for="carousel-1" class="carousel-control prev control-2">‹</label>
+                    <label for="carousel-3" class="carousel-control next control-2">›</label>
+                    <label for="carousel-2" class="carousel-control prev control-3">‹</label>
+                    <label for="carousel-1" class="carousel-control next control-3">›</label>
+                    <ol class="carousel-indicators">
+                        <li>
+                            <label for="carousel-1" class="carousel-bullet">•</label>
+                        </li>
+                        <li>
+                            <label for="carousel-2" class="carousel-bullet">•</label>
+                        </li>
+                        <li>
+                            <label for="carousel-3" class="carousel-bullet">•</label>
+                        </li>
+                    </ol>
                 </div>
-                <label for="carousel-3" class="carousel-control prev control-1">‹</label>
-                <label for="carousel-2" class="carousel-control next control-1">›</label>
-                <label for="carousel-1" class="carousel-control prev control-2">‹</label>
-                <label for="carousel-3" class="carousel-control next control-2">›</label>
-                <label for="carousel-2" class="carousel-control prev control-3">‹</label>
-                <label for="carousel-1" class="carousel-control next control-3">›</label>
-                <ol class="carousel-indicators">
-                    <li>
-                        <label for="carousel-1" class="carousel-bullet">•</label>
-                    </li>
-                    <li>
-                        <label for="carousel-2" class="carousel-bullet">•</label>
-                    </li>
-                    <li>
-                        <label for="carousel-3" class="carousel-bullet">•</label>
-                    </li>
-                </ol>
             </div>
-        </div></a>
+        </a>
         <div class="Content-LandingText" id="Content-LandingText">
             <h1 class="Content-LandingText-Header">
                 Lorem Ipsum

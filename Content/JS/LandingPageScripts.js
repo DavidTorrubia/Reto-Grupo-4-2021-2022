@@ -16,7 +16,7 @@ function LocationMenuDeploy(){
 window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
     const Text = document.getElementById("Content-LandingText");
-  if ((document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) && window.innerWidth>600) {
+  if ((document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) && window.innerWidth>600) {
     Text.style.opacity="100%";
     Text.style.marginTop="4rem"
   } else if (window.innerWidth>600){
