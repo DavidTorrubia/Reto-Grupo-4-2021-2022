@@ -71,10 +71,10 @@
         </a>
         <div class="Content-LandingText" id="Content-LandingText">
             <h1 class="Content-LandingText-Header">
-                Lorem Ipsum
+                Why ecoffe?
             </h1>
             <p class="Content-LandingText-Text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in dolor id leo feugiat faucibus. Etiam interdum venenatis accumsan. Suspendisse ut finibus mi, vel elementum nisl. Suspendisse viverra porta ex nec congue. Nam nisl nunc, porta id vulputate eget, maximus ac nisi. In quis mattis augue. In hac habitasse platea dictumst. Morbi fringilla pharetra tempus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed elementum lectus at dui finibus vehicula. Donec et risus vel ante commodo varius. Phasellus sed est lacinia, faucibus enim lobortis, lobortis magna. Praesent feugiat pellentesque facilisis. Mauris sodales nunc aliquam, placerat massa sed, sagittis neque.
+                Ecoffe is a branch who respects nature and local production, our coffee is elaborated by traditional ways in localized parts of the world where coffee masters as we call them recollect the grain and prepares it for our shops. Once it reaches our shops the coffee gets prepared by our baristas and packed by our employees, and finally our delivery service brings it carefully to your home.
             </p>
         </div>
         <div class="FixedAdv">
