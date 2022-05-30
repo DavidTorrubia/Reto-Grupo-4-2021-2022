@@ -24,20 +24,24 @@
     <a href="../HTML/LandingPage.php"><img class="Header-Logo" src="../Images/Logo/LogoWhite.png" alt="logo"></a>
     <div class="Header-Item Header-Item-Right-Container">
         <div class="Header-Item-Right-Container-UserDropButtonContainer">
-            <button type="button" class="Header-Item-Right-Container-UserDropButton" id="Header-Item-Right-Container-UserDropButton" onclick="UserMenuDeploy()"><img class="Header-Imagen Header-Image-Usericon" src="<?php if ($WebPageUser->get_isLogged() == true) {
-                                                                                                                                                                                                                            $sql = "SELECT IMAGENPERFIL FROM USUARIOS WHERE ID_USUARIO =" . $WebPageUser->get_id();
-                                                                                                                                                                                                                            $resultado = mysqli_query($con, $sql) or die('Error: ' . mysqli_error($con));
-                                                                                                                                                                                                                            while ($row = mysqli_fetch_assoc($resultado)) {
-                                                                                                                                                                                                                                echo $row["IMAGENPERFIL"];
-                                                                                                                                                                                                                                if ($row["IMAGENPERFIL"] == null) {
-                                                                                                                                                                                                                                    echo "../Images/defaultUserImage.jpg";
-                                                                                                                                                                                                                                }
-                                                                                                                                                                                                                            }
-                                                                                                                                                                                                                        } else {
-                                                                                                                                                                                                                            echo "../Images/defaultUserImage.jpg";
-                                                                                                                                                                                                                        } ?>" /></button>
+            <button type="button" class="Header-Item-Right-Container-UserDropButton" id="Header-Item-Right-Container-UserDropButton" onclick="UserMenuDeploy()"><img class="Header-Imagen Header-Image-Usericon" src="
+                <?php
+                //Consulta para coger la imagen de usurio
+                if ($WebPageUser->get_isLogged() == true) {
+                    $sql = "SELECT IMAGENPERFIL FROM USUARIOS WHERE ID_USUARIO =" . $WebPageUser->get_id();
+                    $resultado = mysqli_query($con, $sql) or die('Error: ' . mysqli_error($con));
+                    while ($row = mysqli_fetch_assoc($resultado)) {
+                        echo $row["IMAGENPERFIL"];
+                        if ($row["IMAGENPERFIL"] == null) {
+                            echo "../Images/defaultUserImage.jpg";
+                        }
+                    }
+                } else {
+                    echo "../Images/defaultUserImage.jpg";
+                } ?>" /></button>
             <div class="Header-Item-Right-Container-UserDropButton-Content" id="Header-Item-Right-Container-UserDropButton-Content">
                 <?php
+                //Si no estas loggeado no puedes acceder a la pagina de gestion de usuario
                 if ($WebPageUser->get_isLogged() == false) {
                 ?>
                     <button type="button" class="Header-Item-Right-Container-UserDropButton-Content-Button" id="Header-Item-Right-Container-UserDropButton-Content-LogIn" onclick="LoginDeploy()">

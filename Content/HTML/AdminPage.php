@@ -38,8 +38,8 @@
                             <input type="radio">
                         </div>
                         <div class="Content-DataAlteration-Elements-Item-List">
-
                             <?php
+                            //Consulta para conseguir los datos del usuario 
                             $sql = "SELECT * FROM USUARIOS";
                             $result = mysqli_query($con, $sql) or die('Error');
                             while ($row = mysqli_fetch_assoc($result)) {
@@ -81,8 +81,6 @@
                         <label class="Content-DataAlteration-Elements-Item-Login">Log in? <input type="checkbox" value="1" name="login"></label>
                         <input type="submit" value="Create User" class="Content-DataAlteration-Elements-Item-Submit">
                     </div>
-
-
                 </form>
             </div>
         </div>
@@ -180,15 +178,5 @@
         </div>
     </div>
 
-
-    <div class="Footer">
-        <div class="Footer-SelectionBar">
-            <a href="AboutUs.php">About Us</a>
-            <a href="">Help</a>
-            <a href="https://mail.google.com/mail/u/1/?pli=1#inbox">Contact Us</a>
-            <a href="AboutUs.php">Work with us</a>
-            <a href="UserPage.php">Settings</a>
-        </div>
-        <p>ecoffe @Copyright</p>
-    </div>
+   <?php include 'Footer.php'?>
 </body>

@@ -20,6 +20,7 @@
 
     <div class="Content">
         <?php
+        //Consulta para mostrar los detalles del producto
         $sql = "SELECT * FROM PRODUCTOS WHERE ID_PRODUCTO = $id_prod ";
         $result = mysqli_query($con, $sql) or die('Error');
         $fila = mysqli_fetch_array($result);

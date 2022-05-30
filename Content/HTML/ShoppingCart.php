@@ -18,6 +18,7 @@
     <div class="Content">
         <h1 class="Content-ShoppingCart-Title background-shop">Information</h1>
         <?php if (($WebPageUser)->get_isLogged()) { ?>
+            <!--Si el usuario esta registrado dejara almacenar productos y comprarlos-->
             <div class="Content-ShoppingCart">
 
                 <div class="Content-ShoppingCart-ProductsList">
@@ -53,6 +54,7 @@
                     <hr class="Content-ShoppingCart-Receipt-Line">
                     <div class="Content-ShoppingCart-Receipt-Line-container">
                         <?php
+                        //Mostrar articulos en carrito
                         $preciototal;
                         for ($i = 0; $i < count($_SESSION["cart"]); $i++) {
                             $sql = "SELECT * FROM PRODUCTOS WHERE ID_PRODUCTO =" . $ids[$i];
@@ -101,6 +103,7 @@
                     <h1 class="Content-ShoppingCart-Title background2">Payment Method</h1>
                     <div class="Content-Payment-List" id="Content-Payment">
                         <?php
+                        //Consulta para ver los metodos de pago del usuario
                         $sql = "SELECT * FROM METODOSPAGO WHERE ID_USUARIO =" . $WebPageUser->get_id();
                         $result = mysqli_query($con, $sql) or die('Error');
                         while ($row = mysqli_fetch_assoc($result)) {
