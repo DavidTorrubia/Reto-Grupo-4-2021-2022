@@ -13,207 +13,234 @@
 </head>
 
 <body>
-    <div class="Header">
-        <div class="Header-Background"></div>
-        <div class="Header-Item Header-Item-Left-Container">
-            <button type="button" class="Header-Item-Left-Container-Dropbutton"
-                id="Header-Item-Left-Container-Dropbutton" onclick="MenuDeploy()"><img class="Header-Imagen"
-                    src="../Icons/MenuIcon.png" alt="imagen_menu"></button>
-            <div class="Header-Item-Left-Container-Dropbutton-Content"
-                id="Header-Item-Left-Container-Dropbutton-Content">
-                <a href="../HTML/Menu.php">Menu</a>
-                <a href="../HTML/AboutUs.php">About us</a>
-            </div>
-        </div>
-        <a href="../HTML/LandingPage.php"><img class="Header-Logo" src="../Images/Logo/LogoWhite.png" alt="logo"></a>
-        <div class="Header-Item Header-Item-Right-Container">
+    <?php include 'Header.php'; ?>
 
-            <div class="Header-Item-Right-Container-UserDropButtonContainer">
-                <button type="button" class="Header-Item-Right-Container-UserDropButton"
-                    id="Header-Item-Right-Container-UserDropButton" onclick="UserMenuDeploy()"><img
-                        class="Header-Imagen Header-Image-Usericon" src="../Images/defaultUserImage.jpg" /></button>
-                <div class="Header-Item-Right-Container-UserDropButton-Content"
-                    id="Header-Item-Right-Container-UserDropButton-Content">
-                    <button type="button" class="Header-Item-Right-Container-UserDropButton-Content-Button"
-                        id="Header-Item-Right-Container-UserDropButton-Content-LogIn" onclick="LoginDeploy()">
-                        Login</button>
-                    <div class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu"
-                        id="Header-Item-Right-Container-UserDropButton-Content-LogInMenu">
-                        <form class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-form">
-                            <h3 class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Header">Email</h3>
-                            <input type="text"
-                                class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Input">
-                            <h3 class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Header">Password
-                            </h3>
-                            <input type="password"
-                                class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Input">
-                            <input type="submit" value="Log in"
-                                class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Submit">
-                        </form>
-                    </div>
-                    <button type="button" class="Header-Item-Right-Container-UserDropButton-Content-Button"
-                        id="Header-Item-Right-Container-UserDropButton-Content-SignUp" onclick="SignUpDeploy()"> Sign
-                        Up</button>
-                    <div class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu"
-                        id="Header-Item-Right-Container-UserDropButton-Content-SignUpMenu">
-                        <form class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-form">
-                            <h3 class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Header">Email</h3>
-                            <input type="text"
-                                class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Input">
-                            <h3 class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Header">Password
-                            </h3>
-                            <input type="password"
-                                class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Input">
-                            <h3 class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Header">Repeat
-                                Password
-                            </h3>
-                            <input type="password"
-                                class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Input">
-                            <input type="submit" value="Sign Up"
-                                class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Submit">
-                        </form>
-                    </div>
-                    <button type="button" class="Header-Item-Right-Container-UserDropButton-Content-Button"
-                        id="Header-Item-Right-Container-UserDropButton-Content-Log off"> Log off</button>
-                </div>
-            </div>
-            <a href="../HTML/ShoppingCart.php"><img class="Header-Imagen" src="../Icons/ShopppingListWhite.png" /></a>
-            <img class="Header-Imagen Header-Imagen-Bandera" src="../Images/flags/ukflag.png" />
-        </div>
-    </div>
     <div class="Content">
         <div class="Content-User">
             <div class="Content-User-UserProfile">
-                <img src="../Images/User/ProfileImage.png" class="Content-User-UserProfile-Image">
+                <img src="<?php if ($WebPageUser->get_isLogged() == true) {
+                                $sql = "SELECT IMAGENPERFIL FROM USUARIOS WHERE ID_USUARIO =" . $WebPageUser->get_id();
+                                $resultado = mysqli_query($con, $sql) or die('Error: ' . mysqli_error($con));
+                                while ($row = mysqli_fetch_assoc($resultado)) {
+                                    echo $row["IMAGENPERFIL"];
+                                    if ($row["IMAGENPERFIL"] == null) {
+                                        echo "../Images/defaultUserImage.jpg";
+                                    }
+                                }
+                            } else {
+                                echo "../Images/defaultUserImage.jpg";
+                            } ?>" class="Content-User-UserProfile-Image">
                 <div class="Content-User-UserProfile-Data">
-                    <h1 class="Content-User-UserProfile-Data-Username">User 12340239282</h1>
-                    <h2 class="Content-User-UserProfile-Data-Email">example@exammple.com</h2>
-                    <p class="Content-User-UserProfile-Data-PrincAddress">Malaga, Spain</p>
+                    <h1 class="Content-User-UserProfile-Data-Username">
+                        <?php if ($WebPageUser->get_name() == null) {
+                            echo "User" . $WebPageUser->get_id();
+                        } else {
+                            echo $WebPageUser->get_name();
+                        }
+                        $sql = "SELECT APELLIDOS FROM USUARIOS WHERE ID_USUARIO =" . $WebPageUser->get_id();
+                        $result = mysqli_query($con, $sql) or die('Error');
+                        if ($row = mysqli_fetch_assoc($result)) {
+                            echo " " . $row["APELLIDOS"];
+                        }
+
+                        ?>
+                    </h1>
+                    <h2 class="Content-User-UserProfile-Data-Email">
+                        <?php $sql = "SELECT CORREO FROM USUARIOS WHERE ID_USUARIO =" . $WebPageUser->get_id();
+                        $result = mysqli_query($con, $sql) or die('Error');
+                        $row = mysqli_fetch_assoc($result);
+                        echo $row['CORREO'];
+                        ?>
+                    </h2>
+                    <p class="Content-User-UserProfile-Data-PrincAddress">
+                        <?php $sql = "SELECT DIRECCION FROM DIRECCIONES WHERE ID_USUARIO =" . $WebPageUser->get_id();
+                        $result = mysqli_query($con, $sql) or die('Error');
+                        if ($row = mysqli_fetch_assoc($result)) {
+                            echo str_replace(
+                                '/',
+                                ' ',
+                                $row['DIRECCION']
+                            );
+                        } else {
+                            echo "No Address";
+                        }
+
+                        ?>
+                    </p>
                 </div>
             </div>
             <div class="Content-UserConfig">
-                <div class="Content-UserConfig-Item half">
-                    <h2 class="Content-UserConfig-Item-Header">First Name</h2>
-                    <input type="text" class="Content-UserConfig-Item-Field" placeholder="Michael">
-                </div>
-                <div class="Content-UserConfig-Item half">
-                    <h2 class="Content-UserConfig-Item-Header">Last Name</h2>
-                    <input type="text" class="Content-UserConfig-Item-Field" placeholder="Jordan">
-                </div>
-                <div class="Content-UserConfig-Item">
-                    <h2 class="Content-UserConfig-Item-Header">Email</h2>
-                    <input type="text" class="Content-UserConfig-Item-Field" placeholder="Example@Example.com">
-                </div>
-                <button class="Content-UserConfig-Item-Button" type="button">Save Changes</button>
-
-                <div class="Content-UserConfig-Item Directions">
-                    <button class="Content-UserConfig-Item-Directions-Button" type="button" onclick="DeployCreateAddres()">Create New Address</button>
-                    <form class="Content-UserConfig-Item-Directions-Content" id="Content-UserConfig-Item-Directions-Content-Create">
+                <form class="Content-UserConfig-User" method="post" action="../PhpScripts/AlterUser.php">
+                    <h1 class="Content-Add-Payment-Header">Update account</h1>
+                    <div class="Content-UserConfig-Item half">
+                        <h2 class="Content-UserConfig-Item-Header">First Name</h2>
+                        <input type="text" class="Content-UserConfig-Item-Field" name="name" placeholder=<?php if ($WebPageUser->get_name() == null) {
+                                                                                                                echo "User" . $WebPageUser->get_id();
+                                                                                                            } else {
+                                                                                                                echo $WebPageUser->get_name();
+                                                                                                            } ?>>
+                    </div>
+                    <div class="Content-UserConfig-Item half">
+                        <h2 class="Content-UserConfig-Item-Header">Last Name</h2>
+                        <input type="text" class="Content-UserConfig-Item-Field" name="lastname" placeholder=<?php $sql = "SELECT APELLIDOS FROM USUARIOS WHERE ID_USUARIO =" . $WebPageUser->get_id();
+                                                                                                                $result = mysqli_query($con, $sql) or die('Error');
+                                                                                                                if ($row = mysqli_fetch_assoc($result)) {
+                                                                                                                    echo $row["APELLIDOS"];
+                                                                                                                    if ($row["APELLIDOS"] == null) {
+                                                                                                                        echo "Jhones";
+                                                                                                                    }
+                                                                                                                } else {
+                                                                                                                } ?>>
+                    </div>
+                    <div class="Content-UserConfig-Item">
+                        <h2 class="Content-UserConfig-Item-Header">Email</h2>
+                        <input type="text" class="Content-UserConfig-Item-Field" name="email" placeholder=<?php $sql = "SELECT CORREO FROM USUARIOS WHERE ID_USUARIO =" . $WebPageUser->get_id();
+                                                                                                            $result = mysqli_query($con, $sql) or die('Error');
+                                                                                                            $row = mysqli_fetch_assoc($result);
+                                                                                                            echo $row['CORREO'];
+                                                                                                            ?>>
+                    </div>
+                    <div class="Content-UserConfig-Item">
+                        <h2 class="Content-UserConfig-Item-Header">Password</h2>
+                        <input type="password" class="Content-UserConfig-Item-Field" placeholder="Password" name="password">
+                        <h2 class="Content-UserConfig-Item-Header">Repeat Password</h2>
+                        <input type="password" class="Content-UserConfig-Item-Field" placeholder="Password" name="passwordrepeat">
+                    </div>
+                    <input type="submit" class="Content-Add-Payment-Form-submit" type="button" value="Save Changes">
+                </form>
+                <div class="Content-UserConfig-Item-Direction-Admin">
+                    <h1 class="Content-Add-Payment-Header">Update directions</h1>
+                    <div class="Content-Add-Payment-type">
+                        <button class="Content-Add-Payment-type-item" type="button" onclick="ChangeDirectionState(1)">Create New Address</button>
+                        <button class="Content-Add-Payment-type-item" type="button" onclick="ChangeDirectionState(2)">Remove Address</button>
+                    </div>
+                    <form class="Content-UserConfig-Item-Directions-Content" id="Content-UserConfig-Item-Directions-Content-Create" method="post" action="../PhpScripts/DirectionCreation.php">
                         <div class="Content-UserConfig-Item">
                             <h2 class="Content-UserConfig-Item-Header">Country</h2>
-                            <input type="text" class="Content-UserConfig-Item-Field" placeholder="Spain">
+                            <input type="text" class="Content-UserConfig-Item-Field" placeholder="Spain" name="country">
                         </div>
                         <div class="Content-UserConfig-Item">
-                            <h2 class="Content-UserConfig-Item-Header">Ciudad</h2>
-                            <input type="text" class="Content-UserConfig-Item-Field" placeholder="Madrid">
+                            <h2 class="Content-UserConfig-Item-Header">City</h2>
+                            <input type="text" class="Content-UserConfig-Item-Field" placeholder="Zaragoza" name="city">
+                        </div>
+                        <div class="Content-UserConfig-Item">
+                            <h2 class="Content-UserConfig-Item-Header">Address</h2>
+                            <input type="text" class="Content-UserConfig-Item-Field" placeholder=" Violeta Parra 8" name="adress">
+                        </div>
+                        <div class="Content-UserConfig-Item half">
+                            <h2 class="Content-UserConfig-Item-Header">Stairs' direction</h2>
+                            <input type="text" class="Content-UserConfig-Item-Field" placeholder="right" name="stairs">
+                        </div>
+                        <div class="Content-UserConfig-Item half">
+                            <h2 class="Content-UserConfig-Item-Header">Floor</h2>
+                            <input type="text" class="Content-UserConfig-Item-Field" placeholder="2B" name="floor">
                         </div>
                         <div class="Content-UserConfig-Item">
                             <h2 class="Content-UserConfig-Item-Header">Postal Code</h2>
-                            <input type="text" class="Content-UserConfig-Item-Field" placeholder="50011">
+                            <input type="text" class="Content-UserConfig-Item-Field" placeholder="50011" name="p_code">
                         </div>
-                        <div class="Content-UserConfig-Item">
-                            <h2 class="Content-UserConfig-Item-Header">Street Address</h2>
-                            <input type="text" class="Content-UserConfig-Item-Field" placeholder="Via Hispanidad">
-                        </div>
-                        <button class="Content-UserConfig-Item-Directions-Content-Button" type="button">Create</button>
+
+                        <input type="submit" class="Content-Add-Payment-Form-submit" value="Create">
                     </form>
-                    <button class="Content-UserConfig-Item-Directions-Button" type="button" onclick="DeployRemoveAddres()">Remove Address</button>
-                    <div class="Content-UserConfig-Item-Directions-Content" id="Content-UserConfig-Item-Directions-Content-Remove">
-                        <form class="Content-UserConfig-Item-Directions-Content-RemoveList">
+                    <form class="Content-UserConfig-Item-Directions-Content" id="Content-UserConfig-Item-Directions-Content-Remove" method="post" action="../PhpScripts/RemoveDirection.php">
+                        <div class="Content-UserConfig-Item-Directions-Content-RemoveList">
                             <div class="Content-UserConfig-Item-Directions-Content-RemoveList-Item Guide">
                                 <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header Guide">Country</h1>
                                 <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header Guide">City</h1>
                                 <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header Guide">Postal Code</h1>
                                 <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header Guide">Address</h1>
                             </div>
-                            <div class="Content-UserConfig-Item-Directions-Content-RemoveList-Item Example">
-                                <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header">Spain</h1>
-                                <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header">Zaragoza</h1>
-                                <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header">50011</h1>
-                                <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header">Miralbueno11</h1>
-                                <input type="checkbox" class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-CheckBox">
-                            </div>
-                            <div class="Content-UserConfig-Item-Directions-Content-RemoveList-Item Example">
-                                <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header">Spain</h1>
-                                <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header">Zaragoza</h1>
-                                <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header">50011</h1>
-                                <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header">Miralbueno11</h1>
-                                <input type="checkbox" class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-CheckBox">
-                            </div>
-                            <div class="Content-UserConfig-Item-Directions-Content-RemoveList-Item Example">
-                                <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header">Spain</h1>
-                                <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header">Zaragoza</h1>
-                                <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header">50011</h1>
-                                <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header">Miralbueno11</h1>
-                                <input type="checkbox" class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-CheckBox">
-                            </div>
-                            <div class="Content-UserConfig-Item-Directions-Content-RemoveList-Item Example">
-                                <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header">Spain</h1>
-                                <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header">Zaragoza</h1>
-                                <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header">50011</h1>
-                                <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header">Miralbueno11</h1>
-                                <input type="checkbox" class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-CheckBox">
-                            </div>
-                            <div class="Content-UserConfig-Item-Directions-Content-RemoveList-Item Example">
-                                <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header">Spain</h1>
-                                <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header">Zaragoza</h1>
-                                <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header">50011</h1>
-                                <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header">Miralbueno11</h1>
-                                <input type="checkbox" class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-CheckBox">
-                            </div>
-                        </form>
-                        <button class="Content-UserConfig-Item-Directions-Content-Button">Remove Selected</button>
-                    </div>
+                            <?php
+                            $sql = "SELECT * FROM DIRECCIONES WHERE ID_USUARIO =" . $WebPageUser->get_id();
+                            $result = mysqli_query($con, $sql) or die('Error');
+                            while ($row = mysqli_fetch_assoc($result)) {
+                                $Direction = explode('/', $row["DIRECCION"]);
+                            ?>
+                                <label class="Content-UserConfig-Item-Directions-Content-RemoveList-Item Example">
+                                    <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header"><?php echo ucfirst((strtolower($Direction[0]))); ?></h1>
+                                    <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header"><?php echo ucfirst((strtolower($Direction[1]))); ?></h1>
+                                    <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header"><?php echo ucfirst((strtolower($Direction[5]))); ?></h1>
+                                    <h1 class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-Header"><?php echo ucfirst((strtolower($Direction[2]))); ?></h1>
+                                    <input type="checkbox" class="Content-UserConfig-Item-Directions-Content-RemoveList-Item-CheckBox" value="<?php echo $row["ID_DIRECCION"] ?>" name="Checkbox[]">
+                                </label>
+                            <?php
+                            }
+                            ?>
+
+
+                        </div>
+                        <input type="submit" class="Content-Add-Payment-Form-submit" value="Remove Selected">
+                    </form>
                 </div>
             </div>
 
-        </div> 
+        </div>
         <div class="Content-Receipts">
-            <div class="Content-Receipts-List">
+            <div class="Content-Receipts-Container">
                 <h1 class="Content-Receipts-List-Header"> Receipts </h1>
-                <div class="Content-Receipts-List-Header-Item">
-                    <h2 class="Content-Receipts-List-Header-Item-text">Date</h2>
-                    <h2 class="Content-Receipts-List-Header-Item-text">Price</h2>
+                <div class="Content-Receipts-List">
+
+                    <?php
+                    $sql = "SELECT * FROM FACTURAS WHERE ID_USUARIO =" . $WebPageUser->get_id();
+                    $result = mysqli_query($con, $sql) or die('Error');
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        $sql = "SELECT * FROM PEDIDOS WHERE ID_PEDIDO =" . $row["ID_PEDIDO"];
+                        $result2 = mysqli_query($con, $sql) or die('Error');
+                        $row2 = mysqli_fetch_assoc($result2)
+                    ?>
+                        <div class="Content-Receipts-List-Header-Item">
+                            <h2 class="Content-Receipts-List-Header-Item-text"><?php echo $row2["FECHA"] ?></h2>
+                            <h2 class="Content-Receipts-List-Header-Item-text"><?php echo $row["PRECIOTOTAL"] ?>€</h2>
+                        </div>
+                    <?php } ?>
                 </div>
-                <div class="Content-Receipts-List-Header-Item">
-                    <h2 class="Content-Receipts-List-Header-Item-text">Date</h2>
-                    <h2 class="Content-Receipts-List-Header-Item-text">Price</h2>
+            </div>
+            <div class="Content-Add-Payment">
+                <h1 class="Content-Add-Payment-Header">Add payment method</h1>
+                <div class="Content-Add-Payment-type">
+                    <button class="Content-Add-Payment-type-item" onclick="ChangePaymentMethod(1)"> Credit Card </button>
+                    <button class="Content-Add-Payment-type-item" onclick="ChangePaymentMethod(2)"> Paypal </button>
+                    <button class="Content-Add-Payment-type-item" onclick="ChangePaymentMethod(3)"> Bank account </button>
                 </div>
-                <div class="Content-Receipts-List-Header-Item">
-                    <h2 class="Content-Receipts-List-Header-Item-text">Date</h2>
-                    <h2 class="Content-Receipts-List-Header-Item-text">Price</h2>
-                </div>
-                <div class="Content-Receipts-List-Header-Item">
-                    <h2 class="Content-Receipts-List-Header-Item-text">Date</h2>
-                    <h2 class="Content-Receipts-List-Header-Item-text">Price</h2>
-                </div>
-                <div class="Content-Receipts-List-Header-Item">
-                    <h2 class="Content-Receipts-List-Header-Item-text">Date</h2>
-                    <h2 class="Content-Receipts-List-Header-Item-text">Price</h2>
-                </div>
+
+                <form class="Content-Add-Payment-Form" id="Payment-CreditCard" method="get" action="../PhpScripts/PaymentMethodCreation.php">
+                    <div class="Content-UserConfig-Item">
+                        <h2 class="Content-UserConfig-Item-Header">Card Number</h2>
+                        <input type="text" class="Content-UserConfig-Item-Field" name="card" placeholder="xxxx-xxxx-xxxx">
+                    </div>
+                    <div class="Content-UserConfig-Item half">
+                        <h2 class="Content-UserConfig-Item-Header">CVC</h2>
+                        <input type="text" class="Content-UserConfig-Item-Field" name="cvc" placeholder="123">
+                    </div>
+                    <div class="Content-UserConfig-Item half">
+                        <h2 class="Content-UserConfig-Item-Header">Expire Date</h2>
+                        <input type="text" class="Content-UserConfig-Item-Field" name="expiredate" placeholder="11/2024">
+                    </div>
+                    <input type="hidden" value="1" name="type">
+                    <input type="submit" class="Content-Add-Payment-Form-submit" value="Create Payment Method">
+                </form>
+                <form class="Content-Add-Payment-Form" id="Payment-Paypal" method="get" action="../PhpScripts/PaymentMethodCreation.php">
+                    <div class="Content-UserConfig-Item">
+                        <h2 class="Content-UserConfig-Item-Header">Email</h2>
+                        <input type="text" class="Content-UserConfig-Item-Field" name="email" placeholder="example@example.com">
+                    </div>
+                    <input type="hidden" value="2" name="type">
+                    <input type="submit" class="Content-Add-Payment-Form-submit" value="Create Payment Method">
+                </form>
+                <form class="Content-Add-Payment-Form" id="Payment-bank" method="get" action="../PhpScripts/PaymentMethodCreation.php">
+                    <div class="Content-UserConfig-Item">
+                        <h2 class="Content-UserConfig-Item-Header">Bank account number</h2>
+                        <input type="text" class="Content-UserConfig-Item-Field" name="account" placeholder="PR3049483920">
+                    </div>
+                    <input type="hidden" value="3" name="type">
+                    <input type="submit" class="Content-Add-Payment-Form-submit" value="Create Payment Method">
+                </form>
+
+
             </div>
         </div>
     </div>
-    <div class="Footer">
-        <div class="Footer-SelectionBar">
-            <a href="AboutUs.php">About Us</a>
-            <a href="">Help</a>
-            <a href="https://mail.google.com/mail/u/1/?pli=1#inbox">Contact Us</a>
-            <a href="AboutUs.php">Work with us</a>
-            <a href="UserPage.php">Settings</a>
-        </div>
-        <p>ecoffe @Copyright</p>
-    </div>
+    <?php include 'Footer.php'; ?>
 </body>
 
 </html>

@@ -1,0 +1,109 @@
+.Content {
+  padding-top: 0;
+  padding-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Content-Image {
+  height: 100%;
+  width: auto;
+  margin: 0 0 0 0;
+  object-fit: cover;
+  width: 50%;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+}
+.Content-Image-Responsive{
+    display: none;
+}
+.Content-Container {
+    margin-top: 6%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  height: 50vh;
+  overflow: hidden;
+  width: 90%;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+.Content-Letter-header {
+  font-family: "Tommy personal use";
+  font-size: 2rem;
+}
+.Content-Letter-Price {
+  font-family: "Tommy personal use";
+  font-size: 1.5rem;
+}
+.Content-Letter {
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  width: 40%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-left: 6%;
+  border-radius: 30px;
+  overflow: hidden;
+}
+.Content-Letter-Desc {
+  font-family: "Tommy personal use";
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.Content-Letter-Button-Container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 3rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  box-sizing: border-box;
+}
+.Content-Letter-Button-Container-input {
+  background-color: white;
+  border: solid black 1px;
+  height: 100%;
+  width: 30%;
+  box-sizing: border-box;
+}
+.Content-Letter-Button-Container-input.quantity {
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  padding-left: 1rem;
+}
+.Content-Letter-Button-Container-input.submit {
+  background-color: #913611;
+  color: white;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+@font-face {
+  src: url(../Fonts/MADE\ Tommy\ Soft\ Medium\ PERSONAL\ USE.otf);
+  font-family: "Tommy personal use";
+}
+@media only screen and (max-width: 600px) {
+    .Content-Container{
+        flex-direction: column;
+        height: min-content;
+    }
+    .Content-Image{
+        display: none;
+    }
+    .Content-Letter{
+        width: 90%;
+        height: auto;
+    }
+    .Content-Image-Responsive{
+        display: block;
+        height: 40%;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+}

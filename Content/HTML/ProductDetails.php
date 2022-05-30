@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,79 +9,46 @@
     <link rel="stylesheet" href="../CSS/MainStyle.css">
     <link rel="stylesheet" href="../CSS/ProductDetailsStyle.css">
     <script src="../JS/HeaderScripts.js"></script>
+    <script src="../JS/ProductDetails.js"></script>
 </head>
+
 <body>
-    <div class="Header">
-        <div class="Header-Background"></div>
-        <div class="Header-Item Header-Item-Left-Container">
-            <button type="button" class="Header-Item-Left-Container-Dropbutton"
-                id="Header-Item-Left-Container-Dropbutton" onclick="MenuDeploy()"><img class="Header-Imagen"
-                    src="../Icons/MenuIcon.png" alt="imagen_menu"></button>
-            <div class="Header-Item-Left-Container-Dropbutton-Content"
-                id="Header-Item-Left-Container-Dropbutton-Content">
-                <a href="../HTML/Menu.php">Menu</a>
-                <a href="../HTML/AboutUs.php">About us</a>
+    <?php include 'Header.php'; ?>
+    <?php
+    $id_prod = $_GET['id'];
+    ?>
+
+    <div class="Content">
+        <?php
+        //Consulta para mostrar los detalles del producto
+        $sql = "SELECT * FROM PRODUCTOS WHERE ID_PRODUCTO = $id_prod ";
+        $result = mysqli_query($con, $sql) or die('Error');
+        $fila = mysqli_fetch_array($result);
+        ?>
+        <div class="Content-Container">
+            <img class="Content-Image" <?PHP echo "src=" . $fila["IMAGENPROD"] ?>>
+            <div class="Content-Letter">
+                <img class="Content-Image-Responsive" <?PHP echo "src=" . $fila["IMAGENPROD"] ?>>
+                <h1 class="Content-Letter-header"><?php echo $fila["NOMBRE"] ?></h1>
+                <p class="Content-Letter-Desc">
+                    <?php echo $fila["DETALLE"] ?>
+                </p>
+                <h3 class="Content-Letter-Price"><?php echo $fila["PRECIO"] ?>€ per unit</h1>
+                    <form class="Content-Letter-Button-Container" method="get" action="../PhpScripts/AddCart.php">
+                        <?php if (($WebPageUser)->get_isLogged()) { ?>
+                            <input type="number" name="quantity"  max="<?php echo $fila["STOCK"] ?>" min="1" class="Content-Letter-Button-Container-input quantity" value="" placeholder="1-99">
+                            <input type="hidden" name="id" value="<?php echo $fila["ID_PRODUCTO"] ?>">
+                            <input type="submit" name="buy" value="add to cart" class="Content-Letter-Button-Container-input submit">
+                        <?php } else { ?>
+                            <h3 class="Content-Letter-Price" >You must be logged in to buy products</h3>
+                        <?php } ?>
+                    </form>
             </div>
         </div>
-        <a href="../HTML/LandingPage.php"><img class="Header-Logo" src="../Images/Logo/LogoWhite.png" alt="logo"></a>
-        <div class="Header-Item Header-Item-Right-Container">
-            <div class="Header-Item-Right-Container-UserDropButtonContainer">
-                <button type="button" class="Header-Item-Right-Container-UserDropButton"
-                    id="Header-Item-Right-Container-UserDropButton" onclick="UserMenuDeploy()"><img
-                        class="Header-Imagen Header-Image-Usericon" src="../Images/defaultUserImage.jpg" /></button>
-                <div class="Header-Item-Right-Container-UserDropButton-Content"
-                    id="Header-Item-Right-Container-UserDropButton-Content">
-                    <button type="button" class="Header-Item-Right-Container-UserDropButton-Content-Button"
-                        id="Header-Item-Right-Container-UserDropButton-Content-LogIn" onclick="LoginDeploy()">
-                        Login</button>
-                    <div class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu"
-                        id="Header-Item-Right-Container-UserDropButton-Content-LogInMenu">
-                        <form class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-form">
-                            <h3 class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Header">Email</h3>
-                            <input type="text"
-                                class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Input">
-                            <h3 class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Header">Password
-                            </h3>
-                            <input type="password"
-                                class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Input">
-                            <input type="submit" value="Log in"
-                                class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Submit">
-                        </form>
-                    </div>
-                    <button type="button" class="Header-Item-Right-Container-UserDropButton-Content-Button"
-                        id="Header-Item-Right-Container-UserDropButton-Content-SignUp" onclick="SignUpDeploy()"> Sign
-                        Up</button>
-                    <div class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu"
-                        id="Header-Item-Right-Container-UserDropButton-Content-SignUpMenu">
-                        <form class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-form">
-                            <h3 class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Header">Email</h3>
-                            <input type="text"
-                                class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Input">
-                            <h3 class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Header">Password
-                            </h3>
-                            <input type="password"
-                                class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Input">
-                            <h3 class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Header">Repeat
-                                Password
-                            </h3>
-                            <input type="password"
-                                class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Input">
-                            <input type="submit" value="Sign Up"
-                                class="Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Submit">
-                        </form>
-                    </div>
-                    <div>
-                        <a type="button" class="Header-Item-Right-Container-UserDropButton-Content-Button UserConfig"
-                            id="Header-Item-Right-Container-UserDropButton-Content-UserConfig "
-                            href="../HTML/UserPage.php">User Config</a>
-                    </div>
-                    <button type="button" class="Header-Item-Right-Container-UserDropButton-Content-Button"
-                        id="Header-Item-Right-Container-UserDropButton-Content-Log off"> Log off</button>
-                </div>
-            </div>
-            <a href="../HTML/ShoppingCart.php"><img class="Header-Imagen" src="../Icons/ShopppingListWhite.png" /></a>
-            <img class="Header-Imagen Header-Imagen-Bandera" src="../Images/flags/ukflag.png" />
-        </div>
+
     </div>
+
+    <?php include 'Footer.php'; ?>
 </body>
+
 </html>

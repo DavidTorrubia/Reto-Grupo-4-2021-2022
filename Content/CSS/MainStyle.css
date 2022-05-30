@@ -1,305 +1,317 @@
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
 body {
-    margin: 0 0 0 0;
+  margin: 0 0 0 0;
+}
+.Content {
+  animation: transitionIn 1.5s;
 }
 
 .Header-Logo {
-    width: 15rem;
-    margin: auto;
-    transition: 1s;
+  width: 15rem;
+  margin: auto;
+  transition: 1s;
 }
-
 .Header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 5rem;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    box-shadow: black 4px;
-    background-image: linear-gradient(#913611, #3a1101);
-    z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: black 4px;
+  background-image: linear-gradient(#913611, #3a1101);
+  z-index: 100;
 }
 
 .Header-Background {
-    background-image: linear-gradient(#913611, #3a1101);
-    width: 100%;
-    position: absolute;
-    height: 100%;
-    z-index: -1;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  background-image: linear-gradient(#913611, #3a1101);
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  z-index: -1;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
 .Header-Imagen {
-    height: 2rem;
-    width: auto;
-    margin-left: 1rem;
-    margin-right: 1rem;
+  height: 2rem;
+  width: auto;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .Header-Item-Right-Container-UserDropButton-Content-LogInMenu {
-    display: none;
-    background-color: rgba(0, 0, 0, 0.067);
-    align-items: center;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.067);
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .Header-Item-Right-Container-UserDropButton-Content-SignUpMenu {
-    display: none;
-    background-color: rgba(0, 0, 0, 0.067);
-    align-items: center;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.067);
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .Header-Item-Right-Container-UserDropButton-Content-SignUpMenu-Header {
-    text-align: left;
-    font-family: 'Tommy personal use';
-    font-weight: lighter;
-    margin: 0.2rem 0.2rem 0.2rem 0.2rem;
-    text-align: left;
-    font-size: 1rem;
-    width: 80%;
+  text-align: left;
+  font-family: "Tommy personal use";
+  font-weight: lighter;
+  margin: 0.2rem 0.2rem 0.2rem 0.2rem;
+  text-align: left;
+  font-size: 1rem;
+  width: 80%;
 }
 
 .Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Header {
-    text-align: left;
-    font-family: 'Tommy personal use';
-    font-weight: lighter;
-    margin: 0.2rem 0.2rem 0.2rem 0.2rem;
-    text-align: left;
-    font-size: 1rem;
-    width: 80%;
+  text-align: left;
+  font-family: "Tommy personal use";
+  font-weight: lighter;
+  margin: 0.2rem 0.2rem 0.2rem 0.2rem;
+  text-align: left;
+  font-size: 1rem;
+  width: 80%;
 }
 
 .Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Submit {
-    border: transparent;
-    background-color: #006D77;
-    color: white;
-    width: 40%;
-    border-radius: 30px;
-    margin-top: 1rem;
-    font-size: 1rem;
+  border: transparent;
+  background-color: #006d77;
+  color: white;
+  width: 40%;
+  border-radius: 30px;
+  margin-top: 1rem;
+  font-size: 1rem;
 }
 
 .Header-Item-Right-Container-UserDropButton-Content-LogInMenu-Input {
-    border-radius: 30px;
-    padding-left: 1rem;
-    width: 80%;
+  border-radius: 30px;
+  padding-left: 1rem;
+  width: 80%;
 }
 
 .Header-Item-Right-Container-UserDropButton-Content-LogInMenu-form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .Header-Item-Left-Container {
-    display: flex;
-    justify-content: left;
-    width: 12rem;
-    height: 100%;
-    margin-right: 3rem;
-    position: relative;
+  display: flex;
+  justify-content: left;
+  width: 12rem;
+  height: 100%;
+  margin-right: 3rem;
+  position: relative;
 }
 
 .Header-Image-Usericon {
-    border-radius: 30px;
+  border-radius: 30px;
+  background-color: white;
 }
 
 .Header-Item-Right-Container {
-    margin-right: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 12rem;
-    height: 100%;
-
+  margin-right: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 12rem;
+  height: 100%;
 }
 
 .Header-Imagen-Bandera {
-    border-radius: 30px;
-    height: 20px;
+  border-radius: 30px;
+  height: 20px;
 }
 
 .Header-Item-Left-Container-Dropbutton {
-    font-size: 16px;
-    border: none;
-    background-color: transparent;
-    height: 100%;
-    transition: 0.3s;
-    cursor: pointer;
+  font-size: 16px;
+  border: none;
+  background-color: transparent;
+  height: 100%;
+  transition: 0.3s;
+  cursor: pointer;
 }
 
 .Header-Item-Left-Container-Dropbutton-Content {
-    position: absolute;
-    left: -20rem;
-    top: 100%;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: -999;
-    transition: left 1s;
+  position: absolute;
+  left: -20rem;
+  top: 100%;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: -999;
+  transition: left 1s;
 }
 
 .Header-Item-Left-Container-Dropbutton-Content.deployed {
-    transition: 0.7s;
-    left: 0rem;
+  transition: 0.7s;
+  left: 0rem;
 }
 
-
 .Header-Item-Left-Container-Dropbutton-Content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    font-family: 'Tommy personal use';
-    transition: 0.3s;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-family: "Tommy personal use";
+  transition: 0.3s;
 }
 
 .Header-Item-Left-Container-Dropbutton-Content a:hover {
-    background-color: rgba(0, 0, 0, 0.123);
+  background-color: rgba(0, 0, 0, 0.123);
 }
 
 .Header-Item-Right-Container-UserDropButton-Content-Button:hover {
-    background-color: rgba(0, 0, 0, 0.123);
+  background-color: rgba(0, 0, 0, 0.123);
 }
 
 .Header-Item-Right-Container-UserDropButton {
-    background-color: transparent;
-    border: transparent;
-    height: 100%;
-    transition: 0.3s;
-    padding: 0 0 0 0;
-    cursor: pointer;
+  background-color: transparent;
+  border: transparent;
+  height: 100%;
+  transition: 0.3s;
+  padding: 0 0 0 0;
+  cursor: pointer;
 }
 
 .Header-Item-Right-Container-UserDropButton-Content-Button {
-    background-color: transparent;
-    color: black;
-    padding: 12px 16px;
-    display: block;
-    text-decoration: none;
-    font-size: 16px;
-    border: transparent;
-    font-family: 'Tommy personal use';
-    width: 100%;
-    justify-content: center;
-    text-align: center;
-    transition: 0.3s;
-    height: min-content;
-    box-sizing: border-box;
-    cursor: pointer;
+  background-color: transparent;
+  color: black;
+  padding: 12px 16px;
+  display: block;
+  text-decoration: none;
+  font-size: 16px;
+  border: transparent;
+  font-family: "Tommy personal use";
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  transition: 0.3s;
+  height: min-content;
+  box-sizing: border-box;
+  cursor: pointer;
 }
 
 .Header-Item-Right-Container-UserDropButton-Content {
-    position: absolute;
-    width: 20rem;
-    background-color: #f1f1f1;
-    top: -10rem;
-    transition: top 1s;
-    z-index: -999;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    right: 0rem;
+  position: absolute;
+  width: 20rem;
+  background-color: #f1f1f1;
+  top: -10rem;
+  transition: top 1s;
+  z-index: -999;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  right: 0rem;
 }
 
 .Header-Item-Right-Container-UserDropButton-Content.deployed {
-    transition: 0.7s;
-    top: 100%;
+  transition: 0.7s;
+  top: 100%;
 }
 
 .Header-Item-Right-Container-UserDropButtonContainer {
-    height: 100%;
+  height: 100%;
 }
 
 .Footer a {
-    color: white;
-    text-decoration: auto;
-    font-family: 'Tommy personal use';
-    font-size: 14px;
+  color: white;
+  text-decoration: auto;
+  font-family: "Tommy personal use";
+  font-size: 14px;
 }
 
 .Footer {
-    background-image: linear-gradient(#913611, #3a1101);
-    color: white;
-    z-index: 999;
+  background-image: linear-gradient(#913611, #3a1101);
+  color: white;
+  z-index: 999;
 }
 
 .Footer-SelectionBar {
-    display: flex;
-    justify-content: space-around;
-    padding: 19px 0 0 0;
+  display: flex;
+  justify-content: space-around;
+  padding: 19px 0 0 0;
 }
 
 .Footer p {
-    font-size: 12px;
-    text-align-last: center;
-    text-align: justify;
-    padding: 4px 41px 25px 0px;
-    font-family: SANS-SERIF;
-    margin-bottom: 0;
+  font-size: 12px;
+  text-align-last: center;
+  text-align: justify;
+  padding: 4px 41px 25px 0px;
+  font-family: SANS-SERIF;
+  margin-bottom: 0;
 }
 
 .Content {
-    width: 100%;
-    background-color: #e5be9e3a;
-    margin-top: 5rem;
-    padding-top: 1rem;
-    height: fit-content;
-    min-height: 40rem;
-    z-index: 1;
-    position: relative;
+  width: 100%;
+  background-color: #e5be9e3a;
+  margin-top: 5rem;
+  padding-top: 1rem;
+  height: fit-content;
+  min-height: 40rem;
+  z-index: 1;
+  position: relative;
+  padding-bottom: 1rem;
 }
 .Content::after {
-    background-image: url("../Images/background.webp");
-    width: 100%;
-    position: absolute;
-    content: " ";
-    top: 0;
-    left: 0;
-    background-size: contain;
-    z-index: -2;
-    opacity: 15%;
-    bottom: 0;
+  background-image: url("../Images/background.webp");
+  width: 100%;
+  position: absolute;
+  content: " ";
+  top: 0;
+  left: 0;
+  background-size: contain;
+  z-index: -2;
+  opacity: 10%;
+  bottom: 0;
 }
 
 .Header-Logo:hover {
-    width: 17rem;
+  width: 17rem;
 }
 
 @media only screen and (max-width: 600px) {
-    .Header-Item-Right-Container {
-        width: 8rem;
-        margin-right: 0;
-    }
+  .Header-Item-Right-Container {
+    width: 8rem;
+    margin-right: 0;
+  }
 
-    .Header-Logo {
-        width: 9rem;
-    }
+  .Header-Logo {
+    width: 9rem;
+  }
 
-    .Header-Logo:hover {
-        width: 11rem;
-    }
+  .Header-Logo:hover {
+    width: 11rem;
+  }
 
-    .Header-Imagen-Bandera {
-        display: none;
-    }
+  .Header-Imagen-Bandera {
+    display: none;
+  }
 
-    .Header-Item-Left-Container {
-        width: 8rem;
-        margin-right: 0rem;
-    }
-    .Header-Item-Right-Container-UserDropButton-Content{
-        width: 100%;
-    }
-    .Content{
-        padding-top: 0.5rem;
-    }
+  .Header-Item-Left-Container {
+    width: 8rem;
+    margin-right: 0rem;
+  }
+  .Header-Item-Right-Container-UserDropButton-Content {
+    width: 100%;
+  }
+  .Content {
+    padding-top: 0.5rem;
+  }
 }
 
 @font-face {
-    src: url(../Fonts/MADE\ Tommy\ Soft\ Medium\ PERSONAL\ USE.otf);
-    font-family: 'Tommy personal use';
+  src: url(../Fonts/MADE\ Tommy\ Soft\ Medium\ PERSONAL\ USE.otf);
+  font-family: "Tommy personal use";
 }
