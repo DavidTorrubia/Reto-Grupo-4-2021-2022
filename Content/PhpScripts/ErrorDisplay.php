@@ -9,5 +9,6 @@ switch ($_SESSION['Error']){
     case 7; echo '<script language="javascript">alert("The Shopping Cart is empty");</script>'; break;
     case 8; echo '<script language="javascript">alert("You must select a delivery Adress");</script>'; break;
     case 9; echo '<script language="javascript">alert("You must select a payment method");</script>'; break;
+    case 10; echo'<script language="javascript">alert("You must fill all the fields");</script>'; break;
 }
 $_SESSION['Error'] = 0;

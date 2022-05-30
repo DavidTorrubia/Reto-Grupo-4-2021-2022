@@ -21,9 +21,10 @@
     font-family: "Tommy personal use";
     width: 100%;
     background-color: rgba(0, 0, 0, 0.18);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     text-align: center;
-    margin-bottom: 0.5rem;
     margin-top: 0;
+    margin-bottom: 0;
 }
 .Content-DataAlteration-Elements-Item-Login{
     display: flex;
@@ -95,7 +96,7 @@
     position: relative;
 }
 .Content-DataAlteration-Elements-Item-Container{
-    width: 90%;
+    width: 100%;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 .Content-DataAlteration-Elements-Item-List-Item{
@@ -109,7 +110,7 @@
     background-color: rgba(0, 0, 0, 0.081);
 }
 .Content-DataAlteration-Elements-Item-List-Item-Example{
-    background-color: rgb(206, 206, 206);
+    background-color: rgb(234, 234, 234);
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;  
@@ -156,7 +157,40 @@
 .Content-SelectionBar-Item:hover {
     background-color: rgba(0, 0, 0, 0.048);
 }
+#UserAlterSubmit{
+    display: none;
+}
+.Content-DataAlteration-Elements-Item-Selection{
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
 
+}
+.Content-DataAlteration-Elements-Item-Selection-Button{
+    border: transparent;
+    font-family: "Tommy personal use";
+    font-size: 1.5rem;
+    cursor: pointer;
+    width: 50%;
+    transition: 0.3s;
+}
+.Content-DataAlteration-Elements-Item-Selection-Button:hover {
+    background-color: rgba(0, 0, 0, 0.104);
+}
+.Alter-User{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.Remove-User{
+    display: none;
+}
 @font-face {
     src: url(../Fonts/MADE\ Tommy\ Soft\ Medium\ PERSONAL\ USE.otf);
     font-family: "Tommy personal use";

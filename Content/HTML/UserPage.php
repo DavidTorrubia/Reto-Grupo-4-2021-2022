@@ -203,7 +203,7 @@
                     <button class="Content-Add-Payment-type-item" onclick="ChangePaymentMethod(3)"> Bank account </button>
                 </div>
 
-                <form class="Content-Add-Payment-Form" id="Payment-CreditCard">
+                <form class="Content-Add-Payment-Form" id="Payment-CreditCard" method="get" action="../PhpScripts/PaymentMethodCreation.php">
                     <div class="Content-UserConfig-Item">
                         <h2 class="Content-UserConfig-Item-Header">Card Number</h2>
                         <input type="text" class="Content-UserConfig-Item-Field" name="card" placeholder="xxxx-xxxx-xxxx">
@@ -219,7 +219,7 @@
                     <input type="hidden" value="1" name="type">
                     <input type="submit" class="Content-Add-Payment-Form-submit" value="Create Payment Method">
                 </form>
-                <form class="Content-Add-Payment-Form" id="Payment-Paypal">
+                <form class="Content-Add-Payment-Form" id="Payment-Paypal" method="get" action="../PhpScripts/PaymentMethodCreation.php">
                     <div class="Content-UserConfig-Item">
                         <h2 class="Content-UserConfig-Item-Header">Email</h2>
                         <input type="text" class="Content-UserConfig-Item-Field" name="email" placeholder="example@example.com">
@@ -227,7 +227,7 @@
                     <input type="hidden" value="2" name="type">
                     <input type="submit" class="Content-Add-Payment-Form-submit" value="Create Payment Method">
                 </form>
-                <form class="Content-Add-Payment-Form" id="Payment-bank">
+                <form class="Content-Add-Payment-Form" id="Payment-bank" method="get" action="../PhpScripts/PaymentMethodCreation.php">
                     <div class="Content-UserConfig-Item">
                         <h2 class="Content-UserConfig-Item-Header">Bank account number</h2>
                         <input type="text" class="Content-UserConfig-Item-Field" name="account" placeholder="PR3049483920">
