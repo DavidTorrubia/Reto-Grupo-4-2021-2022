@@ -238,25 +238,6 @@
 
 
             </div>
-            <div class="Content-Payment-List" id="Content-Payment">
-                <?php
-                $sql = "SELECT * FROM METODOSPAGO WHERE ID_USUARIO =" . $WebPageUser->get_id();
-                $result = mysqli_query($con, $sql) or die('Error');
-                while ($row = mysqli_fetch_assoc($result)) {
-                    $sql = "SELECT * FROM TIPOSMETODOPAGO WHERE ID_TIPOMETPAGO =" . $row['ID_TIPOMETPAGO'];
-                    $result2 = mysqli_query($con, $sql) or die('Error');
-                    $row2 = mysqli_fetch_assoc($result2);
-                    $detail = explode('/', $row["DETALLE"]);
-                ?>
-                    <label class="Content-Payment-List-Item cursor">
-                        <h1 class="Content-Payment-List-Item-Info-Payment"><?php echo $detail[0]; ?></h1>
-                        <h1 class="Content-Payment-List-Item-Info-Payment"><?php echo $row2['NOMBRE']; ?></h1>
-                        <input type="radio" class="" value="<?php echo $row["ID_METPAGO"] ?>" name="Checkbox3[]">
-                    </label>
-                <?php
-                }
-                ?>
-            </div>
         </div>
     </div>
     <?php include 'Footer.php'; ?>
