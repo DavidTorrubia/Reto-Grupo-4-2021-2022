@@ -1,4 +1,5 @@
 <?php
+//En funcion del fallo que de saltara una alerta u otra
 switch ($_SESSION['Error']){
     case 1: echo '<script language="javascript">alert("Incorrect Password");</script>'; break;
     case 2: echo '<script language="javascript">alert("Incorrect Email");</script>'; break;

@@ -1,4 +1,5 @@
 <?php
+//Clase del usuario con los parametros nombre, id, esAdmin y estaLogged con sus respectivos getters y setters
 class User {
   private $name;
   private $id;

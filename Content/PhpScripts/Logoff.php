@@ -1,5 +1,6 @@
 <?php
 error_reporting(0);
+//Si la sesion esta activa, la cierra
 if (!isset($_SESSION)) {
     session_start();
     include "PhpClasses/UserClass.php";

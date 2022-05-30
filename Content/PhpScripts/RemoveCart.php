@@ -1,4 +1,5 @@
 <?php
+//Borra el array de la carta 
 if (!isset($_SESSION)) {
     session_start();
     $id = $_GET["id"];

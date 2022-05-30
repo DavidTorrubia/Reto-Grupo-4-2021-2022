@@ -17,6 +17,7 @@ if (!isset($_SESSION)) {
     $payment = $_GET["Checkbox3"];
     $finalprice = $_GET['price'];
     $UserWeb = unserialize($_SESSION["User"]);
+    //Comprueba los articulos seleccionados del carrito, la direccion y el metodo de pago y si esta todo bien se realiza el pedido
     if (count($_SESSION["cart"]) > 0) {
         if ($direccion != null) {
             if ($payment != null) {
