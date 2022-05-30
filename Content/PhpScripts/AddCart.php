@@ -1,4 +1,5 @@
 <?php
+//Agregar producto del menu al carrito y su cantidad
 if (!isset($_SESSION)) {
     session_start();
     $id = $_GET["id"];

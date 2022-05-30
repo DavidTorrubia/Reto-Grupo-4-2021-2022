@@ -20,6 +20,7 @@ if (!isset($_SESSION)) {
     $sql = "UPDATE USUARIOS SET ";
     $count = 0;
     $UserWeb = unserialize($_SESSION['User']);
+    //A partir de los parametros que da el usuario se le cambian sus respectivos datos
     if ($email != null || $password != null || $name != null || $lastname != null) {
         if ($email != "" && $email != null) {
             $AuxSql = "SELECT CORREO FROM USUARIOS WHERE CORREO LIKE '" . $email . "'";

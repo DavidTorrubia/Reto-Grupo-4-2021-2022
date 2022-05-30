@@ -17,6 +17,7 @@ if (!isset($_SESSION)) {
     $sql = "Select * from USUARIOS where CORREO like '" . $email . "'";
     $result = mysqli_query($con, $sql) or die('Error');
     $rowcount = mysqli_fetch_assoc($result);
+    //Comprueba los datos del usuario y si son correctos lo registra
     if ($rowcount > 0) {
         if ($rowcount["CONTRASENA"] == $password) {
             $UserWeb = unserialize($_SESSION['User']);

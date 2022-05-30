@@ -18,7 +18,7 @@ if (!isset($_SESSION)) {
     $sql = "Select * from USUARIOS where CORREO like '" . $email . "'";
     $result = mysqli_query($con, $sql) or die('Error');
     $rowcount = mysqli_fetch_assoc($result);
-
+    //Si la contraseña que escribes y la 2 constraseña coinciden se al nuevo usuario
     if ($rowcount == 0) {
         if ($password == $repassword) {
             try {

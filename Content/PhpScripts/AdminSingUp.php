@@ -20,7 +20,7 @@ if (!isset($_SESSION)) {
     $sql = "Select * from USUARIOS where CORREO like '" . $email . "'";
     $result = mysqli_query($con, $sql) or die('Error');
     $rowcount = mysqli_fetch_assoc($result);
-
+    //Comprueba el parametro de isadmin y si su estado es 1 cambia ese usuario a administrador
     if ($rowcount == 0) {
         if ($password == $repassword) {
             try {

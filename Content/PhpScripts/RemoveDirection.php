@@ -17,6 +17,7 @@ if (!isset($_SESSION)) {
     echo count($Directions);
     $sql = "DELETE FROM DIRECCIONES WHERE ID_DIRECCION IN (";
     $sql2 = "UPDATE PEDIDOS SET ID_DIRECCION = 9 WHERE ID_DIRECCION in (";
+    //Borra la direccion seleccionada 
     for ($i=0;$i < count($Directions) ; $i++){
         if ($count > 0){
             $sql .= ","; 

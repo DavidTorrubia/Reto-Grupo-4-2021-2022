@@ -21,6 +21,7 @@ if (!isset($_SESSION)) {
     $postalCode = strtolower(trim($_POST["p_code"]));
     $WebUser = unserialize($_SESSION["User"]);
     $FinalAdress = $country."/".$city."/".$adress."/";
+    //Recoge los datos introducidos por el usuario y los mete en la variable direccion
     if ($stairs != null && $stairs != ""){
         $FinalAdress .= $stairs."/";
     } else {

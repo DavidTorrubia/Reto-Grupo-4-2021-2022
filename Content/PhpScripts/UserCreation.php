@@ -2,7 +2,7 @@
 error_reporting(0);
 session_start();
 include "PhpClasses/UserClass.php";
-//User Creation And Value Assign
+//En caso de no existir usuario lo crea y le asigna sus valores
 if ($_SESSION['User'] == null) {
     $User = new User();
     $_SESSION['User'] = serialize($User);
